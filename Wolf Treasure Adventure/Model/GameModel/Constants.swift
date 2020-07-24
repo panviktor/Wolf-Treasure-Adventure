@@ -24,8 +24,9 @@ enum Layer {
     static let background: CGFloat = 0
     static let crocodile: CGFloat = 1
     static let vine: CGFloat = 1
-    static let prize: CGFloat = 2
-    static let foreground: CGFloat = 3
+    static let wood: CGFloat = 2
+    static let prize: CGFloat = 3
+    static let foreground: CGFloat = 4
 }
 
 enum PhysicsCategory {
@@ -37,6 +38,7 @@ enum PhysicsCategory {
 
 enum GameConfiguration {
     static let canCutMultipleVinesAtOnce = false
+    static let maximumLevel = 3
 }
 
 enum Scene {

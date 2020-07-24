@@ -5,7 +5,7 @@ class GameScene: SKScene {
     private var particles: SKEmitterNode?
     private var crocodile: SKSpriteNode!
     private var prize: SKSpriteNode!
-    
+   
     private var level: LevelProtocol!
     private var currentLevelNum = 1
     
@@ -17,6 +17,7 @@ class GameScene: SKScene {
     
     private var isLevelOver = false
     private var didCutVine = false
+    private var winLevel = false
     
     override func didMove(to view: SKView) {
         setUpLevel(number: currentLevelNum)
@@ -38,7 +39,6 @@ class GameScene: SKScene {
         background.size = CGSize(width: size.width, height: size.height)
         addChild(background)
         
-        
         let water = SKSpriteNode(imageNamed: ImageName.water)
         water.anchorPoint = CGPoint(x: 0, y: 0)
         water.position = CGPoint(x: 0, y: 0)
@@ -52,7 +52,8 @@ class GameScene: SKScene {
         prize.position = CGPoint(x: size.width * level.prizePosition.x,
                                  y: level.prizePosition.y)
         prize.zPosition = Layer.prize
-        prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
+        prize.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: ImageName.prize),
+                                          size: prize.size)
         prize.physicsBody?.categoryBitMask = PhysicsCategory.prize
         prize.physicsBody?.collisionBitMask = 0
         prize.physicsBody?.density = 0.5
@@ -187,13 +188,17 @@ class GameScene: SKScene {
     }
     
     private func switchToNewGame(withTransition transition: SKTransition) {
-        let delay = SKAction.wait(forDuration: 1)
-        let sceneChange = SKAction.run {
-            let scene = GameScene(size: self.size)
-            self.view?.presentScene(scene, transition: transition)
+        if currentLevelNum <= GameConfiguration.maximumLevel  {
+            let delay = SKAction.wait(forDuration: 1)
+            let sceneChange = SKAction.run {
+                let scene = GameScene(size: self.size)
+                scene.currentLevelNum = self.currentLevelNum
+                self.view?.presentScene(scene, transition: transition)
+            }
+            run(.sequence([delay, sceneChange]))
+        } else  {
+            print("WIiIiiiiiiiiiiiiiIIIIIIiiiiIiiisqcbbbm3333")
         }
-        
-        run(.sequence([delay, sceneChange]))
     }
     
     //MARK: - Audio
@@ -265,7 +270,7 @@ extension GameScene: SKPhysicsContactDelegate {
             || (contact.bodyA.node == prize && contact.bodyB.node == crocodile) {
             
             isLevelOver = true
-            
+            currentLevelNum += 1
             // shrink the pineapple away
             let shrink = SKAction.scale(to: 0, duration: 0.08)
             let removeNode = SKAction.removeFromParent()

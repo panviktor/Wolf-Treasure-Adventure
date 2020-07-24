@@ -1,8 +1,8 @@
 {
-  "levelName": "Second Level",
-  "levelNumber": 2,
+  "levelName": "First Level",
+  "levelNumber": 1,
   
-  "heroesPosition": {"x": 0.75, "y": 0.312},
+  "heroesPosition": {"x": 0.35, "y": 0.312},
   
   "vines": [{
     "length": 16,
@@ -12,15 +12,15 @@
   
   {  "length": 18,
     "xAnchorPoint": 0.85,
-    "yAnchorPoint": 0.8996
+    "yAnchorPoint": 0.5996
   },
   {
-    "length": 16,
+    "length": 26,
     "xAnchorPoint": 0.8593,
-    "yAnchorPoint": 0.7588
+    "yAnchorPoint": 0.9588
   }
   ],
 
   "prizeType": 1,
-  "prizePosition": {"x": 0.15, "y": 0.9}
+  "prizePosition": {"x": 0.55, "y": 0.9}
 }

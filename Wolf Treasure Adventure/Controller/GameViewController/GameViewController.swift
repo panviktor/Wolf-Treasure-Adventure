@@ -2,9 +2,6 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-    
-   
-    
     //MARK: - ViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +27,5 @@ class GameViewController: UIViewController {
         // Present the scene.
         skView.presentScene(scene)
     }
-    
-    
-     
 }
 
