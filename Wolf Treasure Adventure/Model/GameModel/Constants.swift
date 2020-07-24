@@ -11,6 +11,8 @@ enum ImageName {
     static let crocMask = "CrocMask"
     static let prize = "Pineapple"
     static let prizeMask = "PineappleMask"
+    
+    static let woodTexture = "Wood"
 }
 
 enum SoundFile {
@@ -34,6 +36,7 @@ enum PhysicsCategory {
     static let vineHolder: UInt32 = 2
     static let vine: UInt32 = 4
     static let prize: UInt32 = 8
+    static let wood: UInt32 = 16
 }
 
 enum GameConfiguration {

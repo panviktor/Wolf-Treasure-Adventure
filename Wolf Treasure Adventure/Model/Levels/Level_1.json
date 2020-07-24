@@ -17,6 +17,19 @@
   }
   ],
 
+    "items": [{
+    "type": "wood",
+    "layer": 2,
+    "physicsCategory": 12,
+    "xAnchorPoint": 0.34,
+    "yAnchorPoint": 0.344,
+    "itemsSize": {
+      "width": 0.34,
+      "height": 0.4
+      
+    }
+  }],
+  
   "prizeType": 1,
   "prizePosition": {"x": 0.15, "y": 0.9}
 }

@@ -5,10 +5,9 @@ class GameScene: SKScene {
     private var particles: SKEmitterNode?
     private var crocodile: SKSpriteNode!
     private var prize: SKSpriteNode!
-   
+    
     private var level: LevelProtocol!
     private var currentLevelNum = 1
-    
     
     private static var backgroundMusicPlayer: AVAudioPlayer!
     private var sliceSoundAction: SKAction!
@@ -17,7 +16,6 @@ class GameScene: SKScene {
     
     private var isLevelOver = false
     private var didCutVine = false
-    private var winLevel = false
     
     override func didMove(to view: SKView) {
         setUpLevel(number: currentLevelNum)
@@ -77,8 +75,21 @@ class GameScene: SKScene {
         }
     }
     
-    //MARK: - Croc methods
     
+    //MARK: - Items methods
+    private func setUpWoods() {
+        // load items data
+        guard let items = level.items, !items.isEmpty else { return }
+        //FIXME: - Refactor to switch/enum
+        for (i, item) in items.enumerated() {
+            if item.type == "wood" {
+                let wood = WoodNode(anchorPoint: CGPoint.init(), name: "\(i)")
+                wood.addToScene(self)
+            }
+        }
+    }
+    
+    //MARK: - Croc methods
     private func setUpCrocodile() {
         crocodile = SKSpriteNode(imageNamed: ImageName.crocMouthClosed)
         
