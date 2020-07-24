@@ -24,6 +24,7 @@
 		14F1778D24CB0A7E006463F2 /* Slice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 14F1778324CB0A7E006463F2 /* Slice.caf */; };
 		14F1778E24CB0A7E006463F2 /* Splash.caf in Resources */ = {isa = PBXBuildFile; fileRef = 14F1778424CB0A7E006463F2 /* Splash.caf */; };
 		14F1778F24CB0A7E006463F2 /* Level_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 14F1778724CB0A7E006463F2 /* Level_1.json */; };
+		14F1779A24CB192A006463F2 /* Level_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 14F1779924CB192A006463F2 /* Level_2.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		14F1778324CB0A7E006463F2 /* Slice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Slice.caf; sourceTree = "<group>"; };
 		14F1778424CB0A7E006463F2 /* Splash.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Splash.caf; sourceTree = "<group>"; };
 		14F1778724CB0A7E006463F2 /* Level_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_1.json; sourceTree = "<group>"; };
+		14F1779924CB192A006463F2 /* Level_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_2.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				14F1778724CB0A7E006463F2 /* Level_1.json */,
+				14F1779924CB192A006463F2 /* Level_2.json */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				14F1778A24CB0A7E006463F2 /* Particle.png in Resources */,
 				14F1778B24CB0A7E006463F2 /* CheeZeeJungle.caf in Resources */,
 				14F1778C24CB0A7E006463F2 /* NomNom.caf in Resources */,
+				14F1779A24CB192A006463F2 /* Level_2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,18 +1,22 @@
 {
-  "levelName": "First Level",
-  "levelNumber": 1,
+  "levelName": "Ыусщтв Level",
+  "levelNumber": 2,
   
   "heroesPosition": {"x": 0.75, "y": 0.312},
   
-  "vines": [
+  "vines": [{
+    "length": 16,
+    "xAnchorPoint": 0.1187,
+    "yAnchorPoint": 0.9383
+  },
   
-  {  "length": 15,
+  {  "length": 18,
     "xAnchorPoint": 0.85,
     "yAnchorPoint": 0.8996
   },
   {
-    "length": 15,
-    "xAnchorPoint": 0.2593,
+    "length": 16,
+    "xAnchorPoint": 0.8593,
     "yAnchorPoint": 0.7588
   }
   ],
