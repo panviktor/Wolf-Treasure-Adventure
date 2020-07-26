@@ -79,8 +79,10 @@ class GameScene: SKScene {
     private func setUpWoods() {
         // load items data
         guard let items = level.items, !items.isEmpty else { return }
-        for (i, item) in items.enumerated() {
-            switch item.type {
+        
+        
+//        for (i, item) in items.enumerated() {
+//            switch item.type {
 //            case .wood:
 //                let anchorPoint = CGPoint(
 //                    x: item.xAnchorPoint * size.width,
@@ -88,10 +90,10 @@ class GameScene: SKScene {
 //                
 //                
 //                addChild(woods)
-            default:
-                print("ADD NEW ITEMS HANDLER")
-            }
-        }
+//            default:
+//                print("ADD NEW ITEMS HANDLER")
+//         }
+//        }
     }
     
     
@@ -261,6 +263,7 @@ class GameScene: SKScene {
         setUpPrize()
         setUpVines()
         setUpCrocodile()
+        setUpWoods()
         setUpAudio()
     }
 }
