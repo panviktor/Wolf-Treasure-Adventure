@@ -1,17 +1,6 @@
 import SpriteKit
 
-protocol LevelProtocol {
-    var levelName: String { get }
-    var levelNumber: Int { get }
-    var heroesPosition: CGPoint { get }
-    var vines: [Vine] { get }
-    var prizeType: PrizeType { get }
-    var prizePosition: CGPoint { get }
-    var items: [Item]? { get }
-    var bonusScore: Int? { get }
-}
-
-struct Level: LevelProtocol {
+struct Level {
     let levelName: String
     let levelNumber: Int
     let heroesPosition: CGPoint

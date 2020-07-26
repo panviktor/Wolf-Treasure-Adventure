@@ -53,3 +53,8 @@ enum PrizeType: String {
     case rare = "Rare"
     case unique = "Unique"
 }
+
+enum ObjectType: String, Codable {
+    case wood = "Wood"
+    case somethingNew = "SomethingNew"
+}

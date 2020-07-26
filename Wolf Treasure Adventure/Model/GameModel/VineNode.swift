@@ -9,7 +9,6 @@ class VineNode: SKNode {
         self.length = length
         self.anchorPoint = anchorPoint
         super.init()
-        
         self.name = name
     }
     

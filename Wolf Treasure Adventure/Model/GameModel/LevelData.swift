@@ -4,10 +4,11 @@ import UIKit
 struct LevelData: Codable {
     let levelName: String
     let levelNumber: Int
-    let heroesPosition: ItemPosition
+    let heroesPosition: Position
+    let prizePosition: Position
     let vines: [Vine]
-    let prizeType: Int
-    let prizePosition: ItemPosition
+    
+    let prizeType: Int?
     let items: [Item]?
     let bonusScore: Int?
     
@@ -35,22 +36,12 @@ struct LevelData: Codable {
 }
 
 // MARK: - HeroesPosition
-struct ItemPosition: Codable {
+struct Position: Codable {
     let x: CGFloat
     let y: CGFloat
     var position: CGPoint {
         get { return CGPoint(x: x, y: y) }
     }
-}
-
-// MARK: - Item
-struct Item: Codable {
-    let type: String
-    let layer: Int
-    let physicsCategory: Int
-    let xAnchorPoint: Double
-    let yAnchorPoint: Double
-    let itemsSize: ItemsSize
 }
 
 // MARK: - ItemsSize
@@ -66,3 +57,12 @@ struct Vine: Codable {
     let yAnchorPoint: CGFloat
 }
 
+// MARK: - Item
+struct Item: Codable {
+    let type: String
+    let layer: CGFloat
+    let physicsCategory: UInt32
+    let xAnchorPoint: CGFloat
+    let yAnchorPoint: CGFloat
+    let itemsSize: ItemsSize
+}

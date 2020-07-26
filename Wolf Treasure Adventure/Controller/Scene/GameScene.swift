@@ -5,8 +5,9 @@ class GameScene: SKScene {
     private var particles: SKEmitterNode?
     private var crocodile: SKSpriteNode!
     private var prize: SKSpriteNode!
+    private var woods: SKSpriteNode!
     
-    private var level: LevelProtocol!
+    private var level: Level!
     private var currentLevelNum = 1
     
     private static var backgroundMusicPlayer: AVAudioPlayer!
@@ -70,7 +71,6 @@ class GameScene: SKScene {
             let vine = VineNode(length: vine.length, anchorPoint: anchorPoint, name: "\(i)")
             
             vine.addToScene(self)
-            
             vine.attachToPrize(prize)
         }
     }
@@ -80,14 +80,21 @@ class GameScene: SKScene {
     private func setUpWoods() {
         // load items data
         guard let items = level.items, !items.isEmpty else { return }
-        //FIXME: - Refactor to switch/enum
         for (i, item) in items.enumerated() {
-            if item.type == "wood" {
-                let wood = WoodNode(anchorPoint: CGPoint.init(), name: "\(i)")
-                wood.addToScene(self)
+            switch item.type {
+//            case .wood:
+//                let anchorPoint = CGPoint(
+//                    x: item.xAnchorPoint * size.width,
+//                    y: item.yAnchorPoint * size.height)
+//                
+//                
+//                addChild(woods)
+            default:
+                print("ADD NEW ITEMS HANDLER")
             }
         }
     }
+    
     
     //MARK: - Croc methods
     private func setUpCrocodile() {
