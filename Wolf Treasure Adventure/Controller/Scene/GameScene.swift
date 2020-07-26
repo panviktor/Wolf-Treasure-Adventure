@@ -51,8 +51,7 @@ class GameScene: SKScene {
         prize.position = CGPoint(x: size.width * level.prizePosition.x,
                                  y: level.prizePosition.y)
         prize.zPosition = Layer.prize
-        prize.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: ImageName.prize),
-                                          size: prize.size)
+        prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
         prize.physicsBody?.categoryBitMask = PhysicsCategory.prize
         prize.physicsBody?.collisionBitMask = 0
         prize.physicsBody?.density = 0.5
