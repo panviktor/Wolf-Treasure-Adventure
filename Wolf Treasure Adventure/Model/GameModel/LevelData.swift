@@ -61,7 +61,6 @@ struct Vine: Codable {
 struct Item: Codable {
     let type: ObjectType
     let layer: CGFloat
-    let physicsCategory: UInt32
     let xAnchorPoint: CGFloat
     let yAnchorPoint: CGFloat
     let itemsSize: ItemsSize

@@ -80,12 +80,12 @@ class GameScene: SKScene {
         // load items data
         guard let items = level.items, !items.isEmpty else {
             return }
-        
+        print(#line, items.count)
         for (i, item) in items.enumerated() {
             switch item.type {
             case .wood:
                 
-                print(#line, item.yAnchorPoint)
+                print(#line, i, item.yAnchorPoint)
                 
                 
                 //                let anchorPoint = CGPoint(
