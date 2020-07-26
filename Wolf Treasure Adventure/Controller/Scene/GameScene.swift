@@ -85,15 +85,14 @@ class GameScene: SKScene {
             switch item.type {
             case .wood:
                 
-                print(#line, i, item.yAnchorPoint)
+//                let anchorPoint = CGPoint(
+//                    x: item.xAnchorPoint * size.width,
+//                    y: item.yAnchorPoint * size.height)
+                            let anchorPoint = CGPoint(
+                    x: item.xAnchorPoint * size.width,
+                    y: item.yAnchorPoint * size.height)
                 
-                
-                //                let anchorPoint = CGPoint(
-                //                    x: item.xAnchorPoint * size.width,
-                //                    y: item.yAnchorPoint * size.height)
-                //
-                //
-            //                addChild(woods)
+                addWoodToScene(anchorPoint)
             default:
                 print("ADD NEW ITEMS HANDLER")
             }
@@ -261,7 +260,6 @@ class GameScene: SKScene {
     private func setUpLevel(number: Int) {
         let levelString = "Level_\(number)"
         level = Level.init(filename: levelString)
-        
         setUpPhysics()
         setUpScenery()
         setUpPrize()

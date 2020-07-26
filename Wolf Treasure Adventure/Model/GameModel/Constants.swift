@@ -26,7 +26,7 @@ enum Layer {
     static let background: CGFloat = 0
     static let crocodile: CGFloat = 1
     static let vine: CGFloat = 1
-    static let wood: CGFloat = 2
+    static let wood: CGFloat = 5
     static let prize: CGFloat = 3
     static let foreground: CGFloat = 4
 }

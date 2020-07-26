@@ -8,28 +8,21 @@
 
 import SpriteKit
 
-class WoodNode: SKNode {
-    private let anchorPoint: CGPoint
-    init(length: Int, anchorPoint: CGPoint, name: String) {
-        self.anchorPoint = anchorPoint
-        super.init()
-        self.name = name
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        anchorPoint = aDecoder.decodeCGPoint(forKey: "anchorPoint")
-        super.init(coder: aDecoder)
+extension GameScene {
+    func addWoodToScene(_ anchorPoint: CGPoint) {
+        let wood = SKSpriteNode(imageNamed: ImageName.woodTexture)
+        wood.size = CGSize(width: 100, height: 20)
+
+        wood.position = CGPoint(x: 200.5, y: 300.5)
+//        wood.anchorPoint = anchorPoint
+        
+        wood.zPosition = Layer.wood
+        wood.physicsBody = SKPhysicsBody(texture:  SKTexture(imageNamed: ImageName.woodTexture), size: wood.size)
+        wood.physicsBody?.categoryBitMask = PhysicsCategory.wood
+        wood.physicsBody?.collisionBitMask = 0
+        wood.physicsBody?.contactTestBitMask = PhysicsCategory.wood
+        wood.physicsBody?.isDynamic = false
+
+       addChild(wood)
     }
 }
-
-
-
-//    woods = SKSpriteNode(imageNamed: ImageName.woodTexture)
-//    woods.position = CGPoint(x: size.width * level.prizePosition.x,
-//        y: level.prizePosition.y)
-//    woods.zPosition = Layer.wood
-//    woods.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: ImageName.woodTexture),
-//                                       size: woods?.size ?? CGSize.zero)
-//    woods.physicsBody?.categoryBitMask = PhysicsCategory.prize
-//    woods.physicsBody?.collisionBitMask = 0
-//    woods.physicsBody?.density = 0.5

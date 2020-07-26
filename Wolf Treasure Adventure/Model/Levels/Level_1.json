@@ -22,14 +22,14 @@
     "items": [
         { "type": "Wood",
             "layer": 2,
-            "xAnchorPoint": 0.34,
-            "yAnchorPoint": 0.21,
+            "xAnchorPoint": 0.2592,
+            "yAnchorPoint": 0.7583,
             "itemsSize": {
                 "width": 0.34,
                 "height": 0.4
             },
         },
-        {   "type": "Wood",
+        {   "type": "Wood_",
             "layer": 2,
             "xAnchorPoint": 0.35,
             "yAnchorPoint": 0.37,
@@ -38,7 +38,7 @@
                 "height": 0.20
             },
         },
-        {   "type": "Wood",
+        {   "type": "Wood_",
             "layer": 2,
             "xAnchorPoint": 0.34,
             "yAnchorPoint": 0.344,
