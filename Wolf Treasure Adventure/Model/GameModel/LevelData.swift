@@ -59,7 +59,7 @@ struct Vine: Codable {
 
 // MARK: - Item
 struct Item: Codable {
-    let type: String
+    let type: ObjectType
     let layer: CGFloat
     let physicsCategory: UInt32
     let xAnchorPoint: CGFloat

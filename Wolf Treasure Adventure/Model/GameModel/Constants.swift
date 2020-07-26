@@ -57,4 +57,9 @@ enum PrizeType: String {
 enum ObjectType: String, Codable {
     case wood = "Wood"
     case somethingNew = "SomethingNew"
+    
+    init(from decoder: Decoder) throws {
+      let object = try decoder.singleValueContainer().decode(String.self)
+      self = ObjectType(rawValue: object) ?? .somethingNew
+    }
 }

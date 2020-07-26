@@ -20,11 +20,11 @@
     ],
     
     "items": [
-        { "type": "wood",
+        { "type": "Wood",
             "layer": 2,
             "physicsCategory": 12,
             "xAnchorPoint": 0.34,
-            "yAnchorPoint": 0.344,
+            "yAnchorPoint": 0.21,
             "itemsSize": {
                 "width": 0.34,
                 "height": 0.4
