@@ -1,6 +1,19 @@
 import CoreGraphics
 
 enum ImageName {
+    /// Welcome View Controller
+    static let welcomeViewBackground =  "WelcomeViewBackground"
+    static let welcomeItemElement = "WelcomeItemElement"
+    static let welcomePlayButton = "WelcomePlayButton"
+    
+    ///Main Scene Textures
+    static let mainSceneBackground = "MainSceneBackground"
+    static let mainSceneCloud = "MainSceneCloud"
+    static let mainScenePlayButton = "MainScenePlayButton"
+    static let mainSceneSettingsButton = "MainSceneSettingsButton"
+    static let mainSceneScoreButton = "MainSceneScoreButton"
+    
+    /// Game Scene Textures
     static let background = "Background"
     static let ground = "Ground"
     static let water = "Water"
@@ -11,8 +24,8 @@ enum ImageName {
     static let crocMask = "CrocMask"
     static let prize = "Pineapple"
     static let prizeMask = "PineappleMask"
-    
     static let woodTexture = "Wood"
+
 }
 
 enum SoundFile {
