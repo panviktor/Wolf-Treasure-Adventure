@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "CrocMouthOpen.png",
+      "filename" : "CrocMouthClosed.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "CrocMouthOpen@2x.png",
+      "filename" : "CrocMouthClosed-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "CrocMouthOpen@3x.png",
+      "filename" : "CrocMouthClosed-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

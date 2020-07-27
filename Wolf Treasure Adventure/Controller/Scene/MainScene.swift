@@ -20,14 +20,14 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         case WinLevelScene
     }
     
-    private  enum MainSceneButton: String {
+    private enum MainSceneButton: String {
         case PlayButton
         case SettingsButton
         case ScoreButton
     }
     
-    private   let sceneManager = SceneManager.shared
-    private  let screenSize: CGRect = UIScreen.main.bounds
+    private let sceneManager = SceneManager.shared
+    private let screenSize: CGRect = UIScreen.main.bounds
     
     override func didMove(to view: SKView) {
         guard sceneManager.gameScene == nil else { return }
@@ -43,7 +43,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
     private func loadBackground(){
         let mainSceneBackground = SKSpriteNode()
         mainSceneBackground.texture = SKTexture(imageNamed: ImageName.mainSceneBackground)
-        mainSceneBackground.position = CGPoint(x: screenSize.width/2, y: screenSize.height/2)
+        mainSceneBackground.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         mainSceneBackground.size = CGSize(width: screenSize.width, height: screenSize.height)
         mainSceneBackground.zPosition = -10
         mainSceneBackground.name = ImageName.mainSceneBackground
@@ -56,7 +56,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         cloud.zPosition = -9
         cloud.name = ImageName.mainSceneCloud
         self.addChild(cloud)
-        
+
         let root = SKSpriteNode()
         root.color = .clear
         root.name = "RootSKSpriteNode"
@@ -64,14 +64,14 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         root.position = CGPoint(x: screenSize.width / 2, y: screenSize.height * 0.55)
         root.zPosition = -7
         self.addChild(root)
-        
+
         let bd_one_button = createUIButton(name: MainSceneButton.PlayButton, offsetPosX: 0, offsetPosY: 0)
         root.addChild(bd_one_button)
-        
-        let bd_two_button = createUIButton(name: MainSceneButton.SettingsButton, offsetPosX: 10, offsetPosY: 10)
+
+        let bd_two_button = createUIButton(name: MainSceneButton.SettingsButton, offsetPosX: 50, offsetPosY: 50)
         root.addChild(bd_two_button)
-        
-        let bd_three_button = createUIButton(name: MainSceneButton.ScoreButton, offsetPosX: 20, offsetPosY: 20)
+
+        let bd_three_button = createUIButton(name: MainSceneButton.ScoreButton, offsetPosX: -20, offsetPosY: 100)
         root.addChild(bd_three_button)
     }
     
@@ -116,13 +116,6 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func prepareToChangeScene(scene: Scene){
-        // remove all gestures
-        if scene != .WinLevelScene {
-            for gesture in (view?.gestureRecognizers)!{
-                view?.removeGestureRecognizer(gesture)
-            }
-        }
-        
         switch scene {
         case .MainScene:
             debugPrint("Something go wrong?")

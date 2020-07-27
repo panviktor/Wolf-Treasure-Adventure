@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "CrocMouthClosed.png",
+      "filename" : "MainSceneSettingsButton.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "CrocMouthClosed-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "CrocMouthClosed-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

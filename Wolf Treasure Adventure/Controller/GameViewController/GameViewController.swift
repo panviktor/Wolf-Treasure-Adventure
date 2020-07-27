@@ -21,10 +21,8 @@ class GameViewController: UIViewController {
         skView.ignoresSiblingOrder = true
         
         // Create and configure the scene.
-        let scene = GameScene(size: CGSize(width: 375, height: 667))
+        let scene = MainScene(size: CGSize(width: 375, height: 667))
         scene.scaleMode = .aspectFill
-        
-        // Present the scene.
         skView.presentScene(scene)
     }
 }
