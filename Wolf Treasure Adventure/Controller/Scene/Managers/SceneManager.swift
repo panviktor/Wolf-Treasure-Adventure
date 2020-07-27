@@ -8,5 +8,6 @@
 
 class SceneManager {
     static let shared = SceneManager()
-    var gameScene: MainScene?
+    var mainScene: MainScene?
+    var gameScene: GameScene?
 }

@@ -119,7 +119,7 @@ class TopScoreScene: SKScene {
         self.recursiveRemovingSKActions(sknodes: self.children)
         self.removeAllChildren()
         self.removeAllActions()
-        sceneManager.gameScene = nil
+        sceneManager.mainScene = nil
         let newScene = MainScene(size: self.size)
         self.view?.presentScene(newScene)
     }

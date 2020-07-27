@@ -31,8 +31,8 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
     private let screenSize: CGRect = UIScreen.main.bounds
     
     override func didMove(to view: SKView) {
-        guard sceneManager.gameScene == nil else { return }
-        sceneManager.gameScene = self
+        guard sceneManager.mainScene == nil else { return }
+        sceneManager.mainScene = self
         removeUIViews()
         // Setting up delegate for Physics World & Set up gravity
         physicsWorld.contactDelegate = self
@@ -155,7 +155,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
             let transition = SKTransition.doorway(withDuration: 0.5)
             let winLevel = WinLevelScene(size: self.size)
             winLevel.scaleMode = .aspectFill
-            sceneManager.gameScene = self
+            sceneManager.mainScene = self
             self.scene?.isPaused = true
             self.scene!.view?.presentScene(winLevel, transition: transition)
         }

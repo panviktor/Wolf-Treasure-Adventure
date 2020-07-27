@@ -18,6 +18,7 @@ class EndChapterScene: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         sceneManager.gameScene = nil
+        sceneManager.mainScene = nil
         let scene = MainScene(size: self.size)
         self.view?.presentScene(scene)
     }

@@ -26,15 +26,20 @@ class WinLevelScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let transition = SKTransition.crossFade(withDuration: 1.0)
         guard let gameScene = sceneManager.gameScene else { return }
+       
+        gameScene.recursiveRemovingSKActions(sknodes: self.children)
+        gameScene.removeAllChildren()
+        gameScene.removeAllActions()
+        
         gameScene.scaleMode = .aspectFill
         self.scene!.view?.presentScene(gameScene, transition: transition)
     }
     
     private func loadBackground() {
-        let bg = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.winLevelSceneBackground))
-        bg.anchorPoint = CGPoint(x: 0.0, y: 0.0)
-        bg.size = CGSize(width: screenSize.width, height: screenSize.height)
-        self.addChild(bg)
+        let background = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.winLevelSceneBackground))
+        background.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+        background.size = CGSize(width: screenSize.width, height: screenSize.height)
+        self.addChild(background)
     }
 }
 

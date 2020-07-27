@@ -14,12 +14,14 @@ class GameScene: SKScene {
     private var sliceSoundAction: SKAction!
     private var splashSoundAction: SKAction!
     private var nomNomSoundAction: SKAction!
-    
+    private let sceneManager = SceneManager.shared
     private var isLevelOver = false
     private var didCutVine = false
     
     override func didMove(to view: SKView) {
         setUpLevel(number: currentLevelNum)
+        guard sceneManager.gameScene == nil else { return }
+        sceneManager.gameScene = self
     }
     
     //MARK: - Level setup
@@ -85,10 +87,10 @@ class GameScene: SKScene {
             switch item.type {
             case .wood:
                 
-//                let anchorPoint = CGPoint(
-//                    x: item.xAnchorPoint * size.width,
-//                    y: item.yAnchorPoint * size.height)
-                            let anchorPoint = CGPoint(
+                //                let anchorPoint = CGPoint(
+                //                    x: item.xAnchorPoint * size.width,
+                //                    y: item.yAnchorPoint * size.height)
+                let anchorPoint = CGPoint(
                     x: item.xAnchorPoint * size.width,
                     y: item.yAnchorPoint * size.height)
                 
@@ -211,22 +213,29 @@ class GameScene: SKScene {
     
     private func switchToNewGame(withTransition transition: SKTransition) {
         if currentLevelNum <= GameConfiguration.maximumLevel  {
-            let delay = SKAction.wait(forDuration: 1)
+            let delay = SKAction.wait(forDuration: 0.5)
             let sceneChange = SKAction.run {
                 let scene = GameScene(size: self.size)
                 scene.currentLevelNum = self.currentLevelNum
-                self.view?.presentScene(scene, transition: transition)
+                
+                print(#line, #function)
+                let transition = SKTransition.doorway(withDuration: 0.5)
+                let winLevel = WinLevelScene(size: self.size)
+                winLevel.scaleMode = .aspectFill
+                
+//self.scene!.view?.presentScene(winLevel, transition: transition)
+//self.view?.presentScene(scene, transition: transition)
             }
             run(.sequence([delay, sceneChange]))
         } else  {
-                  self.run(SKAction.sequence([SKAction.wait(forDuration: 4), SKAction.run {
-                     self.recursiveRemovingSKActions(sknodes: self.children)
-                     self.removeAllChildren()
-                     self.removeAllActions()
-                     let scene = EndChapterScene(size: self.size)
-                    print(#line)
-                     self.view?.presentScene(scene)
-                     }]))
+            self.run(SKAction.sequence([SKAction.wait(forDuration: 0.5), SKAction.run {
+                self.recursiveRemovingSKActions(sknodes: self.children)
+                self.removeAllChildren()
+                self.removeAllActions()
+                let scene = EndChapterScene(size: self.size)
+                print(#line, #function)
+                self.view?.presentScene(scene)
+                }]))
         }
     }
     
@@ -278,12 +287,14 @@ class GameScene: SKScene {
 }
 
 extension GameScene: SKPhysicsContactDelegate {
+    
     override func update(_ currentTime: TimeInterval) {
         if isLevelOver {
             return
         }
-        
+        print(prize.position.y)
         if prize.position.y <= 0 {
+            print(#line, #function)
             isLevelOver = true
             run(splashSoundAction)
             switchToNewGame(withTransition: .fade(withDuration: 1.0))
@@ -308,6 +319,7 @@ extension GameScene: SKPhysicsContactDelegate {
             run(nomNomSoundAction)
             runNomNomAnimation(withDelay: 0.15)
             // transition to next level
+            print(#line, #function)
             switchToNewGame(withTransition: .doorway(withDuration: 1.0))
         }
     }
