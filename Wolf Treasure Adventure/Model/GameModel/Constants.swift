@@ -25,7 +25,27 @@ enum ImageName {
     static let prize = "Pineapple"
     static let prizeMask = "PineappleMask"
     static let woodTexture = "Wood"
-
+    
+    /// End Chapter Scene Textures
+    static let endChapterSceneBackground = "EndChapterSceneBackground"
+    
+    /// Win Level Scene Texture
+    static let winLevelSceneBackground = "WinLevelSceneBackground"
+    
+    /// Game Settings Scene Texture
+    static let gameSceneSettingsBackground = "GameSceneSettingBackground"
+    static let gameSceneSettingsTitleLabel = "GameSceneSettingsTitleLabel"
+    static let gameSceneSettingsNode = "GameSceneSettingsNode"
+    static let gameSceneSettingsBackButton = "GameSceneSettingsBackButton"
+    static let gameSceneSettingsVibroButton = "GameSceneSettingsVibroButton"
+    static let gameSceneSettingsMusicButton = "GameSceneSettingsMusicButton"
+    
+    /// Game Top Score  Texture
+    static let topScoreSceneBackground = "TopScoreSceneBackground"
+    static let topScoreSceneTitleLabel = "TopScoreSceneTitleLabel"
+    static let topScoreSceneBackButton = "TopScoreSceneBackButton"
+    static let topScoreSceneNode = "TopScoreSceneNode"
+    
 }
 
 enum SoundFile {

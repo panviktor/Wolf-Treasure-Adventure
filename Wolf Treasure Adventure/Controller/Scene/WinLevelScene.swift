@@ -9,10 +9,10 @@
 import SpriteKit
 
 class WinLevelScene: SKScene {
-    let sceneManager = SceneManager.shared
-   let screenSize: CGRect = UIScreen.main.bounds
+    private let sceneManager = SceneManager.shared
+    private let screenSize: CGRect = UIScreen.main.bounds
     override func didMove(to view: SKView) {
-       loadBackground()
+        loadBackground()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -24,14 +24,14 @@ class WinLevelScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            let transition = SKTransition.crossFade(withDuration: 1.0)
-            guard let gameScene = sceneManager.gameScene else { return }
-            gameScene.scaleMode = .aspectFill
-            self.scene!.view?.presentScene(gameScene, transition: transition)        
+        let transition = SKTransition.crossFade(withDuration: 1.0)
+        guard let gameScene = sceneManager.gameScene else { return }
+        gameScene.scaleMode = .aspectFill
+        self.scene!.view?.presentScene(gameScene, transition: transition)
     }
     
     private func loadBackground() {
-        let bg = SKSpriteNode(texture: SKTexture(imageNamed: "YouWin.jpg"))
+        let bg = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.winLevelSceneBackground))
         bg.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         bg.size = CGSize(width: screenSize.width, height: screenSize.height)
         self.addChild(bg)

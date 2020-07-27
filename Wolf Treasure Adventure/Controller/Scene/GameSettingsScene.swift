@@ -8,9 +8,15 @@
 
 import SpriteKit
 
-class GameSettingsScene: SKScene{
+class GameSettingsScene: SKScene {
     private enum State {
         case Select
+    }
+    
+    private enum GameSettingsSceneButton: String {
+        case BackButton
+        case VibroButton
+        case MusicButton
     }
     
     private let settingsNode = SKSpriteNode()
@@ -27,11 +33,11 @@ class GameSettingsScene: SKScene{
     }
     
     private func loadBackground() {
-        let bg = SKSpriteNode(texture: SKTexture(imageNamed: "EndChapterSceneBackground"))
-        bg.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        bg.size = CGSize(width: screenSize.width, height: screenSize.height)
-        bg.zPosition = -10
-        self.addChild(bg)
+        let loadBackground = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.gameSceneSettingsBackground))
+        loadBackground.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        loadBackground.size = CGSize(width: screenSize.width, height: screenSize.height)
+        loadBackground.zPosition = -10
+        self.addChild(loadBackground)
     }
     
     private func load(){
@@ -41,7 +47,7 @@ class GameSettingsScene: SKScene{
         title.position.y = screenSize.size.height / 3.5
         title.size = CGSize(width: screenSize.width * 0.6, height: screenSize.height * 0.12)
         
-        let titleLabel = SKLabelNode(fontNamed: "KohinoorTelugu-Medium")
+        let titleLabel = SKLabelNode(fontNamed: "PingFangSC-Regular")
         titleLabel.text = "Settings"
         titleLabel.position.y = -title.size.height / 5.5
         titleLabel.fontColor = SKColor(#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1))
@@ -51,31 +57,31 @@ class GameSettingsScene: SKScene{
         self.addChild(title)
         
         // BackArrow
-        let backarrow = SKSpriteNode(texture: SKTexture(imageNamed: ""))
-        backarrow.name = ""
+        let backarrow = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.gameSceneSettingsBackButton))
+        backarrow.name = GameSettingsSceneButton.BackButton.rawValue
         backarrow.anchorPoint = CGPoint(x: 1.0, y: 0.5)
         backarrow.position = CGPoint(x: -title.size.width/2 - 10, y: title.position.y + 3)
         backarrow.size = CGSize(width: screenSize.width/8, height: screenSize.height*0.06)
         self.addChild(backarrow)
         
         // settingsNode
-        settingsNode.texture = SKTexture(imageNamed: "")
+        settingsNode.texture = SKTexture(imageNamed: ImageName.gameSceneSettingsNode)
         settingsNode.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        settingsNode.size = CGSize(width: screenSize.width/1.25, height: screenSize.height / 3.8)
+        settingsNode.size = CGSize(width: screenSize.width / 1.25, height: screenSize.height / 3.8)
         settingsNode.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: 15, duration: 1),
                                                                    SKAction.moveBy(x: 0, y: -15, duration: 3)])))
         
         //vibro button
-        let vibroButton = SKSpriteNode(texture:  SKTexture(imageNamed: ""))
-        vibroButton.name = "vibroToggle"
+        let vibroButton = SKSpriteNode(texture:  SKTexture(imageNamed: ImageName.gameSceneSettingsVibroButton))
+        vibroButton.name = GameSettingsSceneButton.VibroButton.rawValue
         vibroButton.anchorPoint = CGPoint(x: 0.5, y: 0.2)
         vibroButton.position.y = settingsNode.size.height / 6
         vibroButton.size = CGSize(width: settingsNode.size.width / 3.25, height: settingsNode.size.height / 2.75)
         settingsNode.addChild(vibroButton)
         
         //sound button
-        let musicButton = SKSpriteNode(texture:  SKTexture(imageNamed: ""))
-        musicButton.name = "musicToogle"
+        let musicButton = SKSpriteNode(texture:  SKTexture(imageNamed: ImageName.gameSceneSettingsMusicButton))
+        musicButton.name = GameSettingsSceneButton.MusicButton.rawValue
         musicButton.anchorPoint = CGPoint(x: 0.5, y: 0.95)
         musicButton.size = CGSize(width: settingsNode.size.width / 3.25, height: settingsNode.size.height / 2.75)
         settingsNode.addChild(musicButton)
@@ -92,11 +98,11 @@ class GameSettingsScene: SKScene{
         switch state {
         case .Select:
             for c in nodes(at: pos){
-                if c.name == "backButton" {
+                if c.name == GameSettingsSceneButton.BackButton.rawValue {
                     backButtonPressed()
-                } else if c.name == "vibroToggle" {
+                } else if c.name == GameSettingsSceneButton.VibroButton.rawValue {
                     audioVibroManager.vibroToggle()
-                } else if c.name == "musicToogle" {
+                } else if c.name == GameSettingsSceneButton.MusicButton.rawValue {
                     audioVibroManager.musicToggle()
                 }
             }

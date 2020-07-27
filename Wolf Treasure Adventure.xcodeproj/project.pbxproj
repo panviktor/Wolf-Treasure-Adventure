@@ -244,10 +244,10 @@
 				14FEE48A24CEB62400C47B75 /* Managers */,
 				14FEE48824CEB22300C47B75 /* MainScene.swift */,
 				14F1777324CB0A5D006463F2 /* GameScene.swift */,
-				14FEE49124CEB73000C47B75 /* EndChapterScene.swift */,
 				14FEE49224CEB73000C47B75 /* GameSettingsScene.swift */,
 				14FEE48F24CEB73000C47B75 /* TopScoreScene.swift */,
 				14FEE49024CEB73000C47B75 /* WinLevelScene.swift */,
+				14FEE49124CEB73000C47B75 /* EndChapterScene.swift */,
 				14FEE49724CEBCAF00C47B75 /* Infobar.swift */,
 			);
 			path = Scene;

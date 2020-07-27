@@ -20,14 +20,14 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         case WinLevelScene
     }
     
-    enum MainSceneButton: String {
+    private  enum MainSceneButton: String {
         case PlayButton
         case SettingsButton
         case ScoreButton
     }
     
-    let sceneManager = SceneManager.shared
-    let screenSize: CGRect = UIScreen.main.bounds
+    private   let sceneManager = SceneManager.shared
+    private  let screenSize: CGRect = UIScreen.main.bounds
     
     override func didMove(to view: SKView) {
         guard sceneManager.gameScene == nil else { return }
@@ -40,7 +40,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         loadBackground()
     }
     
-    func loadBackground(){
+    private func loadBackground(){
         let mainSceneBackground = SKSpriteNode()
         mainSceneBackground.texture = SKTexture(imageNamed: ImageName.mainSceneBackground)
         mainSceneBackground.position = CGPoint(x: screenSize.width/2, y: screenSize.height/2)
@@ -106,9 +106,9 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         case .SettingsButton:
             button.texture = SKTexture(imageNamed: ImageName.mainSceneSettingsButton)
         case .ScoreButton:
-             button.texture = SKTexture(imageNamed: ImageName.mainSceneScoreButton)
+            button.texture = SKTexture(imageNamed: ImageName.mainSceneScoreButton)
         }
-       
+        
         button.position = CGPoint(x: dx, y: dy)
         button.size = CGSize(width: screenSize.width / 4, height: screenSize.height / 16)
         button.name = name.rawValue

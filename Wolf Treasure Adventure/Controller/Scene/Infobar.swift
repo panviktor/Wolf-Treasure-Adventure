@@ -15,8 +15,8 @@ class Infobar: SKSpriteNode{
         case Fifth // Above the 'Fourth' Label. Visible once game state == .Start
     }
     
-    let sceneManager = SceneManager.shared
-    let screenSize: CGRect = UIScreen.main.bounds
+    private let sceneManager = SceneManager.shared
+    private let screenSize: CGRect = UIScreen.main.bounds
     
     private let mainRootWidth: CGFloat = UIScreen.main.bounds.width
     private let mainRootHeight: CGFloat = 100
@@ -36,6 +36,7 @@ class Infobar: SKSpriteNode{
         size = CGSize(width: mainRootWidth, height: mainRootHeight)
         anchorPoint = CGPoint(x: 0.0, y: 0.0)
         position = CGPoint(x: 0, y: screenSize.height * 0.85)
+        
         // Main_Menu_Currency_Bar
         firstTemplate = generateTemplate(templateStyle: .First, itemSize: rootItemSize, name: "topbar_first_item",  previousPos: nil)
         secondTemplate = generateTemplate(templateStyle: .Second, itemSize: rootItemSize, name: "topbar_second_item",  previousPos: firstTemplate.position)
@@ -152,7 +153,7 @@ class Infobar: SKSpriteNode{
         let height = itemSize.height
         let node = makeTemplateNode(width: width, height: height, dx: prev.x + itemSize.width, name: "topbar_right_corner")
         node.position.y += 100 // decrease 100 to show to user
-
+        
         node.alpha = 0.0
         return node
     }

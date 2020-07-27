@@ -9,7 +9,7 @@ class EndChapterScene: SKScene {
     }
     
     private func loadBackground() {
-        let bg = SKSpriteNode(texture: SKTexture(imageNamed: "EndChapterSceneBackground"))
+        let bg = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.endChapterSceneBackground))
         bg.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         bg.size = CGSize(width: screenSize.width, height: screenSize.height)
         bg.zPosition = -10
