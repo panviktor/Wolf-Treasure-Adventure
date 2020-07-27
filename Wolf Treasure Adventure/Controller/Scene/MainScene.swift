@@ -16,8 +16,9 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         case GameSettingsScene
         case TopScoreScene
         
-        case EndChapterScene
         case WinLevelScene
+        case EndChapterScene
+        
     }
     
     private enum MainSceneButton: String {
@@ -142,7 +143,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
             self.view?.presentScene(newScene)
             
         case .EndChapterScene:
-            self.run(SKAction.sequence([SKAction.wait(forDuration: 4), SKAction.run {
+            self.run(SKAction.sequence([SKAction.wait(forDuration: 0.1), SKAction.run {
                 self.recursiveRemovingSKActions(sknodes: self.children)
                 self.removeAllChildren()
                 self.removeAllActions()

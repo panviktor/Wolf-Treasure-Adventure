@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Pineapple.png",
+      "filename" : "moon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Pineapple@2x.png",
+      "filename" : "moon-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Pineapple@3x.png",
+      "filename" : "moon-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

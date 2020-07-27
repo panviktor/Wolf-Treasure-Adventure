@@ -219,7 +219,14 @@ class GameScene: SKScene {
             }
             run(.sequence([delay, sceneChange]))
         } else  {
-            print("WIiIiiiiiiiiiiiiiIIIIIIiiiiIiiisqcbbbm3333")
+                  self.run(SKAction.sequence([SKAction.wait(forDuration: 4), SKAction.run {
+                     self.recursiveRemovingSKActions(sknodes: self.children)
+                     self.removeAllChildren()
+                     self.removeAllActions()
+                     let scene = EndChapterScene(size: self.size)
+                    print(#line)
+                     self.view?.presentScene(scene)
+                     }]))
         }
     }
     
