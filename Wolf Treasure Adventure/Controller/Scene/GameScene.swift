@@ -212,28 +212,37 @@ class GameScene: SKScene {
     }
     
     private func switchToNewGame(withTransition transition: SKTransition) {
-        if currentLevelNum <= GameConfiguration.maximumLevel  {
+        if currentLevelNum <= GameConfiguration.maximumLevel && isLevelOver {
             let delay = SKAction.wait(forDuration: 0.5)
             let sceneChange = SKAction.run {
                 let scene = GameScene(size: self.size)
                 scene.currentLevelNum = self.currentLevelNum
-                
-                print(#line, #function)
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 let winLevel = WinLevelScene(size: self.size)
                 winLevel.scaleMode = .aspectFill
-                
-//self.scene!.view?.presentScene(winLevel, transition: transition)
-//self.view?.presentScene(scene, transition: transition)
+                print(#line, "New Level")
+                self.scene!.view?.presentScene(winLevel, transition: transition)
             }
             run(.sequence([delay, sceneChange]))
-        } else  {
+        } else if currentLevelNum <= GameConfiguration.maximumLevel  {
+            let delay = SKAction.wait(forDuration: 0.5)
+            let sceneChange = SKAction.run {
+                let scene = GameScene(size: self.size)
+                scene.currentLevelNum = self.currentLevelNum
+                let transition = SKTransition.doorway(withDuration: 0.5)
+                let winLevel = WinLevelScene(size: self.size)
+                winLevel.scaleMode = .aspectFill
+                print(#line, "Try Again")
+                self.view?.presentScene(scene, transition: transition)
+            }
+            run(.sequence([delay, sceneChange]))
+        } else {
             self.run(SKAction.sequence([SKAction.wait(forDuration: 0.5), SKAction.run {
                 self.recursiveRemovingSKActions(sknodes: self.children)
                 self.removeAllChildren()
                 self.removeAllActions()
                 let scene = EndChapterScene(size: self.size)
-                print(#line, #function)
+                print(#line, "End Chapter")
                 self.view?.presentScene(scene)
                 }]))
         }
@@ -292,9 +301,8 @@ extension GameScene: SKPhysicsContactDelegate {
         if isLevelOver {
             return
         }
-        print(prize.position.y)
+        
         if prize.position.y <= 0 {
-            print(#line, #function)
             isLevelOver = true
             run(splashSoundAction)
             switchToNewGame(withTransition: .fade(withDuration: 1.0))

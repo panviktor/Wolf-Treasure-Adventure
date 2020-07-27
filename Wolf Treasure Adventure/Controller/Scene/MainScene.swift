@@ -15,10 +15,6 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         
         case GameSettingsScene
         case TopScoreScene
-        
-        case WinLevelScene
-        case EndChapterScene
-        
     }
     
     private enum MainSceneButton: String {
@@ -142,22 +138,28 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
             let newScene = TopScoreScene(size: self.size)
             self.view?.presentScene(newScene)
             
-        case .EndChapterScene:
-            self.run(SKAction.sequence([SKAction.wait(forDuration: 0.1), SKAction.run {
-                self.recursiveRemovingSKActions(sknodes: self.children)
-                self.removeAllChildren()
-                self.removeAllActions()
-                let scene = EndChapterScene(size: self.size)
-                self.view?.presentScene(scene)
-                }]))
-            
-        case .WinLevelScene:
-            let transition = SKTransition.doorway(withDuration: 0.5)
-            let winLevel = WinLevelScene(size: self.size)
-            winLevel.scaleMode = .aspectFill
-            sceneManager.mainScene = self
-            self.scene?.isPaused = true
-            self.scene!.view?.presentScene(winLevel, transition: transition)
+//        case .EndChapterScene:
+//            self.run(SKAction.sequence([SKAction.wait(forDuration: 0.1), SKAction.run {
+//                self.recursiveRemovingSKActions(sknodes: self.children)
+//                self.removeAllChildren()
+//                self.removeAllActions()
+//                let scene = EndChapterScene(size: self.size)
+//                self.view?.presentScene(scene)
+//                }]))
+//
+//        case .WinLevelScene:
+//            let transition = SKTransition.doorway(withDuration: 0.5)
+//            let winLevel = WinLevelScene(size: self.size)
+//            winLevel.scaleMode = .aspectFill
+//            sceneManager.mainScene = self
+//            self.scene?.isPaused = true
+//            self.scene!.view?.presentScene(winLevel, transition: transition)
         }
     }
 }
+
+//
+
+
+
+
