@@ -8,7 +8,8 @@ class GameScene: SKScene {
     private var woods: SKSpriteNode!
     
     private var level: Level!
-    private var currentLevelNum = 1
+    
+    var currentLevelNum = 1
     
     private static var backgroundMusicPlayer: AVAudioPlayer!
     private var sliceSoundAction: SKAction!
@@ -16,6 +17,7 @@ class GameScene: SKScene {
     private var nomNomSoundAction: SKAction!
     private let sceneManager = SceneManager.shared
     private var isLevelOver = false
+    private var isLevelWin = false
     private var didCutVine = false
     
     override func didMove(to view: SKView) {
@@ -212,26 +214,23 @@ class GameScene: SKScene {
     }
     
     private func switchToNewGame(withTransition transition: SKTransition) {
-        if currentLevelNum <= GameConfiguration.maximumLevel && isLevelOver {
+        if currentLevelNum <= GameConfiguration.maximumLevel && isLevelOver && isLevelWin {
             let delay = SKAction.wait(forDuration: 0.5)
             let sceneChange = SKAction.run {
-                let scene = GameScene(size: self.size)
-                scene.currentLevelNum = self.currentLevelNum
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 let winLevel = WinLevelScene(size: self.size)
+                winLevel.nextLevel = self.currentLevelNum
                 winLevel.scaleMode = .aspectFill
                 print(#line, "New Level")
-                self.scene!.view?.presentScene(winLevel, transition: transition)
+                self.view?.presentScene(winLevel, transition: transition)
             }
             run(.sequence([delay, sceneChange]))
-        } else if currentLevelNum <= GameConfiguration.maximumLevel  {
+        } else if currentLevelNum <= GameConfiguration.maximumLevel && !isLevelWin {
             let delay = SKAction.wait(forDuration: 0.5)
             let sceneChange = SKAction.run {
                 let scene = GameScene(size: self.size)
                 scene.currentLevelNum = self.currentLevelNum
                 let transition = SKTransition.doorway(withDuration: 0.5)
-                let winLevel = WinLevelScene(size: self.size)
-                winLevel.scaleMode = .aspectFill
                 print(#line, "Try Again")
                 self.view?.presentScene(scene, transition: transition)
             }
@@ -318,6 +317,7 @@ extension GameScene: SKPhysicsContactDelegate {
             || (contact.bodyA.node == prize && contact.bodyB.node == crocodile) {
             
             isLevelOver = true
+            isLevelWin = true
             currentLevelNum += 1
             // shrink the pineapple away
             let shrink = SKAction.scale(to: 0, duration: 0.08)

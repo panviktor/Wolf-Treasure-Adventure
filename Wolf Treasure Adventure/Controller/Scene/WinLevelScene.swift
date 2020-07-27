@@ -11,6 +11,7 @@ import SpriteKit
 class WinLevelScene: SKScene {
     private let sceneManager = SceneManager.shared
     private let screenSize: CGRect = UIScreen.main.bounds
+    var nextLevel: Int!
     override func didMove(to view: SKView) {
         loadBackground()
     }
@@ -24,15 +25,23 @@ class WinLevelScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let transition = SKTransition.crossFade(withDuration: 1.0)
+//        let transition = SKTransition.crossFade(withDuration: 1.0)
         guard let gameScene = sceneManager.gameScene else { return }
        
+       
+
         gameScene.recursiveRemovingSKActions(sknodes: self.children)
         gameScene.removeAllChildren()
         gameScene.removeAllActions()
         
-        gameScene.scaleMode = .aspectFill
-        self.scene!.view?.presentScene(gameScene, transition: transition)
+//        gameScene.scaleMode = .aspectFill
+
+//        self.scene!.view?.presentScene(gameScene, transition: transition)
+        
+        let scene = GameScene(size: self.size)
+        scene.currentLevelNum = nextLevel
+        self.view?.presentScene(scene)
+   
     }
     
     private func loadBackground() {
