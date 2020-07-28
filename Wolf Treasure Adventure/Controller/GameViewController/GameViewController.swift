@@ -2,6 +2,8 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    private let screenSize = UIScreen.main.bounds.size
+    
     //MARK: - ViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +21,9 @@ class GameViewController: UIViewController {
         skView.showsFPS = false
         skView.showsNodeCount = false
         skView.ignoresSiblingOrder = true
-        
-        // Create and configure the scene.
-//        let scene = GameScene(size: CGSize(width: 375, height: 667))
-        
-        let scene = GameScene(size: UIScreen.main.bounds.size)
+
+//      let scene = GameScene(size: CGSize(width: 375, height: 667))
+        let scene = MainScene(size: screenSize)
         scene.scaleMode = .aspectFill
         skView.presentScene(scene)
     }
