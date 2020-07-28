@@ -58,17 +58,17 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         root.color = .clear
         root.name = "RootSKSpriteNode"
         root.size = CGSize(width: screenSize.width, height: screenSize.height * 0.7)
-        root.position = CGPoint(x: screenSize.width / 2, y: screenSize.height * 0.55)
+        root.position = CGPoint(x: screenSize.width / 2, y: screenSize.height / 1.5)
         root.zPosition = -7
         self.addChild(root)
 
-        let bd_one_button = createUIButton(name: MainSceneButton.PlayButton, offsetPosX: 0, offsetPosY: 0)
+        let bd_one_button = createUIButton(name: MainSceneButton.PlayButton, offsetPosX: 0, offsetPosY: 140)
         root.addChild(bd_one_button)
 
-        let bd_two_button = createUIButton(name: MainSceneButton.SettingsButton, offsetPosX: 50, offsetPosY: 50)
+        let bd_two_button = createUIButton(name: MainSceneButton.SettingsButton, offsetPosX: 0, offsetPosY: 0)
         root.addChild(bd_two_button)
 
-        let bd_three_button = createUIButton(name: MainSceneButton.ScoreButton, offsetPosX: -20, offsetPosY: 100)
+        let bd_three_button = createUIButton(name: MainSceneButton.ScoreButton, offsetPosX: 0, offsetPosY: -140)
         root.addChild(bd_three_button)
     }
     
@@ -107,7 +107,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         }
         
         button.position = CGPoint(x: dx, y: dy)
-        button.size = CGSize(width: screenSize.width / 4, height: screenSize.height / 16)
+        button.size = CGSize(width: screenSize.width / 3, height: screenSize.height / 8)
         button.name = name.rawValue
         return button
     }

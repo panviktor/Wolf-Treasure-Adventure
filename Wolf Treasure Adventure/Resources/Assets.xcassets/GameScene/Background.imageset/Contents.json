@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "FON-1.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "FON-2.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "FON-3.jpg",
+      "filename" : "Background.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

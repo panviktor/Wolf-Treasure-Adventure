@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "RopeTexture.png",
+      "filename" : "RopeTexture@3x-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "RopeTexture@2x.png",
+      "filename" : "RopeTexture@3x-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
