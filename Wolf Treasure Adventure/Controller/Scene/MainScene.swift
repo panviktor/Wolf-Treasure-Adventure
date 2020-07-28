@@ -48,10 +48,11 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         
         let cloud = SKSpriteNode()
         cloud.texture = SKTexture(imageNamed: ImageName.mainSceneCloud)
-        cloud.position = CGPoint(x: screenSize.width/2, y: screenSize.height*0.40)
-        cloud.size = CGSize(width: screenSize.width, height: screenSize.height*3/4)
+        cloud.position = CGPoint(x: screenSize.width/2, y: screenSize.height * 0.60)
+        cloud.size = CGSize(width: screenSize.width, height: screenSize.height * 3 / 4)
         cloud.zPosition = -9
         cloud.name = ImageName.mainSceneCloud
+        cloud.alpha = 0.8
         self.addChild(cloud)
 
         let root = SKSpriteNode()
@@ -70,6 +71,9 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
 
         let bd_three_button = createUIButton(name: MainSceneButton.ScoreButton, offsetPosX: 0, offsetPosY: -140)
         root.addChild(bd_three_button)
+        
+        cloud.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: 25, duration: 3),
+                                                            SKAction.moveBy(x: 0, y: -5, duration: 3)])))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

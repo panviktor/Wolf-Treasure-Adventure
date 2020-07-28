@@ -30,8 +30,8 @@ class WelcomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadGUI()
-        itemElementImage.pulsate(_repeatCount: 100)
-        playButton.pulsate(_repeatCount: 100)
+        itemElementImage.rotate(5)
+        playButton.pulsate(100)
     }
     
     private func loadGUI() {
@@ -42,16 +42,17 @@ class WelcomeViewController: UIViewController {
         rootView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
         
         view.addSubview(itemElementImage)
-        itemElementImage.widthAnchor.constraint(equalToConstant: 300).isActive = true
-        itemElementImage.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        itemElementImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
+        itemElementImage.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        itemElementImage.heightAnchor.constraint(equalToConstant: 150).isActive = true
         itemElementImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        itemElementImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
-
+       
+        
         view.addSubview(playButton)
         playButton.topAnchor.constraint(equalTo: itemElementImage.topAnchor, constant: 50).isActive = true
-        playButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 20).isActive = true
-        playButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
-        playButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15).isActive = true
+        playButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 55).isActive = true
+        playButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25).isActive = true
+        playButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25).isActive = true
     }
     
     override var prefersStatusBarHidden: Bool {
