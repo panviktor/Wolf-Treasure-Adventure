@@ -38,13 +38,7 @@ class TopScoreScene: SKScene {
         self.addChild(loadBackground)
     }
     
-    private func load(){
-        //GameInfo Load
-        let infobar = Infobar(name: "infobar")
-        self.addChild(infobar)
-        infobar.position.y = (screenSize.size.height / 2) - infobar.mainRootHeight
-        infobar.position.x = screenSize.size.width / -2
-        infobar.anchorPoint = CGPoint(x: 0, y: 0)
+    private func load() {
         // Title
         let title = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.topScoreSceneTitleLabel))
         title.anchorPoint = CGPoint(x: 0.5, y: 0.5)

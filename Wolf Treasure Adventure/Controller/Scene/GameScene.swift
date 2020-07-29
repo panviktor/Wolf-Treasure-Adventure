@@ -9,7 +9,7 @@ class GameScene: SKScene {
     private var level: Level!
     
     var currentLevelNum = 1
-    
+    private let screenSize: CGRect = UIScreen.main.bounds
     private let sceneManager = SceneManager.shared
     private var isLevelOver = false
     private var isLevelWin = false
@@ -105,7 +105,7 @@ class GameScene: SKScene {
         
         //FIXME: - load from level
         heroes.position = CGPoint(x: size.width * level.heroesPosition.x,
-                                     y: size.height * level.heroesPosition.y)
+                                  y: size.height * level.heroesPosition.y)
         
         heroes.zPosition = Layer.crocodile
         heroes.physicsBody = SKPhysicsBody(
@@ -245,6 +245,16 @@ class GameScene: SKScene {
     private func setUpLevel(number: Int) {
         let levelString = "Level_\(number)"
         level = Level.init(filename: levelString)
+        
+        let infobar = Infobar(name: "infobar")
+        self.addChild(infobar)
+        infobar.position.y = (screenSize.size.height) - infobar.mainRootHeight
+        infobar.position.x = 0
+        infobar.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+        infobar.zPosition = 50
+        infobar.updateLevelLabel(levelName: level.levelName)
+        
+        
         setUpPhysics()
         setUpScenery()
         setUpPrize()

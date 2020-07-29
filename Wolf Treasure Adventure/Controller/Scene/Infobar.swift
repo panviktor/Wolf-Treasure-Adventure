@@ -79,8 +79,8 @@ class Infobar: SKSpriteNode {
         case .Second:
             let labelText = SKLabelNode(fontNamed: "KohinoorTelugu-Medium")
             labelText.text = "Level Name First"
-            labelText.fontSize = 20
-            labelText.fontColor = SKColor(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1))
+            labelText.fontSize = 25
+            labelText.fontColor = SKColor(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1))
             labelText.horizontalAlignmentMode = .center
             labelText.verticalAlignmentMode = .center
             labelText.position = CGPoint(x: node.position.x / 2, y: node.position.y / 2)
