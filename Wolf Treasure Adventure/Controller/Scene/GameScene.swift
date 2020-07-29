@@ -251,6 +251,7 @@ class GameScene: SKScene {
         setUpVines()
         setUpCrocodile()
         setUpWoods()
+        try? audioVibroManager.playLevelMusic(type: .mainSceneBackground)
     }
 }
 

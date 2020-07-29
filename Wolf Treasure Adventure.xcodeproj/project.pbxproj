@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142D3D8024D18FE000DB314A /* gradientMonoTone.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 142D3D7F24D18FE000DB314A /* gradientMonoTone.fsh */; };
 		14F1775C24CB094B006463F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1775B24CB094B006463F2 /* AppDelegate.swift */; };
 		14F1776524CB094D006463F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F1776424CB094D006463F2 /* Assets.xcassets */; };
 		14F1776824CB094D006463F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F1776624CB094D006463F2 /* LaunchScreen.storyboard */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142D3D7F24D18FE000DB314A /* gradientMonoTone.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gradientMonoTone.fsh; sourceTree = "<group>"; };
 		14F1775824CB094B006463F2 /* Wolf Treasure Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wolf Treasure Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F1775B24CB094B006463F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F1776424CB094D006463F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				14F1777D24CB0A7E006463F2 /* Particle.sks */,
 				14F1777E24CB0A7E006463F2 /* Particle@2x.png */,
 				14F1777F24CB0A7E006463F2 /* Particle.png */,
+				142D3D7F24D18FE000DB314A /* gradientMonoTone.fsh */,
 			);
 			path = Particles;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				14F1778824CB0A7E006463F2 /* Particle.sks in Resources */,
 				14F1776524CB094D006463F2 /* Assets.xcassets in Resources */,
 				14F1778F24CB0A7E006463F2 /* Level_1.json in Resources */,
+				142D3D8024D18FE000DB314A /* gradientMonoTone.fsh in Resources */,
 				14F1778A24CB0A7E006463F2 /* Particle.png in Resources */,
 				14F1778B24CB0A7E006463F2 /* CheeZeeJungle.caf in Resources */,
 				14F1778C24CB0A7E006463F2 /* NomNom.caf in Resources */,

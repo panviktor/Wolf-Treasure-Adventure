@@ -27,16 +27,10 @@ class WinLevelScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        let transition = SKTransition.crossFade(withDuration: 1.0)
         guard let gameScene = sceneManager.gameScene else { return }
-       
-       
 
         gameScene.recursiveRemovingSKActions(sknodes: self.children)
         gameScene.removeAllChildren()
         gameScene.removeAllActions()
-        
-//        gameScene.scaleMode = .aspectFill
-
-//        self.scene!.view?.presentScene(gameScene, transition: transition)
         
         let scene = GameScene(size: self.size)
         scene.currentLevelNum = nextLevel

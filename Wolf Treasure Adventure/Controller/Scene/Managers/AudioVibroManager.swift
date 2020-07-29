@@ -69,6 +69,8 @@ final class AudioVibroManager {
         }
         backgroundMusic = try AVAudioPlayer(contentsOf: urlToPlay)
         backgroundMusic?.numberOfLoops = -1
+        
+        playMusic()
     }
     
     func getAction(type: SoundType) -> SKAction{

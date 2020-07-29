@@ -21,6 +21,7 @@ class TopScoreScene: SKScene {
     private var state:State = .Select
     private weak var scoreManager = ScoreManager.shared
     private let sceneManager = SceneManager.shared
+    private let audioVibroManager = AudioVibroManager.shared
     private let screenSize: CGRect = UIScreen.main.bounds
     
     override func didMove(to view: SKView) {
@@ -40,8 +41,8 @@ class TopScoreScene: SKScene {
     private func load(){
         //GameInfo Load
         let infobar = self.childNode(withName: "infobar")!
-        infobar.position.y -= screenSize.size.height/2
-        infobar.position.x -= screenSize.size.width/2
+        infobar.position.y -= screenSize.size.height / 2
+        infobar.position.x -= screenSize.size.width / 2
         
         // Title
         let title = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.topScoreSceneTitleLabel))
@@ -88,7 +89,6 @@ class TopScoreScene: SKScene {
         silverScore.fontSize = screenSize.width / 17
         scoreNode.addChild(silverScore.shadowNode(nodeName: "silverScoreLabel"))
         
-        
         let bronzeScore = SKLabelNode(fontNamed: "PingFangSC-Regular")
         bronzeScore.position.y = -scoreNode.size.height / 4
         bronzeScore.text = "#3 \(scoreManager?.thirdScore ?? 0)"
@@ -97,6 +97,7 @@ class TopScoreScene: SKScene {
         scoreNode.addChild(bronzeScore.shadowNode(nodeName: "bronzeScoreLabel"))
         
         self.addChild(scoreNode)
+        try? audioVibroManager.playLevelMusic(type: .mainSceneBackground)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -42,7 +42,7 @@ class GameSettingsScene: SKScene {
     
     private func load(){
         // Title
-        let title = SKSpriteNode(texture: SKTexture(imageNamed: ""))
+        let title = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.gameSceneSettingsTitleLabel))
         title.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         title.position.y = screenSize.size.height / 3.5
         title.size = CGSize(width: screenSize.width * 0.6, height: screenSize.height * 0.12)
@@ -87,6 +87,7 @@ class GameSettingsScene: SKScene {
         settingsNode.addChild(musicButton)
         
         self.addChild(settingsNode)
+        try? audioVibroManager.playLevelMusic(type: .mainSceneBackground)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
