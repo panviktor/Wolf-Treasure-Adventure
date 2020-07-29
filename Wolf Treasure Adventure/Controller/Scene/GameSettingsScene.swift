@@ -87,7 +87,7 @@ class GameSettingsScene: SKScene {
         settingsNode.addChild(musicButton)
         
         self.addChild(settingsNode)
-        try? audioVibroManager.playLevelMusic(type: .mainSceneBackground)
+        try? audioVibroManager.playMusic(type: .mainSceneBackground)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

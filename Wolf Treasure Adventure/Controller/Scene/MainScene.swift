@@ -36,7 +36,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
         self.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         loadBackground()
-        try? audioVibroManager.playLevelMusic(type: .mainSceneBackground)
+        try? audioVibroManager.playMusic(type: .mainSceneBackground)
     }
     
     private func loadBackground(){

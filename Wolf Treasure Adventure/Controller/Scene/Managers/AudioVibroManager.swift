@@ -51,7 +51,7 @@ final class AudioVibroManager {
         vibroStatus.toggle()
     }
     
-    func playLevelMusic(type: BackgroundSoundType) throws {
+    func playMusic(type: BackgroundSoundType) throws {
         backgroundMusic = nil
         guard musicStatus else { return }
         var urlToPlay: URL

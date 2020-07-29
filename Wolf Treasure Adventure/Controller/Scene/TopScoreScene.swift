@@ -97,7 +97,7 @@ class TopScoreScene: SKScene {
         scoreNode.addChild(bronzeScore.shadowNode(nodeName: "bronzeScoreLabel"))
         
         self.addChild(scoreNode)
-        try? audioVibroManager.playLevelMusic(type: .mainSceneBackground)
+        try? audioVibroManager.playMusic(type: .mainSceneBackground)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
