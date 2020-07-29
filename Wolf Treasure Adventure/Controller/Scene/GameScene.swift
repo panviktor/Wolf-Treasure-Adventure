@@ -3,7 +3,7 @@ import AVFoundation
 
 class GameScene: SKScene {
     private var particles: SKEmitterNode?
-    private var crocodile: SKSpriteNode!
+    private var heroes: SKSpriteNode!
     private var prize: SKSpriteNode!
     private var woods: SKSpriteNode!
     private var level: Level!
@@ -101,22 +101,22 @@ class GameScene: SKScene {
     
     //MARK: - Croc methods
     private func setUpCrocodile() {
-        crocodile = SKSpriteNode(imageNamed: ImageName.crocMouthClosed)
+        heroes = SKSpriteNode(imageNamed: ImageName.crocMouthClosed)
         
         //FIXME: - load from level
-        crocodile.position = CGPoint(x: size.width * level.heroesPosition.x,
+        heroes.position = CGPoint(x: size.width * level.heroesPosition.x,
                                      y: size.height * level.heroesPosition.y)
         
-        crocodile.zPosition = Layer.crocodile
-        crocodile.physicsBody = SKPhysicsBody(
-            texture: SKTexture(imageNamed: ImageName.crocMask),
-            size: crocodile.size)
-        crocodile.physicsBody?.categoryBitMask = PhysicsCategory.crocodile
-        crocodile.physicsBody?.collisionBitMask = 0
-        crocodile.physicsBody?.contactTestBitMask = PhysicsCategory.prize
-        crocodile.physicsBody?.isDynamic = false
+        heroes.zPosition = Layer.crocodile
+        heroes.physicsBody = SKPhysicsBody(
+            texture: SKTexture(imageNamed: ImageName.heroesMask),
+            size: heroes.size)
+        heroes.physicsBody?.categoryBitMask = PhysicsCategory.crocodile
+        heroes.physicsBody?.collisionBitMask = 0
+        heroes.physicsBody?.contactTestBitMask = PhysicsCategory.prize
+        heroes.physicsBody?.isDynamic = false
         
-        addChild(crocodile)
+        addChild(heroes)
         
         animateCrocodile()
     }
@@ -127,18 +127,18 @@ class GameScene: SKScene {
         let wait = SKAction.wait(forDuration: duration)
         let close = SKAction.setTexture(SKTexture(imageNamed: ImageName.crocMouthClosed))
         let sequence = SKAction.sequence([wait, open, wait, close])
-        crocodile.run(.repeatForever(sequence))
+        heroes.run(.repeatForever(sequence))
     }
     
     private func runNomNomAnimation(withDelay delay: TimeInterval) {
-        crocodile.removeAllActions()
+        heroes.removeAllActions()
         
         let closeMouth = SKAction.setTexture(SKTexture(imageNamed: ImageName.crocMouthClosed))
         let wait = SKAction.wait(forDuration: delay)
         let openMouth = SKAction.setTexture(SKTexture(imageNamed: ImageName.crocMouthOpen))
         let sequence = SKAction.sequence([closeMouth, wait, openMouth, wait, closeMouth])
         
-        crocodile.run(sequence)
+        heroes.run(sequence)
     }
     
     //MARK: - Touch handling
@@ -200,8 +200,8 @@ class GameScene: SKScene {
                 node.run(sequence)
             })
             
-            crocodile.removeAllActions()
-            crocodile.texture = SKTexture(imageNamed: ImageName.crocMouthOpen)
+            heroes.removeAllActions()
+            heroes.texture = SKTexture(imageNamed: ImageName.crocMouthOpen)
             animateCrocodile()
             run(audioVibroManager.getAction(type: .slice))
             didCutVine = true
@@ -273,8 +273,8 @@ extension GameScene: SKPhysicsContactDelegate {
             return
         }
         
-        if (contact.bodyA.node == crocodile && contact.bodyB.node == prize)
-            || (contact.bodyA.node == prize && contact.bodyB.node == crocodile) {
+        if (contact.bodyA.node == heroes && contact.bodyB.node == prize)
+            || (contact.bodyA.node == prize && contact.bodyB.node == heroes) {
             
             isLevelOver = true
             isLevelWin = true

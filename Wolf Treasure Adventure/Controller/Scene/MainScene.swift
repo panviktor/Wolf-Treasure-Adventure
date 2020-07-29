@@ -75,7 +75,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         root.addChild(bd_three_button)
         
         cloud.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: 25, duration: 3),
-                                                            SKAction.moveBy(x: 0, y: -5, duration: 3)])))
+                                                            SKAction.moveBy(x: 0, y: -25, duration: 3)])))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

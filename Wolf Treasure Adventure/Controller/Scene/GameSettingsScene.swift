@@ -45,15 +45,14 @@ class GameSettingsScene: SKScene {
         let title = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.gameSceneSettingsTitleLabel))
         title.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         title.position.y = screenSize.size.height / 3.5
+        title.zPosition = -8
         title.size = CGSize(width: screenSize.width * 0.6, height: screenSize.height * 0.12)
-        
-        let titleLabel = SKLabelNode(fontNamed: "PingFangSC-Regular")
-        titleLabel.text = "Settings"
-        titleLabel.position.y = -title.size.height / 5.5
-        titleLabel.fontColor = SKColor(#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1))
-        titleLabel.fontSize = screenSize.width / 15
-        title.addChild(titleLabel.shadowNode(nodeName: "titleEffectNodeLabel"))
-        
+        title.alpha = 0.95
+        title.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: -30, duration: 1),
+                                                            SKAction.scale(to: 1.5, duration: 1),
+                                                            SKAction.moveBy(x: 0, y: 30, duration: 1),
+                                                            SKAction.scale(to: 0.9, duration: 1)
+           ])))
         self.addChild(title)
         
         // BackArrow
@@ -67,9 +66,12 @@ class GameSettingsScene: SKScene {
         // settingsNode
         settingsNode.texture = SKTexture(imageNamed: ImageName.gameSceneSettingsNode)
         settingsNode.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        settingsNode.size = CGSize(width: screenSize.width / 1.25, height: screenSize.height / 3.8)
-        settingsNode.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: 15, duration: 1),
-                                                                   SKAction.moveBy(x: 0, y: -15, duration: 3)])))
+        settingsNode.size = CGSize(width: screenSize.width / 1.25, height: screenSize.height / 3)
+        settingsNode.alpha = 0.95
+        settingsNode.zPosition = -9
+        settingsNode.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: -30, duration: 3),
+                                                                   SKAction.moveBy(x: 0, y: 30, duration: 3),
+        ])))
         
         //vibro button
         let vibroButton = SKSpriteNode(texture:  SKTexture(imageNamed: ImageName.gameSceneSettingsVibroButton))
@@ -77,6 +79,7 @@ class GameSettingsScene: SKScene {
         vibroButton.anchorPoint = CGPoint(x: 0.5, y: 0.2)
         vibroButton.position.y = settingsNode.size.height / 6
         vibroButton.size = CGSize(width: settingsNode.size.width / 3.25, height: settingsNode.size.height / 2.75)
+        vibroButton.zPosition = 5
         settingsNode.addChild(vibroButton)
         
         //sound button
@@ -84,6 +87,7 @@ class GameSettingsScene: SKScene {
         musicButton.name = GameSettingsSceneButton.MusicButton.rawValue
         musicButton.anchorPoint = CGPoint(x: 0.5, y: 0.95)
         musicButton.size = CGSize(width: settingsNode.size.width / 3.25, height: settingsNode.size.height / 2.75)
+        musicButton.zPosition = 5
         settingsNode.addChild(musicButton)
         
         self.addChild(settingsNode)

@@ -73,7 +73,7 @@ final class AudioVibroManager {
         playMusic()
     }
     
-    func getAction(type: SoundType) -> SKAction{
+    func getAction(type: SoundType) -> SKAction {
         switch type {
         case .nomNom:
             let skCoinAction = SKAction.playSoundFileNamed(SoundFile.nomNom, waitForCompletion: false)
