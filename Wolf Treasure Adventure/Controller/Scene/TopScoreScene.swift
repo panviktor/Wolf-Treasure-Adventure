@@ -40,10 +40,11 @@ class TopScoreScene: SKScene {
     
     private func load(){
         //GameInfo Load
-        let infobar = self.childNode(withName: "infobar")!
-        infobar.position.y -= screenSize.size.height / 2
-        infobar.position.x -= screenSize.size.width / 2
-        
+        let infobar = Infobar(name: "infobar")
+        self.addChild(infobar)
+        infobar.position.y = (screenSize.size.height / 2) - infobar.mainRootHeight
+        infobar.position.x = screenSize.size.width / -2
+        infobar.anchorPoint = CGPoint(x: 0, y: 0)
         // Title
         let title = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.topScoreSceneTitleLabel))
         title.anchorPoint = CGPoint(x: 0.5, y: 0.5)

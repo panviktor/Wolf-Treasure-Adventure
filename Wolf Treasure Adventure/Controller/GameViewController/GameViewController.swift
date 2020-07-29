@@ -15,6 +15,10 @@ class GameViewController: UIViewController {
         self.view = SKView()
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     //MARK: - Custom Methods
     private func load(){
         // Configure the view.
@@ -24,7 +28,7 @@ class GameViewController: UIViewController {
         skView.ignoresSiblingOrder = true
 
 //      let scene = GameScene(size: CGSize(width: 375, height: 667))
-        let scene = MainScene(size: screenSize)
+        let scene = TopScoreScene(size: screenSize)
         scene.scaleMode = .aspectFill
         skView.presentScene(scene)
     }
