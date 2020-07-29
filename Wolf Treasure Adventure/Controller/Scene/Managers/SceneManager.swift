@@ -6,7 +6,7 @@
 //  Copyright © 2020 Viktor. All rights reserved.
 //
 
-class SceneManager {
+final class SceneManager {
     static let shared = SceneManager()
     var mainScene: MainScene?
     var gameScene: GameScene?

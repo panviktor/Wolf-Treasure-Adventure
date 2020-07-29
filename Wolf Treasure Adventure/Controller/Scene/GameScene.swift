@@ -6,19 +6,15 @@ class GameScene: SKScene {
     private var crocodile: SKSpriteNode!
     private var prize: SKSpriteNode!
     private var woods: SKSpriteNode!
-    
     private var level: Level!
     
     var currentLevelNum = 1
     
-    private static var backgroundMusicPlayer: AVAudioPlayer!
-    private var sliceSoundAction: SKAction!
-    private var splashSoundAction: SKAction!
-    private var nomNomSoundAction: SKAction!
     private let sceneManager = SceneManager.shared
     private var isLevelOver = false
     private var isLevelWin = false
     private var didCutVine = false
+    private let audioVibroManager = AudioVibroManager.shared
     
     override func didMove(to view: SKView) {
         setUpLevel(number: currentLevelNum)
@@ -84,8 +80,7 @@ class GameScene: SKScene {
         // load items data
         guard let items = level.items, !items.isEmpty else {
             return }
-        print(#line, items.count)
-        for (i, item) in items.enumerated() {
+        for (_, item) in items.enumerated() {
             switch item.type {
             case .wood:
                 
@@ -208,7 +203,7 @@ class GameScene: SKScene {
             crocodile.removeAllActions()
             crocodile.texture = SKTexture(imageNamed: ImageName.crocMouthOpen)
             animateCrocodile()
-            run(sliceSoundAction)
+            run(audioVibroManager.getAction(type: .slice))
             didCutVine = true
         }
     }
@@ -247,40 +242,6 @@ class GameScene: SKScene {
         }
     }
     
-    //MARK: - Audio
-    private func setUpAudio() {
-        //FIXME: - load from level
-        if GameScene.backgroundMusicPlayer == nil {
-            let backgroundMusicURL = Bundle.main.url(
-                forResource: SoundFile.backgroundMusic,
-                withExtension: nil)
-            
-            do {
-                let theme = try AVAudioPlayer(contentsOf: backgroundMusicURL!)
-                GameScene.backgroundMusicPlayer = theme
-            } catch {
-                // couldn't load file :[
-            }
-            
-            GameScene.backgroundMusicPlayer.numberOfLoops = -1
-        }
-        
-        if !GameScene.backgroundMusicPlayer.isPlaying {
-            GameScene.backgroundMusicPlayer.play()
-        }
-        
-        sliceSoundAction = .playSoundFileNamed(
-            SoundFile.slice,
-            waitForCompletion: false)
-        splashSoundAction = .playSoundFileNamed(
-            SoundFile.splash,
-            waitForCompletion: false)
-        nomNomSoundAction = .playSoundFileNamed(
-            SoundFile.nomNom,
-            waitForCompletion: false)
-    }
-    
-    
     private func setUpLevel(number: Int) {
         let levelString = "Level_\(number)"
         level = Level.init(filename: levelString)
@@ -290,12 +251,10 @@ class GameScene: SKScene {
         setUpVines()
         setUpCrocodile()
         setUpWoods()
-        setUpAudio()
     }
 }
 
 extension GameScene: SKPhysicsContactDelegate {
-    
     override func update(_ currentTime: TimeInterval) {
         if isLevelOver {
             return
@@ -303,7 +262,7 @@ extension GameScene: SKPhysicsContactDelegate {
         
         if prize.position.y <= 0 {
             isLevelOver = true
-            run(splashSoundAction)
+            run(audioVibroManager.getAction(type: .splash))
             switchToNewGame(withTransition: .fade(withDuration: 1.0))
         }
     }
@@ -324,10 +283,8 @@ extension GameScene: SKPhysicsContactDelegate {
             let removeNode = SKAction.removeFromParent()
             let sequence = SKAction.sequence([shrink, removeNode])
             prize.run(sequence)
-            run(nomNomSoundAction)
+            run(audioVibroManager.getAction(type: .nomNom))
             runNomNomAnimation(withDelay: 0.15)
-            // transition to next level
-            print(#line, #function)
             switchToNewGame(withTransition: .doorway(withDuration: 1.0))
         }
     }

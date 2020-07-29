@@ -24,6 +24,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
     }
     
     private let sceneManager = SceneManager.shared
+    private let audioVibroManager = AudioVibroManager.shared
     private let screenSize: CGRect = UIScreen.main.bounds
     
     override func didMove(to view: SKView) {
@@ -35,6 +36,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
         self.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         loadBackground()
+        try? audioVibroManager.playLevelMusic(type: .mainSceneBackground)
     }
     
     private func loadBackground(){

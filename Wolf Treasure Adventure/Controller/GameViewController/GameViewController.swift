@@ -3,6 +3,7 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     private let screenSize = UIScreen.main.bounds.size
+    private let audioVibroManager = AudioVibroManager.shared
     
     //MARK: - ViewController Methods
     override func viewDidLoad() {

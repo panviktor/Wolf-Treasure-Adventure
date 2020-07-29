@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ScoreManager {
+final class ScoreManager {
     let defaults = UserDefaults.standard
     
     private var allScore = [Int]()

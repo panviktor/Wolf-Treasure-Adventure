@@ -55,6 +55,17 @@ enum SoundFile {
     static let nomNom = "NomNom.caf"
 }
 
+enum SoundType {
+    case slice
+    case splash
+    case nomNom
+}
+
+enum BackgroundSoundType {
+    case mainSceneBackground
+    case topScoreSceneBackground
+}
+
 enum Layer {
     static let background: CGFloat = 0
     static let crocodile: CGFloat = 1
@@ -92,7 +103,7 @@ enum ObjectType: String, Codable {
     case somethingNew = "SomethingNew"
     
     init(from decoder: Decoder) throws {
-      let object = try decoder.singleValueContainer().decode(String.self)
-      self = ObjectType(rawValue: object) ?? .somethingNew
+        let object = try decoder.singleValueContainer().decode(String.self)
+        self = ObjectType(rawValue: object) ?? .somethingNew
     }
 }

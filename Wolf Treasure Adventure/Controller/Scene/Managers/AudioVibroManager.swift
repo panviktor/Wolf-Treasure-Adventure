@@ -9,15 +9,12 @@
 import SpriteKit
 import AVFoundation
 
-class AudioVibroManager {
-    enum SoundType{
-        case coin
-        case puff
+final class AudioVibroManager {
+    enum AudioError: Error {
+        case invalidFile
     }
     
-    enum BackgroundSoundType{
-        case backgroundStart
-    }
+    private var backgroundMusic: AVAudioPlayer?
     private let defaults = UserDefaults.standard
     private var musicStatus: Bool {
         get {
@@ -37,19 +34,6 @@ class AudioVibroManager {
     
     static let shared = AudioVibroManager()
     
-    var backgroundMusic: AVAudioPlayer? = {
-        guard let url = Bundle.main.url(forResource: "begin", withExtension: "m4a") else {
-            return nil
-        }
-        do {
-            let player = try AVAudioPlayer(contentsOf: url)
-            player.numberOfLoops = -1
-            return player
-        } catch {
-            return nil
-        }
-    }()
-    
     fileprivate init() {}
     
     private func playMusic() {
@@ -67,28 +51,42 @@ class AudioVibroManager {
         vibroStatus.toggle()
     }
     
-    func play(type: BackgroundSoundType) {
+    func playLevelMusic(type: BackgroundSoundType) throws {
+        backgroundMusic = nil
+        guard musicStatus else { return }
+        var urlToPlay: URL
         switch type {
-        case .backgroundStart:
-            if musicStatus {
-                playMusic()
+        case .mainSceneBackground:
+            guard let url = Bundle.main.url(forResource: SoundFile.backgroundMusic, withExtension: nil) else {
+                throw AudioError.invalidFile
             }
+            urlToPlay = url
+        case .topScoreSceneBackground:
+            guard let url = Bundle.main.url(forResource: SoundFile.backgroundMusic, withExtension: nil) else {
+                throw AudioError.invalidFile
+            }
+            urlToPlay = url
         }
+        backgroundMusic = try AVAudioPlayer(contentsOf: urlToPlay)
+        backgroundMusic?.numberOfLoops = -1
     }
     
     func getAction(type: SoundType) -> SKAction{
         switch type {
-        case .coin:
-            let skCoinAction = SKAction.playSoundFileNamed("getcoin.m4a", waitForCompletion: true)
+        case .nomNom:
+            let skCoinAction = SKAction.playSoundFileNamed(SoundFile.nomNom, waitForCompletion: false)
             vibroStatus ? UIDevice.vibrate() : ()
             return skCoinAction
-        case .puff:
-            let skPuffAction = SKAction.playSoundFileNamed("puff.m4a", waitForCompletion: true)
+        case .splash:
+            let skPuffAction = SKAction.playSoundFileNamed(SoundFile.splash, waitForCompletion: false)
+            return skPuffAction
+        case .slice:
+            let skPuffAction = SKAction.playSoundFileNamed(SoundFile.slice, waitForCompletion: false)
             return skPuffAction
         }
     }
     
-    func stop(){
+    func stop() {
         backgroundMusic?.stop()
     }
 }
