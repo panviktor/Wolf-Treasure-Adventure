@@ -9,20 +9,20 @@
 import SpriteKit
 
 extension GameScene {
-    func addWoodToScene(_ anchorPoint: CGPoint) {
+    func addWoodToScene(_ position: CGPoint, _ rotation: CGFloat) {
         let wood = SKSpriteNode(imageNamed: ImageName.woodTexture)
-        wood.size = CGSize(width: 100, height: 20)
-
-        wood.position = CGPoint(x: 200.5, y: 300.5)
-//        wood.anchorPoint = anchorPoint
         
+        wood.size = CGSize(width: 100, height: 10)
+        wood.position = CGPoint(x: position.x, y: position.y)
+        wood.zRotation = .pi / rotation
         wood.zPosition = Layer.wood
         wood.physicsBody = SKPhysicsBody(texture:  SKTexture(imageNamed: ImageName.woodTexture), size: wood.size)
-        wood.physicsBody?.categoryBitMask = PhysicsCategory.wood
-        wood.physicsBody?.collisionBitMask = 0
-        wood.physicsBody?.contactTestBitMask = PhysicsCategory.wood
+        wood.physicsBody?.categoryBitMask = PhysicsCategoryBitMask.wood
+        wood.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.prize
+        wood.physicsBody?.restitution = 0.75
         wood.physicsBody?.isDynamic = false
 
        addChild(wood)
     }
 }
+

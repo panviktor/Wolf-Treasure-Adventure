@@ -33,7 +33,7 @@ class VineNode: SKNode {
         
         vineHolder.physicsBody = SKPhysicsBody(circleOfRadius: vineHolder.size.width / 2)
         vineHolder.physicsBody?.isDynamic = false
-        vineHolder.physicsBody?.categoryBitMask = PhysicsCategory.vineHolder
+        vineHolder.physicsBody?.categoryBitMask = PhysicsCategoryBitMask.vineHolder
         vineHolder.physicsBody?.collisionBitMask = 0
         
         // add each of the vine parts
@@ -47,8 +47,8 @@ class VineNode: SKNode {
             addChild(vineSegment)
             
             vineSegment.physicsBody = SKPhysicsBody(rectangleOf: vineSegment.size)
-            vineSegment.physicsBody?.categoryBitMask = PhysicsCategory.vine
-            vineSegment.physicsBody?.collisionBitMask = PhysicsCategory.vineHolder
+            vineSegment.physicsBody?.categoryBitMask = PhysicsCategoryBitMask.vine
+            vineSegment.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.vineHolder
         }
         
         // set up joint for vine holder

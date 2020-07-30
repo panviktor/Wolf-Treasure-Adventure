@@ -82,7 +82,7 @@ enum Layer {
     static let exitButton: CGFloat = 10
 }
 
-enum PhysicsCategory {
+enum PhysicsCategoryBitMask {
     static let crocodile: UInt32 = 1
     static let vineHolder: UInt32 = 2
     static let vine: UInt32 = 4

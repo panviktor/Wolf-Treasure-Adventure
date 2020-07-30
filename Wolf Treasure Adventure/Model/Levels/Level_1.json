@@ -22,8 +22,9 @@
     "items": [
         { "type": "Wood",
             "layer": 2,
-            "xAnchorPoint": 0.2592,
-            "yAnchorPoint": 0.7583,
+            "xPoint": 0.3592,
+            "yPoint": 0.5583,
+            "zRotation": -3.5,
             "itemsSize": {
                 "width": 0.34,
                 "height": 0.4
@@ -31,8 +32,8 @@
         },
         {   "type": "Wood_",
             "layer": 2,
-            "xAnchorPoint": 0.35,
-            "yAnchorPoint": 0.37,
+            "xPoint": 0.35,
+            "yPoint": 0.37,
             "itemsSize": {
                 "width": 0.30,
                 "height": 0.20
@@ -40,8 +41,8 @@
         },
         {   "type": "Wood_",
             "layer": 2,
-            "xAnchorPoint": 0.34,
-            "yAnchorPoint": 0.344,
+            "xPoint": 0.34,
+            "yPoint": 0.344,
             "itemsSize": {
                 "width": 0.30,
                 "height": 0.20

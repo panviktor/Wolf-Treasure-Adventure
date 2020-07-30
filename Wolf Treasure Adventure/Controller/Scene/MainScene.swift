@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import DeviceKit
 
 class MainScene: SKScene, SKPhysicsContactDelegate {
     private enum Scene {
@@ -115,6 +116,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         button.position = CGPoint(x: dx, y: dy)
         button.size = CGSize(width: screenSize.width / 4.5, height: screenSize.height / 8)
         button.name = name.rawValue
+        button.alpha = 0.85
         return button
     }
     
@@ -129,14 +131,12 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
             self.removeAllActions()
             let newScene = GameScene(size: self.size)
             self.view?.presentScene(newScene)
-            
         case .GameSettingsScene:
             self.recursiveRemovingSKActions(sknodes: self.children)
             self.removeAllChildren()
             self.removeAllActions()
             let newScene = GameSettingsScene(size: self.size)
             self.view?.presentScene(newScene)
-            
         case .TopScoreScene:
             self.recursiveRemovingSKActions(sknodes: self.children)
             self.removeAllChildren()

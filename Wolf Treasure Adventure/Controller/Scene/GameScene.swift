@@ -14,7 +14,7 @@ class GameScene: SKScene {
     private var particles: SKEmitterNode?
     private var heroes: SKSpriteNode!
     private var prize: SKSpriteNode!
-    private var woods: SKSpriteNode!
+    private var woods: [SKSpriteNode]!
     private var level: Level!
     private let gameManager = GameManager.shared
     private var currentLevelNum: Int {
@@ -67,8 +67,8 @@ class GameScene: SKScene {
                                  y: level.prizePosition.y)
         prize.zPosition = Layer.prize
         prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
-        prize.physicsBody?.categoryBitMask = PhysicsCategory.prize
-        prize.physicsBody?.collisionBitMask = 0
+        prize.physicsBody?.categoryBitMask = PhysicsCategoryBitMask.prize
+        prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.wood
         prize.physicsBody?.density = 0.5
         
         addChild(prize)
@@ -98,15 +98,11 @@ class GameScene: SKScene {
         for (_, item) in items.enumerated() {
             switch item.type {
             case .wood:
-                
-                //                let anchorPoint = CGPoint(
-                //                    x: item.xAnchorPoint * size.width,
-                //                    y: item.yAnchorPoint * size.height)
-                let anchorPoint = CGPoint(
-                    x: item.xAnchorPoint * size.width,
-                    y: item.yAnchorPoint * size.height)
-                
-                addWoodToScene(anchorPoint)
+                let position = CGPoint(
+                    x: item.xPoint * size.width,
+                    y: item.yPoint * size.height)
+                let rotation = item.zRotation ?? 360
+                addWoodToScene(position, rotation)
             default:
                 print("ADD NEW ITEMS HANDLER")
             }
@@ -117,17 +113,16 @@ class GameScene: SKScene {
     //MARK: - Croc methods
     private func setUpCrocodile() {
         heroes = SKSpriteNode(imageNamed: ImageName.crocMouthClosed)
-        
         //FIXME: - load from level
         heroes.position = CGPoint(x: size.width * level.heroesPosition.x,
                                   y: size.height * level.heroesPosition.y)
         
         heroes.zPosition = Layer.crocodile
         heroes.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: ImageName.heroesMask),
-        size: heroes.size)
-        heroes.physicsBody?.categoryBitMask = PhysicsCategory.crocodile
+                                           size: heroes.size)
+        heroes.physicsBody?.categoryBitMask = PhysicsCategoryBitMask.crocodile
         heroes.physicsBody?.collisionBitMask = 0
-        heroes.physicsBody?.contactTestBitMask = PhysicsCategory.prize
+        heroes.physicsBody?.contactTestBitMask = PhysicsCategoryBitMask.prize
         heroes.physicsBody?.isDynamic = false
         addChild(heroes)
         animateCrocodile()
@@ -356,5 +351,7 @@ extension GameScene: SKPhysicsContactDelegate {
             runNomNomAnimation(withDelay: 0.15)
             switchToNewGame(withTransition: .doorway(withDuration: 1.0))
         }
+        
+
     }
 }
