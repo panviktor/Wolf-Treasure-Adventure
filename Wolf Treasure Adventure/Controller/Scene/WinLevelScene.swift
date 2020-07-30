@@ -33,7 +33,7 @@ class WinLevelScene: SKScene {
         gameScene.removeAllActions()
         
         let scene = GameScene(size: self.size)
-        scene.currentLevelNum = nextLevel
+        
         self.view?.presentScene(scene)
    
     }
