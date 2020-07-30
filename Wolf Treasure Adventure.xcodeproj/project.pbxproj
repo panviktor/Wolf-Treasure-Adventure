@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		142D3D8024D18FE000DB314A /* gradientMonoTone.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 142D3D7F24D18FE000DB314A /* gradientMonoTone.fsh */; };
+		14A03CBB24D2F3EB0031A430 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14A03CBA24D2F3EB0031A430 /* DeviceKit */; };
 		14DF6A6624D2A2B0009A5630 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF6A6524D2A2B0009A5630 /* GameManager.swift */; };
 		14F1775C24CB094B006463F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1775B24CB094B006463F2 /* AppDelegate.swift */; };
 		14F1776524CB094D006463F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F1776424CB094D006463F2 /* Assets.xcassets */; };
@@ -32,7 +33,6 @@
 		14FEE47B24CEAE0C00C47B75 /* Extension+DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE47324CEAE0C00C47B75 /* Extension+DispatchQueue.swift */; };
 		14FEE47C24CEAE0C00C47B75 /* Extension+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE47424CEAE0C00C47B75 /* Extension+URL.swift */; };
 		14FEE47D24CEAE0C00C47B75 /* Extensions+Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE47524CEAE0C00C47B75 /* Extensions+Game.swift */; };
-		14FEE47E24CEAE0C00C47B75 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE47624CEAE0C00C47B75 /* Device.swift */; };
 		14FEE47F24CEAE0C00C47B75 /* Extension+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE47724CEAE0C00C47B75 /* Extension+Collection.swift */; };
 		14FEE48024CEAE0C00C47B75 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE47824CEAE0C00C47B75 /* Extension+UIView.swift */; };
 		14FEE48124CEAE0C00C47B75 /* Extension+WKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE47924CEAE0C00C47B75 /* Extension+WKWebView.swift */; };
@@ -77,7 +77,6 @@
 		14FEE47324CEAE0C00C47B75 /* Extension+DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+DispatchQueue.swift"; sourceTree = "<group>"; };
 		14FEE47424CEAE0C00C47B75 /* Extension+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+URL.swift"; sourceTree = "<group>"; };
 		14FEE47524CEAE0C00C47B75 /* Extensions+Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+Game.swift"; sourceTree = "<group>"; };
-		14FEE47624CEAE0C00C47B75 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		14FEE47724CEAE0C00C47B75 /* Extension+Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Collection.swift"; sourceTree = "<group>"; };
 		14FEE47824CEAE0C00C47B75 /* Extension+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		14FEE47924CEAE0C00C47B75 /* Extension+WKWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+WKWebView.swift"; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FEE48524CEB01D00C47B75 /* Reachability in Frameworks */,
+				14A03CBB24D2F3EB0031A430 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +262,6 @@
 				14FEE47324CEAE0C00C47B75 /* Extension+DispatchQueue.swift */,
 				14FEE47424CEAE0C00C47B75 /* Extension+URL.swift */,
 				14FEE47524CEAE0C00C47B75 /* Extensions+Game.swift */,
-				14FEE47624CEAE0C00C47B75 /* Device.swift */,
 				14FEE47724CEAE0C00C47B75 /* Extension+Collection.swift */,
 				14FEE47824CEAE0C00C47B75 /* Extension+UIView.swift */,
 				14FEE47924CEAE0C00C47B75 /* Extension+WKWebView.swift */,
@@ -298,6 +297,7 @@
 			name = "Wolf Treasure Adventure";
 			packageProductDependencies = (
 				14FEE48424CEB01D00C47B75 /* Reachability */,
+				14A03CBA24D2F3EB0031A430 /* DeviceKit */,
 			);
 			productName = "Wolf Treasure Adventure";
 			productReference = 14F1775824CB094B006463F2 /* Wolf Treasure Adventure.app */;
@@ -329,6 +329,7 @@
 			mainGroup = 14F1774F24CB094B006463F2;
 			packageReferences = (
 				14FEE48324CEB01D00C47B75 /* XCRemoteSwiftPackageReference "Reachability" */,
+				14A03CB924D2F3EB0031A430 /* XCRemoteSwiftPackageReference "DeviceKit" */,
 			);
 			productRefGroup = 14F1775924CB094B006463F2 /* Products */;
 			projectDirPath = "";
@@ -371,7 +372,6 @@
 				14DF6A6624D2A2B0009A5630 /* GameManager.swift in Sources */,
 				14FEE49924CEBCB000C47B75 /* Infobar.swift in Sources */,
 				14FEE49424CEB73000C47B75 /* WinLevelScene.swift in Sources */,
-				14FEE47E24CEAE0C00C47B75 /* Device.swift in Sources */,
 				14FEE49324CEB73000C47B75 /* TopScoreScene.swift in Sources */,
 				14FEE47124CEAD8400C47B75 /* WelcomeViewController.swift in Sources */,
 				14FEE49524CEB73000C47B75 /* EndChapterScene.swift in Sources */,
@@ -586,6 +586,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		14A03CB924D2F3EB0031A430 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devicekit/DeviceKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
 		14FEE48324CEB01D00C47B75 /* XCRemoteSwiftPackageReference "Reachability" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ashleymills/Reachability.swift/";
@@ -597,6 +605,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		14A03CBA24D2F3EB0031A430 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14A03CB924D2F3EB0031A430 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			productName = DeviceKit;
+		};
 		14FEE48424CEB01D00C47B75 /* Reachability */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 14FEE48324CEB01D00C47B75 /* XCRemoteSwiftPackageReference "Reachability" */;

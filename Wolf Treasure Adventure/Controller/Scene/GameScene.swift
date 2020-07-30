@@ -1,5 +1,6 @@
 import SpriteKit
 import AVFoundation
+import DeviceKit
 
 class GameScene: SKScene {
     private enum Scene {
@@ -264,11 +265,16 @@ class GameScene: SKScene {
     }
     
     private func setUpLevel(number: Int) {
+        var extraPoin: CGFloat = 0
+        if Device.current.hasRoundedDisplayCorners {
+            extraPoin = 25.0
+        }
+        
         let levelString = "Level_\(number)"
         level = Level.init(filename: levelString)
         let infobar = Infobar(name: "infobar")
         self.addChild(infobar)
-        infobar.position.y = (screenSize.size.height) - infobar.mainRootHeight
+        infobar.position.y = (screenSize.size.height) - infobar.mainRootHeight - extraPoin
         infobar.position.x = 0
         infobar.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         infobar.zPosition = Layer.infobar
@@ -280,7 +286,7 @@ class GameScene: SKScene {
         exitButton.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         exitButton.size = CGSize(width: 50, height: 50)
         exitButton.zPosition = Layer.exitButton
-        exitButton.position = CGPoint(x: screenSize.width - exitButton.size.width - 15, y: screenSize.size.height - exitButton.size.height - (infobar.size.height ))
+        exitButton.position = CGPoint(x: screenSize.width - exitButton.size.width - 15, y: screenSize.size.height - exitButton.size.height - infobar.size.height - extraPoin * 0.85 )
         exitButton.alpha = 0.25
         addChild(exitButton)
         
