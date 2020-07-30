@@ -46,7 +46,10 @@ enum ImageName {
     static let topScoreSceneTitleLabel = "TopScoreSceneTitleLabel"
     static let topScoreSceneBackButton = "TopScoreSceneBackButton"
     static let topScoreSceneNode = "TopScoreSceneNode"
+    static let topScoreResetButton = "TopScoreResetButton"
     
+    //FIXME: - Add Infobar Images
+    ///Infobar
 }
 
 enum SoundFile {

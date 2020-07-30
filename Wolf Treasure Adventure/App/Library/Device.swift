@@ -91,6 +91,7 @@ open class Device {
         }
     }
     
+    
     static public func version() -> Version {
         return getVersion(code: getVersionCode())
     }
@@ -193,6 +194,7 @@ public enum Version: String {
     case iPhone6S
     case iPhone6SPlus
     case iPhoneSE
+    case iPhoneSE2
     case iPhone7
     case iPhone7Plus
     case iPhone8
@@ -313,3 +315,13 @@ public func ==(lhs: Size, rhs: Size) -> Bool {
 }
 
 
+//
+//switch deviceType {
+//   case .iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR,
+//        .iPhone11, .iPhone11Pro, .iPhone11ProMax:
+//       iPhoneTypeSize = node.size.width
+//       print(#line, iPhoneTypeSize)
+//   default:
+//       iPhoneTypeSize = 0
+//       print(#line, iPhoneTypeSize)
+//   }

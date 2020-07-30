@@ -1,5 +1,5 @@
 {
-    "levelName": "First Level",
+    "levelName": "Level First",
     "levelNumber": 1,
     
     "heroesPosition": {"x": 0.80, "y": 0.3},
@@ -20,7 +20,7 @@
     ],
     
     "items": [
-        { "type": "Wood",
+        { "type": "Wood_",
             "layer": 2,
             "xAnchorPoint": 0.2592,
             "yAnchorPoint": 0.7583,

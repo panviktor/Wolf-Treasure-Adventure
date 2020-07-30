@@ -74,13 +74,16 @@ class Infobar: SKSpriteNode {
             thirdHeart.anchorPoint = CGPoint(x: 0.0, y: 0.5)
             thirdHeart.position = CGPoint(x: thirdHeartPositionX, y: node.position.y / 2)
             thirdHeart.size = CGSize(width: node.size.width / 6, height: node.size.height / 2)
+            
+            //FIXME: - Remove: node.alpha = 0
+            node.alpha = 0
             node.addChild(thirdHeart)
             
         case .Second:
             let labelText = SKLabelNode(fontNamed: "KohinoorTelugu-Medium")
             labelText.text = "Level Name First"
             labelText.fontSize = 25
-            labelText.fontColor = SKColor(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1))
+            labelText.fontColor = SKColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
             labelText.horizontalAlignmentMode = .center
             labelText.verticalAlignmentMode = .center
             labelText.position = CGPoint(x: node.position.x / 2, y: node.position.y / 2)
@@ -100,11 +103,11 @@ class Infobar: SKSpriteNode {
         var heartNumber: String!
         switch hertCount {
         case 1:
-           heartNumber = "firstHeart"
+            heartNumber = "firstHeart"
         case 2:
-             heartNumber = "secondHeart"
+            heartNumber = "secondHeart"
         case 3:
-             heartNumber = "thirdHeart"
+            heartNumber = "thirdHeart"
         default:
             break
         }
