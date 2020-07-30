@@ -30,6 +30,8 @@ class GameScene: SKScene {
     private var didCutVine = false
     private let audioVibroManager = AudioVibroManager.shared
     
+    //FIXME: - Add normal gravity
+    let startingDate = Date().addingTimeInterval(3)
     
     override func didMove(to view: SKView) {
         setUpLevel(number: currentLevelNum)
@@ -69,7 +71,7 @@ class GameScene: SKScene {
         prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
         prize.physicsBody?.categoryBitMask = PhysicsCategoryBitMask.prize
         prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.wood
-        prize.physicsBody?.density = 0.5
+        prize.physicsBody?.density = 0.25
         
         addChild(prize)
     }
@@ -239,14 +241,16 @@ class GameScene: SKScene {
             }
             run(.sequence([delay, sceneChange]))
         } else if currentLevelNum <= GameConfiguration.maximumLevel && !isLevelWin {
-            let delay = SKAction.wait(forDuration: 0.5)
             let sceneChange = SKAction.run {
+                self.recursiveRemovingSKActions(sknodes: self.children)
+                self.removeAllChildren()
+                self.removeAllActions()
                 let scene = GameScene(size: self.size)
-                let transition = SKTransition.doorway(withDuration: 0.5)
+                let transition = SKTransition.doorway(withDuration: 0)
                 print(#line, "Try Again")
                 self.view?.presentScene(scene, transition: transition)
             }
-            run(.sequence([delay, sceneChange]))
+            run(.sequence([sceneChange]))
         } else {
             self.run(SKAction.sequence([SKAction.wait(forDuration: 0.5), SKAction.run {
                 self.recursiveRemovingSKActions(sknodes: self.children)
@@ -285,12 +289,16 @@ class GameScene: SKScene {
         exitButton.alpha = 0.25
         addChild(exitButton)
         
-        setUpPhysics()
         setUpScenery()
+        setUpPhysics()
         setUpPrize()
         setUpVines()
         setUpCrocodile()
-        setUpWoods()
+        
+        delay(bySeconds: 0.8) {
+            self.setUpWoods()
+        }
+       
         try? audioVibroManager.playMusic(type: .mainSceneBackground)
     }
     
@@ -351,7 +359,5 @@ extension GameScene: SKPhysicsContactDelegate {
             runNomNomAnimation(withDelay: 0.15)
             switchToNewGame(withTransition: .doorway(withDuration: 1.0))
         }
-        
-
     }
 }

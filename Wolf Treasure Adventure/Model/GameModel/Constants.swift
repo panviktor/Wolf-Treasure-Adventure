@@ -92,7 +92,7 @@ enum PhysicsCategoryBitMask {
 
 enum GameConfiguration {
     static let canCutMultipleVinesAtOnce = false
-    static let maximumLevel = 3
+    static let maximumLevel = 10
 }
 
 enum SceneParticles {
