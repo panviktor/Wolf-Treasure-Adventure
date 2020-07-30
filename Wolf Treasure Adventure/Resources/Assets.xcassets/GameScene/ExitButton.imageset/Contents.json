@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "WIN.jpg",
+      "filename" : "ExitButton.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "WIN-1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "WIN-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

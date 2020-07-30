@@ -41,7 +41,6 @@
 		14FEE48724CEB16B00C47B75 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE48624CEB16B00C47B75 /* SceneManager.swift */; };
 		14FEE48924CEB22300C47B75 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE48824CEB22300C47B75 /* MainScene.swift */; };
 		14FEE48C24CEB63500C47B75 /* AudioVibroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE48B24CEB63500C47B75 /* AudioVibroManager.swift */; };
-		14FEE48E24CEB6DD00C47B75 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE48D24CEB6DD00C47B75 /* ScoreManager.swift */; };
 		14FEE49324CEB73000C47B75 /* TopScoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE48F24CEB73000C47B75 /* TopScoreScene.swift */; };
 		14FEE49424CEB73000C47B75 /* WinLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE49024CEB73000C47B75 /* WinLevelScene.swift */; };
 		14FEE49524CEB73000C47B75 /* EndChapterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE49124CEB73000C47B75 /* EndChapterScene.swift */; };
@@ -86,7 +85,6 @@
 		14FEE48624CEB16B00C47B75 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 		14FEE48824CEB22300C47B75 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
 		14FEE48B24CEB63500C47B75 /* AudioVibroManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioVibroManager.swift; sourceTree = "<group>"; };
-		14FEE48D24CEB6DD00C47B75 /* ScoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
 		14FEE48F24CEB73000C47B75 /* TopScoreScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopScoreScene.swift; sourceTree = "<group>"; };
 		14FEE49024CEB73000C47B75 /* WinLevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinLevelScene.swift; sourceTree = "<group>"; };
 		14FEE49124CEB73000C47B75 /* EndChapterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndChapterScene.swift; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 				14FEE48B24CEB63500C47B75 /* AudioVibroManager.swift */,
 				14FEE48624CEB16B00C47B75 /* SceneManager.swift */,
 				14DF6A6524D2A2B0009A5630 /* GameManager.swift */,
-				14FEE48D24CEB6DD00C47B75 /* ScoreManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -382,7 +379,6 @@
 				14FEE47D24CEAE0C00C47B75 /* Extensions+Game.swift in Sources */,
 				14FEE48724CEB16B00C47B75 /* SceneManager.swift in Sources */,
 				776CFFCE24CCEA3A0007CF2C /* WoodNode.swift in Sources */,
-				14FEE48E24CEB6DD00C47B75 /* ScoreManager.swift in Sources */,
 				14F1777924CB0A5D006463F2 /* GameScene.swift in Sources */,
 				14F1777A24CB0A5D006463F2 /* LevelData.swift in Sources */,
 				14FEE48124CEAE0C00C47B75 /* Extension+WKWebView.swift in Sources */,

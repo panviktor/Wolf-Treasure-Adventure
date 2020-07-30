@@ -22,7 +22,6 @@ class GameSettingsScene: SKScene {
     private let settingsNode = SKSpriteNode()
     private var state: State = .Select
     private let screenSize: CGRect = UIScreen.main.bounds
-    private let scoreManager = ScoreManager.shared
     private let audioVibroManager = AudioVibroManager.shared
     private let sceneManager = SceneManager.shared
     

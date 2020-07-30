@@ -25,6 +25,7 @@ enum ImageName {
     static let prize = "Pineapple"
     static let prizeMask = "PineappleMask"
     static let woodTexture = "Wood"
+    static let exitButton = "ExitButton"
     
     /// End Chapter Scene Textures
     static let endChapterSceneBackground = "EndChapterSceneBackground"

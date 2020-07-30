@@ -276,7 +276,7 @@ class GameScene: SKScene {
         infobar.updateLevelLabel(levelName: level.levelName)
         
         let exitButton = SKSpriteNode()
-        exitButton.texture = SKTexture(imageNamed: ImageName.mainSceneSettingsButton)
+        exitButton.texture = SKTexture(imageNamed: ImageName.exitButton)
         exitButton.name = MainSceneButton.ExitButton.rawValue
         exitButton.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         exitButton.size = CGSize(width: 50, height: 50)
