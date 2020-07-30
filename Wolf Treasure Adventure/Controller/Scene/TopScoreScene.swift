@@ -15,11 +15,11 @@ class TopScoreScene: SKScene {
     
     private enum TopScoreSceneButton: String {
         case BackButton
+        case ResetButton
     }
     
     private var scoreNode = SKSpriteNode()
     private var state: State = .Select
-    private weak var scoreManager = ScoreManager.shared
     private let sceneManager = SceneManager.shared
     private let audioVibroManager = AudioVibroManager.shared
     private let gameManager = GameManager.shared
@@ -44,15 +44,14 @@ class TopScoreScene: SKScene {
         let title = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.topScoreSceneTitleLabel))
         title.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         title.position.y = screenSize.size.height / 3.5
+        title.zPosition = -8
         title.size = CGSize(width: screenSize.width * 0.6, height: screenSize.height * 0.12)
-        
-        let titleLabel = SKLabelNode(fontNamed: "PingFangSC-Regular")
-        titleLabel.text = "Your Best Score"
-        titleLabel.position.y = -title.size.height / 5.5
-        titleLabel.fontColor = SKColor(#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1))
-        titleLabel.fontSize = screenSize.width / 15
-        title.addChild(titleLabel.shadowNode(nodeName: "titleEffectNodeLabel"))
-        
+        title.alpha = 0.95
+        title.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: -30, duration: 1),
+                                                            SKAction.scale(to: 1.5, duration: 1),
+                                                            SKAction.moveBy(x: 0, y: 30, duration: 1),
+                                                            SKAction.scale(to: 0.9, duration: 1)
+        ])))
         self.addChild(title)
         
         // BackArrow
@@ -66,33 +65,58 @@ class TopScoreScene: SKScene {
         // scoreNode
         scoreNode.texture = SKTexture(imageNamed: ImageName.topScoreSceneNode)
         scoreNode.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        scoreNode.size = CGSize(width: screenSize.width/1.5, height: screenSize.height / 4)
+        scoreNode.size = CGSize(width: screenSize.width/1.1, height: screenSize.height / 3)
+        scoreNode.alpha = 0.95
+        scoreNode.zPosition = -9
         scoreNode.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: 20, duration: 1),
                                                                 SKAction.moveBy(x: 0, y: -20, duration: 1.2)])))
-        
-        let goldScore = SKLabelNode(fontNamed: "PingFangSC-Regular")
-        goldScore.position.y = scoreNode.size.height / 4
-        goldScore.text = "#1 \(scoreManager?.firstScore ?? 0)"
-        goldScore.fontColor = SKColor(red: 254/255, green: 189/255, blue: 62/255, alpha: 1)
-        goldScore.fontSize = screenSize.width / 15
-        scoreNode.addChild(goldScore.shadowNode(nodeName: "goldScoreLabel"))
-        
-        
-        let silverScore = SKLabelNode(fontNamed: "PingFangSC-Regular")
-        silverScore.position.y = scoreNode.size.height / 40
-        silverScore.text = "#2 \(scoreManager?.secondScore ?? 0)"
-        silverScore.fontColor = SKColor(red: 254/255, green: 189/255, blue: 62/255, alpha: 1)
-        silverScore.fontSize = screenSize.width / 17
-        scoreNode.addChild(silverScore.shadowNode(nodeName: "silverScoreLabel"))
-        
-        let bronzeScore = SKLabelNode(fontNamed: "PingFangSC-Regular")
-        bronzeScore.position.y = -scoreNode.size.height / 4
-        bronzeScore.text = "#3 \(scoreManager?.thirdScore ?? 0)"
-        bronzeScore.fontColor = SKColor(red: 254/255, green: 189/255, blue: 62/255, alpha: 1)
-        bronzeScore.fontSize = screenSize.width / 17
-        scoreNode.addChild(bronzeScore.shadowNode(nodeName: "bronzeScoreLabel"))
-        
         self.addChild(scoreNode)
+        
+        
+        let firstTextLine = SKLabelNode(fontNamed: "KohinoorTelugu-Medium")
+        firstTextLine.text = "Completed \(gameManager.currentLevel) of \(GameConfiguration.maximumLevel) levels"
+        firstTextLine.fontSize = screenSize.width / 15
+        firstTextLine.fontColor = SKColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        firstTextLine.horizontalAlignmentMode = .center
+        firstTextLine.verticalAlignmentMode = .center
+        firstTextLine.position = CGPoint(x: scoreNode.position.x / 2,
+                                         y: scoreNode.size.height / 2 - firstTextLine.fontSize * 2 )
+        firstTextLine.name = "firstTextLine"
+        firstTextLine.zPosition = 15
+        scoreNode.addChild(firstTextLine)
+        
+        let secondTextLine = SKLabelNode(fontNamed: "KohinoorTelugu-Medium")
+        secondTextLine.text = "Collected \(gameManager.currentScore) points."
+        secondTextLine.fontSize = screenSize.width / 15
+        secondTextLine.fontColor = SKColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        secondTextLine.horizontalAlignmentMode = .center
+        secondTextLine.verticalAlignmentMode = .center
+        secondTextLine.position = CGPoint(x: scoreNode.position.x / 2,
+                                          y: firstTextLine.position.y - secondTextLine.fontSize * 2 )
+        secondTextLine.name = "secondTextLine"
+        secondTextLine.zPosition = 15
+        scoreNode.addChild(secondTextLine)
+        
+        let thirdTextLine = SKLabelNode(fontNamed: "KohinoorTelugu-Medium")
+        thirdTextLine.text = "Reset your progress?"
+        thirdTextLine.fontSize = screenSize.width / 14
+        thirdTextLine.fontColor = SKColor(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1))
+        thirdTextLine.horizontalAlignmentMode = .center
+        thirdTextLine.verticalAlignmentMode = .center
+        thirdTextLine.position = CGPoint(x: scoreNode.position.x / 2,
+                                         y: secondTextLine.position.y - secondTextLine.fontSize * 2 )
+        thirdTextLine.name = "thirdTextLine"
+        thirdTextLine.zPosition = 15
+        scoreNode.addChild(thirdTextLine)
+        
+        let resetButton = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.topScoreResetButton))
+        resetButton.name = TopScoreSceneButton.ResetButton.rawValue
+        resetButton.position = CGPoint(x: scoreNode.position.x / 2,
+                                                y: thirdTextLine.position.y - secondTextLine.fontSize * 2)
+        resetButton.size = CGSize(width: scoreNode.size.width / 5, height: scoreNode.size.height / 5)
+        resetButton.zPosition = 15
+        scoreNode.addChild(resetButton)
+        
         try? audioVibroManager.playMusic(type: .mainSceneBackground)
     }
     
@@ -107,6 +131,8 @@ class TopScoreScene: SKScene {
             for c in nodes(at: pos){
                 if c.name ==  TopScoreSceneButton.BackButton.rawValue {
                     backButtonPressed()
+                } else if c.name == TopScoreSceneButton.ResetButton.rawValue {
+                    resetGame()
                 }
             }
         }
@@ -119,5 +145,10 @@ class TopScoreScene: SKScene {
         sceneManager.mainScene = nil
         let newScene = MainScene(size: self.size)
         self.view?.presentScene(newScene)
+    }
+    
+    private func resetGame() {
+        gameManager.resetAll()
+        backButtonPressed()
     }
 }

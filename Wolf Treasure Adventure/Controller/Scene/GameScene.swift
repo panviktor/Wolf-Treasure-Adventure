@@ -122,9 +122,8 @@ class GameScene: SKScene {
                                   y: size.height * level.heroesPosition.y)
         
         heroes.zPosition = Layer.crocodile
-        heroes.physicsBody = SKPhysicsBody(
-            texture: SKTexture(imageNamed: ImageName.heroesMask),
-            size: heroes.size)
+        heroes.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: ImageName.heroesMask),
+        size: heroes.size)
         heroes.physicsBody?.categoryBitMask = PhysicsCategory.crocodile
         heroes.physicsBody?.collisionBitMask = 0
         heroes.physicsBody?.contactTestBitMask = PhysicsCategory.prize
