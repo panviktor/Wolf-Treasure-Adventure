@@ -20,7 +20,7 @@
     ],
     
     "items": [
-        { "type": "Wood_",
+        { "type": "Wood",
             "layer": 2,
             "xAnchorPoint": 0.2592,
             "yAnchorPoint": 0.7583,

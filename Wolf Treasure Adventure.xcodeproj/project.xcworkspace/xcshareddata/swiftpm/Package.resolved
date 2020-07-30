@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "DeviceKit",
+        "repositoryURL": "https://github.com/devicekit/DeviceKit",
+        "state": {
+          "branch": null,
+          "revision": "446e3ab022af7bb0058be74c1298e1f7e1615607",
+          "version": "3.2.0"
+        }
+      },
+      {
         "package": "Reachability",
         "repositoryURL": "https://github.com/ashleymills/Reachability.swift/",
         "state": {
