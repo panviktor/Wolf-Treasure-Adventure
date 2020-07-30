@@ -11,6 +11,8 @@
 		142D3D8024D18FE000DB314A /* gradientMonoTone.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 142D3D7F24D18FE000DB314A /* gradientMonoTone.fsh */; };
 		1434654324D344F400B12DA8 /* GIFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1434654124D344F400B12DA8 /* GIFViewController.xib */; };
 		1434654424D344F400B12DA8 /* SecondNoInternetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1434654224D344F400B12DA8 /* SecondNoInternetViewController.xib */; };
+		1434654C24D3459500B12DA8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434654B24D3459500B12DA8 /* NotificationService.swift */; };
+		1434655024D3459500B12DA8 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1434654924D3459500B12DA8 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		147DD8BC24D31E3700FA7DD7 /* Level_7.json in Resources */ = {isa = PBXBuildFile; fileRef = 147DD8B524D31E3700FA7DD7 /* Level_7.json */; };
 		147DD8BD24D31E3700FA7DD7 /* Level_6.json in Resources */ = {isa = PBXBuildFile; fileRef = 147DD8B624D31E3700FA7DD7 /* Level_6.json */; };
 		147DD8BE24D31E3700FA7DD7 /* Level_8.json in Resources */ = {isa = PBXBuildFile; fileRef = 147DD8B724D31E3700FA7DD7 /* Level_8.json */; };
@@ -63,13 +65,44 @@
 		14FEE49524CEB73000C47B75 /* EndChapterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE49124CEB73000C47B75 /* EndChapterScene.swift */; };
 		14FEE49624CEB73000C47B75 /* GameSettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE49224CEB73000C47B75 /* GameSettingsScene.swift */; };
 		14FEE49924CEBCB000C47B75 /* Infobar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE49724CEBCAF00C47B75 /* Infobar.swift */; };
+		4FACC5027DFD27EC1E33E6A6 /* Pods_Wolf_Treasure_Adventure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130188B53BE1B735F18CC61A /* Pods_Wolf_Treasure_Adventure.framework */; };
 		776CFFCE24CCEA3A0007CF2C /* WoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CFFCD24CCEA3A0007CF2C /* WoodNode.swift */; };
+		991216C6D137343A0557DE99 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02E3AEF48797FF40ADDBDA5 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1434654E24D3459500B12DA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14F1775024CB094B006463F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1434654824D3459500B12DA8;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1434655424D3459500B12DA8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1434655024D3459500B12DA8 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		130188B53BE1B735F18CC61A /* Pods_Wolf_Treasure_Adventure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wolf_Treasure_Adventure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		142D3D7F24D18FE000DB314A /* gradientMonoTone.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gradientMonoTone.fsh; sourceTree = "<group>"; };
 		1434654124D344F400B12DA8 /* GIFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GIFViewController.xib; sourceTree = "<group>"; };
 		1434654224D344F400B12DA8 /* SecondNoInternetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondNoInternetViewController.xib; sourceTree = "<group>"; };
+		1434654924D3459500B12DA8 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1434654B24D3459500B12DA8 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		1434654D24D3459500B12DA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1434655524D3462600B12DA8 /* Wolf Treasure Adventure.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wolf Treasure Adventure.entitlements"; sourceTree = "<group>"; };
 		147DD8B524D31E3700FA7DD7 /* Level_7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_7.json; sourceTree = "<group>"; };
 		147DD8B624D31E3700FA7DD7 /* Level_6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_6.json; sourceTree = "<group>"; };
 		147DD8B724D31E3700FA7DD7 /* Level_8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_8.json; sourceTree = "<group>"; };
@@ -121,10 +154,23 @@
 		14FEE49124CEB73000C47B75 /* EndChapterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndChapterScene.swift; sourceTree = "<group>"; };
 		14FEE49224CEB73000C47B75 /* GameSettingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingsScene.swift; sourceTree = "<group>"; };
 		14FEE49724CEBCAF00C47B75 /* Infobar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Infobar.swift; sourceTree = "<group>"; };
+		46E3545895A3C0B58F180196 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		50B3F7F90645524B6F4FAD8B /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		776CFFCD24CCEA3A0007CF2C /* WoodNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodNode.swift; sourceTree = "<group>"; };
+		7A3137E08D9197848BCEB45A /* Pods-Wolf Treasure Adventure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolf Treasure Adventure.release.xcconfig"; path = "Target Support Files/Pods-Wolf Treasure Adventure/Pods-Wolf Treasure Adventure.release.xcconfig"; sourceTree = "<group>"; };
+		AEEE514FC5EFBC9BDDDA8EB8 /* Pods-Wolf Treasure Adventure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolf Treasure Adventure.debug.xcconfig"; path = "Target Support Files/Pods-Wolf Treasure Adventure/Pods-Wolf Treasure Adventure.debug.xcconfig"; sourceTree = "<group>"; };
+		C02E3AEF48797FF40ADDBDA5 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1434654624D3459500B12DA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				991216C6D137343A0557DE99 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14F1775524CB094B006463F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +179,7 @@
 				14A03CBB24D2F3EB0031A430 /* DeviceKit in Frameworks */,
 				147DD8C524D338EE00FA7DD7 /* Lottie in Frameworks */,
 				14239C8924D3395C0007926D /* FacebookCore in Frameworks */,
+				4FACC5027DFD27EC1E33E6A6 /* Pods_Wolf_Treasure_Adventure.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +193,15 @@
 				1434654224D344F400B12DA8 /* SecondNoInternetViewController.xib */,
 			);
 			path = Xib;
+			sourceTree = "<group>";
+		};
+		1434654A24D3459500B12DA8 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				1434654B24D3459500B12DA8 /* NotificationService.swift */,
+				1434654D24D3459500B12DA8 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 		14C9A7A724D33CA50076B695 /* Game */ = {
@@ -171,7 +227,10 @@
 			isa = PBXGroup;
 			children = (
 				14F1775A24CB094B006463F2 /* Wolf Treasure Adventure */,
+				1434654A24D3459500B12DA8 /* OneSignalNotificationServiceExtension */,
 				14F1775924CB094B006463F2 /* Products */,
+				EB7B3BCC7CA520B56F7E6C7E /* Pods */,
+				CCBC012AE362C851B5B82653 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				14F1775824CB094B006463F2 /* Wolf Treasure Adventure.app */,
+				1434654924D3459500B12DA8 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +246,7 @@
 		14F1775A24CB094B006463F2 /* Wolf Treasure Adventure */ = {
 			isa = PBXGroup;
 			children = (
+				1434655524D3462600B12DA8 /* Wolf Treasure Adventure.entitlements */,
 				14F1776924CB094D006463F2 /* Info.plist */,
 				14F1779024CB0D1A006463F2 /* App */,
 				14F1779624CB0E44006463F2 /* View */,
@@ -352,20 +413,61 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		CCBC012AE362C851B5B82653 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C02E3AEF48797FF40ADDBDA5 /* Pods_OneSignalNotificationServiceExtension.framework */,
+				130188B53BE1B735F18CC61A /* Pods_Wolf_Treasure_Adventure.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB7B3BCC7CA520B56F7E6C7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46E3545895A3C0B58F180196 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				50B3F7F90645524B6F4FAD8B /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				AEEE514FC5EFBC9BDDDA8EB8 /* Pods-Wolf Treasure Adventure.debug.xcconfig */,
+				7A3137E08D9197848BCEB45A /* Pods-Wolf Treasure Adventure.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		14F1775724CB094B006463F2 /* Wolf Treasure Adventure */ = {
+		1434654824D3459500B12DA8 /* OneSignalNotificationServiceExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14F1776C24CB094D006463F2 /* Build configuration list for PBXNativeTarget "Wolf Treasure Adventure" */;
+			buildConfigurationList = 1434655124D3459500B12DA8 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
 			buildPhases = (
-				14F1775424CB094B006463F2 /* Sources */,
-				14F1775524CB094B006463F2 /* Frameworks */,
-				14F1775624CB094B006463F2 /* Resources */,
+				6B427EC844B9589E04D9BC0C /* [CP] Check Pods Manifest.lock */,
+				1434654524D3459500B12DA8 /* Sources */,
+				1434654624D3459500B12DA8 /* Frameworks */,
+				1434654724D3459500B12DA8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 1434654924D3459500B12DA8 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		14F1775724CB094B006463F2 /* Wolf Treasure Adventure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14F1776C24CB094D006463F2 /* Build configuration list for PBXNativeTarget "Wolf Treasure Adventure" */;
+			buildPhases = (
+				7936F8AB29F42B97B99344B4 /* [CP] Check Pods Manifest.lock */,
+				14F1775424CB094B006463F2 /* Sources */,
+				14F1775524CB094B006463F2 /* Frameworks */,
+				14F1775624CB094B006463F2 /* Resources */,
+				1434655424D3459500B12DA8 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1434654F24D3459500B12DA8 /* PBXTargetDependency */,
 			);
 			name = "Wolf Treasure Adventure";
 			packageProductDependencies = (
@@ -388,6 +490,9 @@
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = Viktor;
 				TargetAttributes = {
+					1434654824D3459500B12DA8 = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					14F1775724CB094B006463F2 = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -413,11 +518,19 @@
 			projectRoot = "";
 			targets = (
 				14F1775724CB094B006463F2 /* Wolf Treasure Adventure */,
+				1434654824D3459500B12DA8 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1434654724D3459500B12DA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14F1775624CB094B006463F2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,7 +564,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6B427EC844B9589E04D9BC0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7936F8AB29F42B97B99344B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wolf Treasure Adventure-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		1434654524D3459500B12DA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1434654C24D3459500B12DA8 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14F1775424CB094B006463F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,6 +658,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1434654F24D3459500B12DA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1434654824D3459500B12DA8 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 1434654E24D3459500B12DA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		14F1776624CB094D006463F2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -502,6 +678,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1434655224D3459500B12DA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46E3545895A3C0B58F180196 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 85254P39JJ;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DenisMamonov.WolfTreasureAdventure.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1434655324D3459500B12DA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50B3F7F90645524B6F4FAD8B /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 85254P39JJ;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DenisMamonov.WolfTreasureAdventure.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		14F1776A24CB094D006463F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -618,8 +836,11 @@
 		};
 		14F1776D24CB094D006463F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEEE514FC5EFBC9BDDDA8EB8 /* Pods-Wolf Treasure Adventure.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Wolf Treasure Adventure/Wolf Treasure Adventure.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = "Wolf Treasure Adventure/Info.plist";
@@ -637,8 +858,11 @@
 		};
 		14F1776E24CB094D006463F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A3137E08D9197848BCEB45A /* Pods-Wolf Treasure Adventure.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Wolf Treasure Adventure/Wolf Treasure Adventure.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = "Wolf Treasure Adventure/Info.plist";
@@ -657,6 +881,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1434655124D3459500B12DA8 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1434655224D3459500B12DA8 /* Debug */,
+				1434655324D3459500B12DA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		14F1775324CB094B006463F2 /* Build configuration list for PBXProject "Wolf Treasure Adventure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
