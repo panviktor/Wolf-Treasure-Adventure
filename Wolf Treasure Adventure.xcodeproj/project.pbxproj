@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		142D3D8024D18FE000DB314A /* gradientMonoTone.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 142D3D7F24D18FE000DB314A /* gradientMonoTone.fsh */; };
+		14DF6A6624D2A2B0009A5630 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF6A6524D2A2B0009A5630 /* GameManager.swift */; };
 		14F1775C24CB094B006463F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1775B24CB094B006463F2 /* AppDelegate.swift */; };
 		14F1776524CB094D006463F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F1776424CB094D006463F2 /* Assets.xcassets */; };
 		14F1776824CB094D006463F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F1776624CB094D006463F2 /* LaunchScreen.storyboard */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		142D3D7F24D18FE000DB314A /* gradientMonoTone.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gradientMonoTone.fsh; sourceTree = "<group>"; };
+		14DF6A6524D2A2B0009A5630 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		14F1775824CB094B006463F2 /* Wolf Treasure Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wolf Treasure Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F1775B24CB094B006463F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F1776424CB094D006463F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			children = (
 				14FEE48B24CEB63500C47B75 /* AudioVibroManager.swift */,
 				14FEE48624CEB16B00C47B75 /* SceneManager.swift */,
+				14DF6A6524D2A2B0009A5630 /* GameManager.swift */,
 				14FEE48D24CEB6DD00C47B75 /* ScoreManager.swift */,
 			);
 			path = Managers;
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FEE49624CEB73000C47B75 /* GameSettingsScene.swift in Sources */,
+				14DF6A6624D2A2B0009A5630 /* GameManager.swift in Sources */,
 				14FEE49924CEBCB000C47B75 /* Infobar.swift in Sources */,
 				14FEE49424CEB73000C47B75 /* WinLevelScene.swift in Sources */,
 				14FEE47E24CEAE0C00C47B75 /* Device.swift in Sources */,

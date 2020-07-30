@@ -18,10 +18,11 @@ class TopScoreScene: SKScene {
     }
     
     private var scoreNode = SKSpriteNode()
-    private var state:State = .Select
+    private var state: State = .Select
     private weak var scoreManager = ScoreManager.shared
     private let sceneManager = SceneManager.shared
     private let audioVibroManager = AudioVibroManager.shared
+    private let gameManager = GameManager.shared
     private let screenSize: CGRect = UIScreen.main.bounds
     
     override func didMove(to view: SKView) {

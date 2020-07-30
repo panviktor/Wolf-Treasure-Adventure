@@ -7,14 +7,20 @@ class GameScene: SKScene {
     private var prize: SKSpriteNode!
     private var woods: SKSpriteNode!
     private var level: Level!
-    
-    var currentLevelNum = 1
+    private let gameManager = GameManager.shared
+    private var currentLevelNum: Int {
+        get {
+            gameManager.currentLevel
+        }
+    }
     private let screenSize: CGRect = UIScreen.main.bounds
     private let sceneManager = SceneManager.shared
     private var isLevelOver = false
     private var isLevelWin = false
+    private var chapterIsOver = false
     private var didCutVine = false
     private let audioVibroManager = AudioVibroManager.shared
+   
     
     override func didMove(to view: SKView) {
         setUpLevel(number: currentLevelNum)
@@ -115,9 +121,7 @@ class GameScene: SKScene {
         heroes.physicsBody?.collisionBitMask = 0
         heroes.physicsBody?.contactTestBitMask = PhysicsCategory.prize
         heroes.physicsBody?.isDynamic = false
-        
         addChild(heroes)
-        
         animateCrocodile()
     }
     
@@ -209,12 +213,11 @@ class GameScene: SKScene {
     }
     
     private func switchToNewGame(withTransition transition: SKTransition) {
-        if currentLevelNum <= GameConfiguration.maximumLevel && isLevelOver && isLevelWin {
+        if currentLevelNum <= GameConfiguration.maximumLevel && isLevelOver && isLevelWin && !chapterIsOver {
             let delay = SKAction.wait(forDuration: 0.5)
             let sceneChange = SKAction.run {
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 let winLevel = WinLevelScene(size: self.size)
-                winLevel.nextLevel = self.currentLevelNum
                 winLevel.scaleMode = .aspectFill
                 print(#line, "New Level")
                 self.view?.presentScene(winLevel, transition: transition)
@@ -224,7 +227,6 @@ class GameScene: SKScene {
             let delay = SKAction.wait(forDuration: 0.5)
             let sceneChange = SKAction.run {
                 let scene = GameScene(size: self.size)
-                scene.currentLevelNum = self.currentLevelNum
                 let transition = SKTransition.doorway(withDuration: 0.5)
                 print(#line, "Try Again")
                 self.view?.presentScene(scene, transition: transition)
@@ -245,7 +247,6 @@ class GameScene: SKScene {
     private func setUpLevel(number: Int) {
         let levelString = "Level_\(number)"
         level = Level.init(filename: levelString)
-        
         let infobar = Infobar(name: "infobar")
         self.addChild(infobar)
         infobar.position.y = (screenSize.size.height) - infobar.mainRootHeight
@@ -253,8 +254,6 @@ class GameScene: SKScene {
         infobar.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         infobar.zPosition = 50
         infobar.updateLevelLabel(levelName: level.levelName)
-        
-        
         setUpPhysics()
         setUpScenery()
         setUpPrize()
@@ -288,7 +287,14 @@ extension GameScene: SKPhysicsContactDelegate {
             
             isLevelOver = true
             isLevelWin = true
-            currentLevelNum += 1
+            
+            if isLevelWin && currentLevelNum == GameConfiguration.maximumLevel {
+                chapterIsOver = true
+            }
+            
+            gameManager.addScore()
+            gameManager.addLevel()
+            
             // shrink the pineapple away
             let shrink = SKAction.scale(to: 0, duration: 0.08)
             let removeNode = SKAction.removeFromParent()
