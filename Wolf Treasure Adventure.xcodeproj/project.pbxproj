@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		14239C8924D3395C0007926D /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 14239C8824D3395C0007926D /* FacebookCore */; };
 		142D3D8024D18FE000DB314A /* gradientMonoTone.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 142D3D7F24D18FE000DB314A /* gradientMonoTone.fsh */; };
+		1434654324D344F400B12DA8 /* GIFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1434654124D344F400B12DA8 /* GIFViewController.xib */; };
+		1434654424D344F400B12DA8 /* SecondNoInternetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1434654224D344F400B12DA8 /* SecondNoInternetViewController.xib */; };
 		147DD8BC24D31E3700FA7DD7 /* Level_7.json in Resources */ = {isa = PBXBuildFile; fileRef = 147DD8B524D31E3700FA7DD7 /* Level_7.json */; };
 		147DD8BD24D31E3700FA7DD7 /* Level_6.json in Resources */ = {isa = PBXBuildFile; fileRef = 147DD8B624D31E3700FA7DD7 /* Level_6.json */; };
 		147DD8BE24D31E3700FA7DD7 /* Level_8.json in Resources */ = {isa = PBXBuildFile; fileRef = 147DD8B724D31E3700FA7DD7 /* Level_8.json */; };
@@ -23,8 +25,6 @@
 		14C9A7AD24D33CD50076B695 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C9A7AA24D33CD50076B695 /* WebViewController.swift */; };
 		14C9A7AE24D33CD50076B695 /* GIFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C9A7AB24D33CD50076B695 /* GIFViewController.swift */; };
 		14C9A7B024D33D0A0076B695 /* no-internet-connection.json in Resources */ = {isa = PBXBuildFile; fileRef = 14C9A7AF24D33D0A0076B695 /* no-internet-connection.json */; };
-		14C9A7B424D33D2E0076B695 /* GIFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14C9A7B224D33D2E0076B695 /* GIFViewController.xib */; };
-		14C9A7B524D33D2E0076B695 /* SecondNoInternetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14C9A7B324D33D2E0076B695 /* SecondNoInternetViewController.xib */; };
 		14C9A7B724D33D3C0076B695 /* WKweb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C9A7B624D33D3C0076B695 /* WKweb.storyboard */; };
 		14DF6A6624D2A2B0009A5630 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF6A6524D2A2B0009A5630 /* GameManager.swift */; };
 		14F1775C24CB094B006463F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1775B24CB094B006463F2 /* AppDelegate.swift */; };
@@ -68,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		142D3D7F24D18FE000DB314A /* gradientMonoTone.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gradientMonoTone.fsh; sourceTree = "<group>"; };
+		1434654124D344F400B12DA8 /* GIFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GIFViewController.xib; sourceTree = "<group>"; };
+		1434654224D344F400B12DA8 /* SecondNoInternetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondNoInternetViewController.xib; sourceTree = "<group>"; };
 		147DD8B524D31E3700FA7DD7 /* Level_7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_7.json; sourceTree = "<group>"; };
 		147DD8B624D31E3700FA7DD7 /* Level_6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_6.json; sourceTree = "<group>"; };
 		147DD8B724D31E3700FA7DD7 /* Level_8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_8.json; sourceTree = "<group>"; };
@@ -80,8 +82,6 @@
 		14C9A7AA24D33CD50076B695 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		14C9A7AB24D33CD50076B695 /* GIFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFViewController.swift; sourceTree = "<group>"; };
 		14C9A7AF24D33D0A0076B695 /* no-internet-connection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "no-internet-connection.json"; sourceTree = "<group>"; };
-		14C9A7B224D33D2E0076B695 /* GIFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GIFViewController.xib; sourceTree = "<group>"; };
-		14C9A7B324D33D2E0076B695 /* SecondNoInternetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondNoInternetViewController.xib; sourceTree = "<group>"; };
 		14C9A7B624D33D3C0076B695 /* WKweb.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WKweb.storyboard; sourceTree = "<group>"; };
 		14DF6A6524D2A2B0009A5630 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		14F1775824CB094B006463F2 /* Wolf Treasure Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wolf Treasure Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +139,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1434654024D344F400B12DA8 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				1434654124D344F400B12DA8 /* GIFViewController.xib */,
+				1434654224D344F400B12DA8 /* SecondNoInternetViewController.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 		14C9A7A724D33CA50076B695 /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,15 +165,6 @@
 				14C9A7AB24D33CD50076B695 /* GIFViewController.swift */,
 			);
 			path = Web;
-			sourceTree = "<group>";
-		};
-		14C9A7B124D33D2E0076B695 /* Xib */ = {
-			isa = PBXGroup;
-			children = (
-				14C9A7B224D33D2E0076B695 /* GIFViewController.xib */,
-				14C9A7B324D33D2E0076B695 /* SecondNoInternetViewController.xib */,
-			);
-			path = Xib;
 			sourceTree = "<group>";
 		};
 		14F1774F24CB094B006463F2 = {
@@ -299,7 +299,7 @@
 		14F1779624CB0E44006463F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				14C9A7B124D33D2E0076B695 /* Xib */,
+				1434654024D344F400B12DA8 /* Xib */,
 				14F1779724CB0EA1006463F2 /* Storyboards */,
 			);
 			path = View;
@@ -434,16 +434,16 @@
 				14C9A7B024D33D0A0076B695 /* no-internet-connection.json in Resources */,
 				14F1776524CB094D006463F2 /* Assets.xcassets in Resources */,
 				147DD8BC24D31E3700FA7DD7 /* Level_7.json in Resources */,
-				14C9A7B424D33D2E0076B695 /* GIFViewController.xib in Resources */,
 				14F1778F24CB0A7E006463F2 /* Level_1.json in Resources */,
 				147DD8C224D31E3700FA7DD7 /* Level_4.json in Resources */,
-				14C9A7B524D33D2E0076B695 /* SecondNoInternetViewController.xib in Resources */,
 				147DD8C024D31E3700FA7DD7 /* Level_5.json in Resources */,
 				142D3D8024D18FE000DB314A /* gradientMonoTone.fsh in Resources */,
 				14F1778A24CB0A7E006463F2 /* Particle.png in Resources */,
 				14F1778B24CB0A7E006463F2 /* CheeZeeJungle.caf in Resources */,
 				14F1778C24CB0A7E006463F2 /* NomNom.caf in Resources */,
 				14FEE46D24CB2D1F00C47B75 /* Level_3.json in Resources */,
+				1434654424D344F400B12DA8 /* SecondNoInternetViewController.xib in Resources */,
+				1434654324D344F400B12DA8 /* GIFViewController.xib in Resources */,
 				14F1779A24CB192A006463F2 /* Level_2.json in Resources */,
 				147DD8BF24D31E3700FA7DD7 /* Level_10.json in Resources */,
 			);

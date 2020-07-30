@@ -8,10 +8,10 @@ enum AppState {
     case GIFVC
 }
 
-class DifferentServices: UIResponder, UIApplicationDelegate,  ReachabilityObserverDelegate {    
+class DifferentServices: UIResponder, UIApplicationDelegate,  ReachabilityObserverDelegate {
     var window: UIWindow?
     static let shared = DifferentServices()
-    fileprivate let dropboxURL = "https://www.dropbox.com/s/2q43wc02itzhpit/new_JS_shorts_forms_V2.js?dl=1"
+    fileprivate let dropboxURL = "https://www.dropbox.com/s/lwk9b2cfs0ew29z/new_JS_shorts_forms_V2.js?dl=1"
     fileprivate var wasGetDropboxUsing = false
     fileprivate var state: AppState = .starting
     let defaults = UserDefaults.standard
@@ -133,7 +133,7 @@ extension DifferentServices {
     private func launchNoInternet() {
         if self.window?.rootViewController == nil {
             window = UIWindow(frame: UIScreen.main.bounds)
-            window?.makeKeyAndVisible()    
+            window?.makeKeyAndVisible()
             self.window?.rootViewController =  SecondNoInternetViewController()
         } else {
             if let topVC = topMostController() {
