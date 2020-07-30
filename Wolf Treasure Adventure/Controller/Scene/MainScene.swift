@@ -9,7 +9,7 @@
 import SpriteKit
 
 class MainScene: SKScene, SKPhysicsContactDelegate {
-    enum Scene {
+    private enum Scene {
         case MainScene
         case GameScene
         
@@ -56,7 +56,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         cloud.name = ImageName.mainSceneCloud
         cloud.alpha = 0.8
         self.addChild(cloud)
-
+        
         let root = SKSpriteNode()
         root.color = .clear
         root.name = "RootSKSpriteNode"
@@ -64,13 +64,13 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         root.position = CGPoint(x: screenSize.width / 2, y: screenSize.height / 1.5)
         root.zPosition = -7
         self.addChild(root)
-
+        
         let bd_one_button = createUIButton(name: MainSceneButton.PlayButton, offsetPosX: 0, offsetPosY: 140)
         root.addChild(bd_one_button)
-
+        
         let bd_two_button = createUIButton(name: MainSceneButton.SettingsButton, offsetPosX: 0, offsetPosY: 0)
         root.addChild(bd_two_button)
-
+        
         let bd_three_button = createUIButton(name: MainSceneButton.ScoreButton, offsetPosX: 0, offsetPosY: -140)
         root.addChild(bd_three_button)
         
@@ -118,7 +118,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         return button
     }
     
-    func prepareToChangeScene(scene: Scene){
+    private func prepareToChangeScene(scene: Scene) {
         switch scene {
         case .MainScene:
             debugPrint("Something go wrong?")

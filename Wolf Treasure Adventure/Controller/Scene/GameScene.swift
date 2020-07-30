@@ -2,6 +2,14 @@ import SpriteKit
 import AVFoundation
 
 class GameScene: SKScene {
+    private enum Scene {
+        case MainScene
+    }
+    
+    private enum MainSceneButton: String {
+        case ExitButton
+    }
+    
     private var particles: SKEmitterNode?
     private var heroes: SKSpriteNode!
     private var prize: SKSpriteNode!
@@ -20,7 +28,7 @@ class GameScene: SKScene {
     private var chapterIsOver = false
     private var didCutVine = false
     private let audioVibroManager = AudioVibroManager.shared
-   
+    
     
     override func didMove(to view: SKView) {
         setUpLevel(number: currentLevelNum)
@@ -148,6 +156,18 @@ class GameScene: SKScene {
     //MARK: - Touch handling
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         didCutVine = false
+        
+        var pos: CGPoint!
+        for touch in touches {
+            pos = touch.location(in: self)
+        }
+        
+        let childs = self.nodes(at: pos)
+        for c in childs {
+            if c.name == MainSceneButton.ExitButton.rawValue {
+                prepareToChangeScene(scene: .MainScene)
+            } 
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -175,7 +195,7 @@ class GameScene: SKScene {
     
     private func showMoveParticles(touchPosition: CGPoint) {
         if particles == nil {
-            particles = SKEmitterNode(fileNamed: Scene.particles)
+            particles = SKEmitterNode(fileNamed: SceneParticles.particles)
             particles!.zPosition = 1
             particles!.targetNode = self
             addChild(particles!)
@@ -252,8 +272,19 @@ class GameScene: SKScene {
         infobar.position.y = (screenSize.size.height) - infobar.mainRootHeight
         infobar.position.x = 0
         infobar.anchorPoint = CGPoint(x: 0.0, y: 0.0)
-        infobar.zPosition = 50
+        infobar.zPosition = Layer.infobar
         infobar.updateLevelLabel(levelName: level.levelName)
+        
+        let exitButton = SKSpriteNode()
+        exitButton.texture = SKTexture(imageNamed: ImageName.mainSceneSettingsButton)
+        exitButton.name = MainSceneButton.ExitButton.rawValue
+        exitButton.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+        exitButton.size = CGSize(width: 50, height: 50)
+        exitButton.zPosition = Layer.exitButton
+        exitButton.position = CGPoint(x: screenSize.width - exitButton.size.width - 15, y: screenSize.size.height - exitButton.size.height - (infobar.size.height ))
+        exitButton.alpha = 0.25
+        addChild(exitButton)
+        
         setUpPhysics()
         setUpScenery()
         setUpPrize()
@@ -261,6 +292,22 @@ class GameScene: SKScene {
         setUpCrocodile()
         setUpWoods()
         try? audioVibroManager.playMusic(type: .mainSceneBackground)
+    }
+    
+    private func prepareToChangeScene(scene: Scene){
+        switch scene {
+        case .MainScene:
+            backButtonPressed()
+        }
+    }
+    
+    private func backButtonPressed() {
+        self.recursiveRemovingSKActions(sknodes: self.children)
+        self.removeAllChildren()
+        self.removeAllActions()
+        sceneManager.mainScene = nil
+        let newScene = MainScene(size: self.size)
+        self.view?.presentScene(newScene)
     }
 }
 

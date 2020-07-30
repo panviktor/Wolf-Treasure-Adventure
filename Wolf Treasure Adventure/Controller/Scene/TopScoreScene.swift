@@ -112,7 +112,7 @@ class TopScoreScene: SKScene {
         }
     }
     
-    private func backButtonPressed(){
+    private func backButtonPressed() {
         self.recursiveRemovingSKActions(sknodes: self.children)
         self.removeAllChildren()
         self.removeAllActions()

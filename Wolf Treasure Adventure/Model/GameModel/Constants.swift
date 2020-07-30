@@ -70,9 +70,12 @@ enum Layer {
     static let background: CGFloat = 0
     static let crocodile: CGFloat = 1
     static let vine: CGFloat = 1
-    static let wood: CGFloat = 5
+   
     static let prize: CGFloat = 3
     static let foreground: CGFloat = 4
+    static let wood: CGFloat = 5
+    static let infobar: CGFloat = 10
+    static let exitButton: CGFloat = 10
 }
 
 enum PhysicsCategory {
@@ -88,7 +91,7 @@ enum GameConfiguration {
     static let maximumLevel = 3
 }
 
-enum Scene {
+enum SceneParticles {
     static let particles = "Particle.sks"
 }
 
