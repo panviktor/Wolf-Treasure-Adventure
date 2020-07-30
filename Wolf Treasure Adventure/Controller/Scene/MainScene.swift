@@ -113,7 +113,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         }
         
         button.position = CGPoint(x: dx, y: dy)
-        button.size = CGSize(width: screenSize.width / 3, height: screenSize.height / 8)
+        button.size = CGSize(width: screenSize.width / 4.5, height: screenSize.height / 8)
         button.name = name.rawValue
         return button
     }
@@ -146,9 +146,3 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 }
-
-
-
-
-
-
