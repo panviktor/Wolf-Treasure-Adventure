@@ -4,15 +4,15 @@
     
     "heroesPosition": {"x": 0.45, "y": 0.312},
     "prizeType": 1,
-    "prizePosition": {"x": 0.8, "y": 0.95},
+    "prizePosition": {"x": 0.97, "y": 0.98},
     
     "vines": [
-        {  "length": 13,
+        {  "length": 16,
             "xAnchorPoint": 0.95,
             "yAnchorPoint": 0.8996
         },
         {
-            "length": 14,
+            "length": 18,
             "xAnchorPoint": 0.0993,
             "yAnchorPoint": 0.7588
         }
@@ -31,9 +31,19 @@
         },
         { "type": "Wood",
             "layer": 2,
-            "xPoint": 0.6592,
+            "xPoint": 0.03592,
             "yPoint": 0.6583,
-            "zRotation": 105,
+            "zRotation": 3,
+            "itemsSize": {
+                "width": 0.34,
+                "height": 0.4
+            }
+        },
+        { "type": "Wood",
+            "layer": 2,
+            "xPoint": 0.483592,
+            "yPoint": 0.6,
+            "zRotation": 2,
             "itemsSize": {
                 "width": 0.34,
                 "height": 0.4

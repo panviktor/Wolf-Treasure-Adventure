@@ -293,12 +293,14 @@ class GameScene: SKScene {
         setUpPhysics()
         setUpPrize()
         setUpVines()
-        setUpCrocodile()
+        delay(bySeconds: 0.8) {
+            self.setUpCrocodile()
+        }
         
         delay(bySeconds: 0.8) {
             self.setUpWoods()
         }
-       
+        
         try? audioVibroManager.playMusic(type: .mainSceneBackground)
     }
     

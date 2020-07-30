@@ -31,9 +31,9 @@
         },
         { "type": "Wood",
             "layer": 2,
-            "xPoint": 0.6592,
+            "xPoint": 0.8592,
             "yPoint": 0.6583,
-            "zRotation": 105,
+            "zRotation": 8,
             "itemsSize": {
                 "width": 0.34,
                 "height": 0.4

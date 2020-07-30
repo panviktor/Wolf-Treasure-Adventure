@@ -113,7 +113,7 @@ class TopScoreScene: SKScene {
         resetButton.name = TopScoreSceneButton.ResetButton.rawValue
         resetButton.position = CGPoint(x: scoreNode.position.x / 2,
                                                 y: thirdTextLine.position.y - secondTextLine.fontSize * 2)
-        resetButton.size = CGSize(width: scoreNode.size.width / 6, height: scoreNode.size.height / 5)
+        resetButton.size = CGSize(width: scoreNode.size.width / 6, height: scoreNode.size.height / 4.5)
         resetButton.zPosition = 15
         scoreNode.addChild(resetButton)
         
