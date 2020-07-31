@@ -13,6 +13,7 @@
 		1434654424D344F400B12DA8 /* SecondNoInternetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1434654224D344F400B12DA8 /* SecondNoInternetViewController.xib */; };
 		1434654C24D3459500B12DA8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434654B24D3459500B12DA8 /* NotificationService.swift */; };
 		1434655024D3459500B12DA8 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1434654924D3459500B12DA8 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		144D580824D40CAF0098E1D7 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 144D580724D40CAF0098E1D7 /* DeviceKit */; };
 		147DD8BC24D31E3700FA7DD7 /* Level_7.json in Resources */ = {isa = PBXBuildFile; fileRef = 147DD8B524D31E3700FA7DD7 /* Level_7.json */; };
 		147DD8BD24D31E3700FA7DD7 /* Level_6.json in Resources */ = {isa = PBXBuildFile; fileRef = 147DD8B624D31E3700FA7DD7 /* Level_6.json */; };
 		147DD8BE24D31E3700FA7DD7 /* Level_8.json in Resources */ = {isa = PBXBuildFile; fileRef = 147DD8B724D31E3700FA7DD7 /* Level_8.json */; };
@@ -21,7 +22,6 @@
 		147DD8C124D31E3700FA7DD7 /* Level_9.json in Resources */ = {isa = PBXBuildFile; fileRef = 147DD8BA24D31E3700FA7DD7 /* Level_9.json */; };
 		147DD8C224D31E3700FA7DD7 /* Level_4.json in Resources */ = {isa = PBXBuildFile; fileRef = 147DD8BB24D31E3700FA7DD7 /* Level_4.json */; };
 		147DD8C524D338EE00FA7DD7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 147DD8C424D338EE00FA7DD7 /* Lottie */; };
-		14A03CBB24D2F3EB0031A430 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14A03CBA24D2F3EB0031A430 /* DeviceKit */; };
 		14C9A7A624D33C8A0076B695 /* DifferentServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C9A7A524D33C8A0076B695 /* DifferentServices.swift */; };
 		14C9A7AC24D33CD50076B695 /* SecondNoInternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C9A7A924D33CD50076B695 /* SecondNoInternetViewController.swift */; };
 		14C9A7AD24D33CD50076B695 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C9A7AA24D33CD50076B695 /* WebViewController.swift */; };
@@ -176,7 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FEE48524CEB01D00C47B75 /* Reachability in Frameworks */,
-				14A03CBB24D2F3EB0031A430 /* DeviceKit in Frameworks */,
+				144D580824D40CAF0098E1D7 /* DeviceKit in Frameworks */,
 				147DD8C524D338EE00FA7DD7 /* Lottie in Frameworks */,
 				14239C8924D3395C0007926D /* FacebookCore in Frameworks */,
 				4FACC5027DFD27EC1E33E6A6 /* Pods_Wolf_Treasure_Adventure.framework in Frameworks */,
@@ -472,9 +472,9 @@
 			name = "Wolf Treasure Adventure";
 			packageProductDependencies = (
 				14FEE48424CEB01D00C47B75 /* Reachability */,
-				14A03CBA24D2F3EB0031A430 /* DeviceKit */,
 				147DD8C424D338EE00FA7DD7 /* Lottie */,
 				14239C8824D3395C0007926D /* FacebookCore */,
+				144D580724D40CAF0098E1D7 /* DeviceKit */,
 			);
 			productName = "Wolf Treasure Adventure";
 			productReference = 14F1775824CB094B006463F2 /* Wolf Treasure Adventure.app */;
@@ -509,9 +509,9 @@
 			mainGroup = 14F1774F24CB094B006463F2;
 			packageReferences = (
 				14FEE48324CEB01D00C47B75 /* XCRemoteSwiftPackageReference "Reachability" */,
-				14A03CB924D2F3EB0031A430 /* XCRemoteSwiftPackageReference "DeviceKit" */,
 				147DD8C324D338EE00FA7DD7 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				14239C8724D3395C0007926D /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				144D580624D40CAF0098E1D7 /* XCRemoteSwiftPackageReference "DeviceKit" */,
 			);
 			productRefGroup = 14F1775924CB094B006463F2 /* Products */;
 			projectDirPath = "";
@@ -685,7 +685,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -706,7 +706,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -770,7 +770,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -824,7 +824,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -844,7 +844,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = "Wolf Treasure Adventure/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -866,7 +866,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = "Wolf Treasure Adventure/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -919,20 +919,20 @@
 				minimumVersion = 7.1.1;
 			};
 		};
+		144D580624D40CAF0098E1D7 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devicekit/DeviceKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
 		147DD8C324D338EE00FA7DD7 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 3.1.8;
-			};
-		};
-		14A03CB924D2F3EB0031A430 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devicekit/DeviceKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.2.0;
 			};
 		};
 		14FEE48324CEB01D00C47B75 /* XCRemoteSwiftPackageReference "Reachability" */ = {
@@ -951,15 +951,15 @@
 			package = 14239C8724D3395C0007926D /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookCore;
 		};
+		144D580724D40CAF0098E1D7 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 144D580624D40CAF0098E1D7 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			productName = DeviceKit;
+		};
 		147DD8C424D338EE00FA7DD7 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 147DD8C324D338EE00FA7DD7 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
-		};
-		14A03CBA24D2F3EB0031A430 /* DeviceKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 14A03CB924D2F3EB0031A430 /* XCRemoteSwiftPackageReference "DeviceKit" */;
-			productName = DeviceKit;
 		};
 		14FEE48424CEB01D00C47B75 /* Reachability */ = {
 			isa = XCSwiftPackageProductDependency;
