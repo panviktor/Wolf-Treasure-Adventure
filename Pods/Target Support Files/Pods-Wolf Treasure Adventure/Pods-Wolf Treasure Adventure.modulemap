@@ -1,0 +1,6 @@
+framework module Pods_Wolf_Treasure_Adventure {
+  umbrella header "Pods-Wolf Treasure Adventure-umbrella.h"
+
+  export *
+  module * { export * }
+}

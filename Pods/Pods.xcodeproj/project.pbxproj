@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		210EB05CEC7AD9C148F90F752DE74C48 /* OneSignal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 09A5A4D585F2B2C7D977A4F1E5213117 /* Build configuration list for PBXAggregateTarget "OneSignal" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = OneSignal;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		063C911DC1564D34B2311980C8D8C004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		20B8ABC3961B4F4D928055D8F3606E54 /* Pods-Wolf Treasure Adventure-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 624715E8F8F34C88B1F46DBFB701CF95 /* Pods-Wolf Treasure Adventure-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74C0B347710148D32A24FB28641C1386 /* Pods-OneSignalNotificationServiceExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 525CBD97F3A342130ED816FEBD243EEB /* Pods-OneSignalNotificationServiceExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DEF629D39200F0A579F519F50C1D473 /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F978BE7B07F8BA1D7446914715A265 /* Pods-OneSignalNotificationServiceExtension-dummy.m */; };
+		B36E1C62E011523734923BA097601055 /* Pods-Wolf Treasure Adventure-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E24BA0BAD0808705060DC24A0CE6243 /* Pods-Wolf Treasure Adventure-dummy.m */; };
+		BAB73F3C5C2980299EC4F12CF215843C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23B56859B5C25E0F114C27428B766514 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 210EB05CEC7AD9C148F90F752DE74C48;
+			remoteInfo = OneSignal;
+		};
+		988E3E6D2A6E811510F18DECDE2B8542 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 210EB05CEC7AD9C148F90F752DE74C48;
+			remoteInfo = OneSignal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3579EBD2D502E7BC776B61B3EA750C78 /* Pods-Wolf Treasure Adventure.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Wolf Treasure Adventure.modulemap"; sourceTree = "<group>"; };
+		39E051A7A86874FAFA38075610F6D89A /* Pods-Wolf Treasure Adventure-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Wolf Treasure Adventure-acknowledgements.plist"; sourceTree = "<group>"; };
+		3C7DF8E6E8316B5A099CA9BE9EF2C770 /* Pods-OneSignalNotificationServiceExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OneSignalNotificationServiceExtension-Info.plist"; sourceTree = "<group>"; };
+		4AF3B972C94DFF11700E306F18F01DF3 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OneSignalNotificationServiceExtension.framework; path = "Pods-OneSignalNotificationServiceExtension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		525CBD97F3A342130ED816FEBD243EEB /* Pods-OneSignalNotificationServiceExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OneSignalNotificationServiceExtension-umbrella.h"; sourceTree = "<group>"; };
+		60D18E3DF212897943E6A824EE1F0A50 /* Pods-Wolf Treasure Adventure-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Wolf Treasure Adventure-acknowledgements.markdown"; sourceTree = "<group>"; };
+		624715E8F8F34C88B1F46DBFB701CF95 /* Pods-Wolf Treasure Adventure-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Wolf Treasure Adventure-umbrella.h"; sourceTree = "<group>"; };
+		7E24BA0BAD0808705060DC24A0CE6243 /* Pods-Wolf Treasure Adventure-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Wolf Treasure Adventure-dummy.m"; sourceTree = "<group>"; };
+		8A5B10E84B17BD26FE9D4B2BF9685E97 /* Pods-Wolf Treasure Adventure-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Wolf Treasure Adventure-Info.plist"; sourceTree = "<group>"; };
+		902E93CF36123E61715248B4BAD22E33 /* OneSignal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OneSignal.debug.xcconfig; sourceTree = "<group>"; };
+		994EDE428CB8DC24411067A35763BFFC /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DA0C0D43BCD3ADE7C121466DB54860D /* Pods-Wolf Treasure Adventure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wolf Treasure Adventure.debug.xcconfig"; sourceTree = "<group>"; };
+		BB6B9916A2D7878B4EADC14AD847B4E1 /* Pods_Wolf_Treasure_Adventure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Wolf_Treasure_Adventure.framework; path = "Pods-Wolf Treasure Adventure.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4268F054477AFC3D7272CE39D4CF6FF /* Pods-OneSignalNotificationServiceExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OneSignalNotificationServiceExtension.modulemap"; sourceTree = "<group>"; };
+		C6F978BE7B07F8BA1D7446914715A265 /* Pods-OneSignalNotificationServiceExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OneSignalNotificationServiceExtension-dummy.m"; sourceTree = "<group>"; };
+		CAD6E83AEF97ED5BEDE9AE94D039E42A /* Pods-Wolf Treasure Adventure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wolf Treasure Adventure.release.xcconfig"; sourceTree = "<group>"; };
+		D0A7D689F959C4F311D022BE2EB29EFD /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		D46D3BFCCCFCED06AC5E5C4D8CF113DA /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		DE970C2B67E152876EBCB1DA43AB863F /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
+		E393F96AB823A5F5DE74921F3D3E3A69 /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.plist"; sourceTree = "<group>"; };
+		EB8C2A5F2DDBF831C0AA4A938F63A708 /* OneSignal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OneSignal.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D8B563E973D8832811120D091F6FD03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				063C911DC1564D34B2311980C8D8C004 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5CB63C822E186ACA76A9F0740CC61E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB73F3C5C2980299EC4F12CF215843C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09E310EB22806134300BFC537FB27F3D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				902E93CF36123E61715248B4BAD22E33 /* OneSignal.debug.xcconfig */,
+				EB8C2A5F2DDBF831C0AA4A938F63A708 /* OneSignal.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OneSignal";
+			sourceTree = "<group>";
+		};
+		0BE54648AA0EBBF75EE1F2CB581F6E8D /* Pods-Wolf Treasure Adventure */ = {
+			isa = PBXGroup;
+			children = (
+				3579EBD2D502E7BC776B61B3EA750C78 /* Pods-Wolf Treasure Adventure.modulemap */,
+				60D18E3DF212897943E6A824EE1F0A50 /* Pods-Wolf Treasure Adventure-acknowledgements.markdown */,
+				39E051A7A86874FAFA38075610F6D89A /* Pods-Wolf Treasure Adventure-acknowledgements.plist */,
+				7E24BA0BAD0808705060DC24A0CE6243 /* Pods-Wolf Treasure Adventure-dummy.m */,
+				8A5B10E84B17BD26FE9D4B2BF9685E97 /* Pods-Wolf Treasure Adventure-Info.plist */,
+				624715E8F8F34C88B1F46DBFB701CF95 /* Pods-Wolf Treasure Adventure-umbrella.h */,
+				9DA0C0D43BCD3ADE7C121466DB54860D /* Pods-Wolf Treasure Adventure.debug.xcconfig */,
+				CAD6E83AEF97ED5BEDE9AE94D039E42A /* Pods-Wolf Treasure Adventure.release.xcconfig */,
+			);
+			name = "Pods-Wolf Treasure Adventure";
+			path = "Target Support Files/Pods-Wolf Treasure Adventure";
+			sourceTree = "<group>";
+		};
+		1D40C0AE1924259957A7C76C1386542E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				699A7B2578216D4BEBAE7B6C9CF67AED /* OneSignal */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		699A7B2578216D4BEBAE7B6C9CF67AED /* OneSignal */ = {
+			isa = PBXGroup;
+			children = (
+				CFE090658AE1E3252BAA8610D3A558D4 /* Frameworks */,
+				09E310EB22806134300BFC537FB27F3D /* Support Files */,
+			);
+			name = OneSignal;
+			path = OneSignal;
+			sourceTree = "<group>";
+		};
+		9E82F6159D4F36E26A06BF03065FCEFE /* Pods-OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C4268F054477AFC3D7272CE39D4CF6FF /* Pods-OneSignalNotificationServiceExtension.modulemap */,
+				994EDE428CB8DC24411067A35763BFFC /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */,
+				E393F96AB823A5F5DE74921F3D3E3A69 /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */,
+				C6F978BE7B07F8BA1D7446914715A265 /* Pods-OneSignalNotificationServiceExtension-dummy.m */,
+				3C7DF8E6E8316B5A099CA9BE9EF2C770 /* Pods-OneSignalNotificationServiceExtension-Info.plist */,
+				525CBD97F3A342130ED816FEBD243EEB /* Pods-OneSignalNotificationServiceExtension-umbrella.h */,
+				D46D3BFCCCFCED06AC5E5C4D8CF113DA /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				D0A7D689F959C4F311D022BE2EB29EFD /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+			);
+			name = "Pods-OneSignalNotificationServiceExtension";
+			path = "Target Support Files/Pods-OneSignalNotificationServiceExtension";
+			sourceTree = "<group>";
+		};
+		AEF0AF00CEDE888346A50ABA59A6CEC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4AF3B972C94DFF11700E306F18F01DF3 /* Pods_OneSignalNotificationServiceExtension.framework */,
+				BB6B9916A2D7878B4EADC14AD847B4E1 /* Pods_Wolf_Treasure_Adventure.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				1D40C0AE1924259957A7C76C1386542E /* Pods */,
+				AEF0AF00CEDE888346A50ABA59A6CEC9 /* Products */,
+				CFE9BB2CEF21A87837B8677E85105207 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CFE090658AE1E3252BAA8610D3A558D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE970C2B67E152876EBCB1DA43AB863F /* OneSignal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFE9BB2CEF21A87837B8677E85105207 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E82F6159D4F36E26A06BF03065FCEFE /* Pods-OneSignalNotificationServiceExtension */,
+				0BE54648AA0EBBF75EE1F2CB581F6E8D /* Pods-Wolf Treasure Adventure */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0DB49AEF36B3C2143821FE1026E02CF6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C0B347710148D32A24FB28641C1386 /* Pods-OneSignalNotificationServiceExtension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44CB103C9DDEA5AA067C024586C19CA7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20B8ABC3961B4F4D928055D8F3606E54 /* Pods-Wolf Treasure Adventure-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A09E1A96FC595A3AB019BF624299B168 /* Pods-Wolf Treasure Adventure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FFBF572416A0B5F08E8367BF10B4DB7 /* Build configuration list for PBXNativeTarget "Pods-Wolf Treasure Adventure" */;
+			buildPhases = (
+				44CB103C9DDEA5AA067C024586C19CA7 /* Headers */,
+				2765F8B45CC6C0F8D32AE1068954FFF9 /* Sources */,
+				6D8B563E973D8832811120D091F6FD03 /* Frameworks */,
+				CE2CAB11F3B43D2D138D5311B64D3632 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23E422267FA9A537DF58DA5F424EEBB8 /* PBXTargetDependency */,
+			);
+			name = "Pods-Wolf Treasure Adventure";
+			productName = "Pods-Wolf Treasure Adventure";
+			productReference = BB6B9916A2D7878B4EADC14AD847B4E1 /* Pods_Wolf_Treasure_Adventure.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BD0F10574EB554D7E668F50D2A5B77DF /* Pods-OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06D58702379A7C1A89E3AB2171114710 /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				0DB49AEF36B3C2143821FE1026E02CF6 /* Headers */,
+				83E1A2A924852B685C9CB91C7B8939DC /* Sources */,
+				E5CB63C822E186ACA76A9F0740CC61E2 /* Frameworks */,
+				3BD14379EC37E7515A387EBE0CC14D16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				652A8F5B5FBA958AE8264763AF88A56A /* PBXTargetDependency */,
+			);
+			name = "Pods-OneSignalNotificationServiceExtension";
+			productName = "Pods-OneSignalNotificationServiceExtension";
+			productReference = 4AF3B972C94DFF11700E306F18F01DF3 /* Pods_OneSignalNotificationServiceExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = AEF0AF00CEDE888346A50ABA59A6CEC9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				210EB05CEC7AD9C148F90F752DE74C48 /* OneSignal */,
+				BD0F10574EB554D7E668F50D2A5B77DF /* Pods-OneSignalNotificationServiceExtension */,
+				A09E1A96FC595A3AB019BF624299B168 /* Pods-Wolf Treasure Adventure */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BD14379EC37E7515A387EBE0CC14D16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE2CAB11F3B43D2D138D5311B64D3632 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2765F8B45CC6C0F8D32AE1068954FFF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B36E1C62E011523734923BA097601055 /* Pods-Wolf Treasure Adventure-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83E1A2A924852B685C9CB91C7B8939DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DEF629D39200F0A579F519F50C1D473 /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23E422267FA9A537DF58DA5F424EEBB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OneSignal;
+			target = 210EB05CEC7AD9C148F90F752DE74C48 /* OneSignal */;
+			targetProxy = 988E3E6D2A6E811510F18DECDE2B8542 /* PBXContainerItemProxy */;
+		};
+		652A8F5B5FBA958AE8264763AF88A56A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OneSignal;
+			target = 210EB05CEC7AD9C148F90F752DE74C48 /* OneSignal */;
+			targetProxy = 23B56859B5C25E0F114C27428B766514 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		196DFA3E4A09A28224918543529A1885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		34AADE235EB32E45818375153527B1BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA0C0D43BCD3ADE7C121466DB54860D /* Pods-Wolf Treasure Adventure.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Wolf Treasure Adventure/Pods-Wolf Treasure Adventure-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Wolf Treasure Adventure/Pods-Wolf Treasure Adventure.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A1E4CC3AEB09F6FA588AA3E9F2CBFFEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D46D3BFCCCFCED06AC5E5C4D8CF113DA /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A878C3D55F709CAD45EF8ECE52195E7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB8C2A5F2DDBF831C0AA4A938F63A708 /* OneSignal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BA3C207D17C23CCC2A2B566475ED03BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAD6E83AEF97ED5BEDE9AE94D039E42A /* Pods-Wolf Treasure Adventure.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Wolf Treasure Adventure/Pods-Wolf Treasure Adventure-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Wolf Treasure Adventure/Pods-Wolf Treasure Adventure.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C880F822ED1907CE91CD957623CB5B1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0A7D689F959C4F311D022BE2EB29EFD /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F3E9F9E9585F98343983C0CCCCB54092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 902E93CF36123E61715248B4BAD22E33 /* OneSignal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06D58702379A7C1A89E3AB2171114710 /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1E4CC3AEB09F6FA588AA3E9F2CBFFEC /* Debug */,
+				C880F822ED1907CE91CD957623CB5B1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09A5A4D585F2B2C7D977A4F1E5213117 /* Build configuration list for PBXAggregateTarget "OneSignal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3E9F9E9585F98343983C0CCCCB54092 /* Debug */,
+				A878C3D55F709CAD45EF8ECE52195E7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FFBF572416A0B5F08E8367BF10B4DB7 /* Build configuration list for PBXNativeTarget "Pods-Wolf Treasure Adventure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34AADE235EB32E45818375153527B1BD /* Debug */,
+				BA3C207D17C23CCC2A2B566475ED03BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				196DFA3E4A09A28224918543529A1885 /* Debug */,
+				B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
