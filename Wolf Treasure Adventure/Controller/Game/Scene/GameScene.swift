@@ -115,6 +115,7 @@ class GameScene: SKScene {
     //MARK: - Croc methods
     private func setUpCrocodile() {
         heroes = SKSpriteNode(imageNamed: ImageName.crocMouthClosed)
+        heroes.setScale(0.95)
         //FIXME: - load from level
         heroes.position = CGPoint(x: size.width * level.heroesPosition.x,
                                   y: size.height * level.heroesPosition.y)
@@ -122,7 +123,13 @@ class GameScene: SKScene {
         heroes.zPosition = Layer.crocodile
         heroes.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: ImageName.heroesMask),
                                            size: heroes.size)
-        heroes.physicsBody?.categoryBitMask = PhysicsCategoryBitMask.crocodile
+        
+        let sizeX = heroes.size.width * CGFloat(0.95)
+        let sizeY = heroes.size.height * CGFloat(0.90)
+        let newPhysicsBodySize = CGSize(width: sizeX, height: sizeY)
+
+        heroes.physicsBody = SKPhysicsBody(rectangleOf: newPhysicsBodySize)
+        heroes.physicsBody!.categoryBitMask = PhysicsCategoryBitMask.crocodile
         heroes.physicsBody?.collisionBitMask = 0
         heroes.physicsBody?.contactTestBitMask = PhysicsCategoryBitMask.prize
         heroes.physicsBody?.isDynamic = false
