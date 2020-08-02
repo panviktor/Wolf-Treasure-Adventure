@@ -21,7 +21,7 @@ class VineNode: SKNode {
     
     func addToScene(_ scene: SKScene) {
         // add vine to scene
-        zPosition = Layer.vine
+        zPosition = Layers.vine
         scene.addChild(self)
         
         // create vine holder

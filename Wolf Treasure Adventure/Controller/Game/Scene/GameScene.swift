@@ -51,15 +51,22 @@ class GameScene: SKScene {
         let background = SKSpriteNode(imageNamed: ImageName.background)
         background.anchorPoint = CGPoint(x: 0, y: 0)
         background.position = CGPoint(x: 0, y: 0)
-        background.zPosition = Layer.background
+        background.zPosition = Layers.background
         background.size = CGSize(width: size.width, height: size.height)
         addChild(background)
         
         let water = SKSpriteNode(imageNamed: ImageName.water)
         water.anchorPoint = CGPoint(x: 0, y: 0)
         water.position = CGPoint(x: 0, y: 0)
-        water.zPosition = Layer.foreground
+        water.zPosition = Layers.foreground
         water.size = CGSize(width: size.width, height: size.height * 0.2139)
+        
+        let emitter = SKEmitterNode(fileNamed: Emitter.rain)!
+        emitter.zPosition = Layers.emitter
+        emitter.position = CGPoint(x: size.width / 2, y: size.height)
+        emitter.advanceSimulationTime(30)
+        addChild(emitter)
+        
         addChild(water)
     }
     
@@ -67,7 +74,7 @@ class GameScene: SKScene {
         prize = SKSpriteNode(imageNamed: ImageName.prize)
         prize.position = CGPoint(x: size.width * level.prizePosition.x,
                                  y: level.prizePosition.y)
-        prize.zPosition = Layer.prize
+        prize.zPosition = Layers.prize
         prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
         prize.physicsBody?.categoryBitMask = PhysicsCategoryBitMask.prize
         prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.wood
@@ -120,7 +127,7 @@ class GameScene: SKScene {
         heroes.position = CGPoint(x: size.width * level.heroesPosition.x,
                                   y: size.height * level.heroesPosition.y)
         
-        heroes.zPosition = Layer.crocodile
+        heroes.zPosition = Layers.crocodile
         heroes.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: ImageName.heroesMask),
                                            size: heroes.size)
         
@@ -283,7 +290,7 @@ class GameScene: SKScene {
         infobar.position.y = (screenSize.size.height) - infobar.mainRootHeight - extraPoin
         infobar.position.x = 0
         infobar.anchorPoint = CGPoint(x: 0.0, y: 0.0)
-        infobar.zPosition = Layer.infobar
+        infobar.zPosition = Layers.infobar
         infobar.updateLevelLabel(levelName: level.levelName)
         
         let exitButton = SKSpriteNode()
@@ -291,7 +298,7 @@ class GameScene: SKScene {
         exitButton.name = MainSceneButton.ExitButton.rawValue
         exitButton.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         exitButton.size = CGSize(width: 50, height: 50)
-        exitButton.zPosition = Layer.exitButton
+        exitButton.zPosition = Layers.exitButton
         exitButton.position = CGPoint(x: screenSize.width - exitButton.size.width - 15, y: screenSize.size.height - exitButton.size.height - infobar.size.height - extraPoin * 0.85 )
         exitButton.alpha = 0.25
         addChild(exitButton)

@@ -70,8 +70,9 @@ enum BackgroundSoundType {
     case topScoreSceneBackground
 }
 
-enum Layer {
+enum Layers {
     static let background: CGFloat = 0
+    static let emitter: CGFloat = 1
     static let crocodile: CGFloat = 1
     static let vine: CGFloat = 1
    
@@ -113,4 +114,9 @@ enum ObjectType: String, Codable {
         let object = try decoder.singleValueContainer().decode(String.self)
         self = ObjectType(rawValue: object) ?? .somethingNew
     }
+}
+
+enum Emitter {
+    static let rain = "Rain"
+    static let dust = "Dust"
 }
