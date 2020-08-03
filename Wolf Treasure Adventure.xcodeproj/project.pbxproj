@@ -29,6 +29,7 @@
 		14C9A7B024D33D0A0076B695 /* no-internet-connection.json in Resources */ = {isa = PBXBuildFile; fileRef = 14C9A7AF24D33D0A0076B695 /* no-internet-connection.json */; };
 		14C9A7B724D33D3C0076B695 /* WKweb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C9A7B624D33D3C0076B695 /* WKweb.storyboard */; };
 		14DF6A6624D2A2B0009A5630 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF6A6524D2A2B0009A5630 /* GameManager.swift */; };
+		14E27AB024D7ED8F0051FE79 /* Level_11.json in Resources */ = {isa = PBXBuildFile; fileRef = 14E27AAF24D7ED8F0051FE79 /* Level_11.json */; };
 		14F1775C24CB094B006463F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1775B24CB094B006463F2 /* AppDelegate.swift */; };
 		14F1776524CB094D006463F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F1776424CB094D006463F2 /* Assets.xcassets */; };
 		14F1776824CB094D006463F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F1776624CB094D006463F2 /* LaunchScreen.storyboard */; };
@@ -118,6 +119,7 @@
 		14C9A7AF24D33D0A0076B695 /* no-internet-connection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "no-internet-connection.json"; sourceTree = "<group>"; };
 		14C9A7B624D33D3C0076B695 /* WKweb.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WKweb.storyboard; sourceTree = "<group>"; };
 		14DF6A6524D2A2B0009A5630 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		14E27AAF24D7ED8F0051FE79 /* Level_11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_11.json; sourceTree = "<group>"; };
 		14F1775824CB094B006463F2 /* Wolf Treasure Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wolf Treasure Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F1775B24CB094B006463F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F1776424CB094D006463F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				147DD8B724D31E3700FA7DD7 /* Level_8.json */,
 				147DD8BA24D31E3700FA7DD7 /* Level_9.json */,
 				147DD8B824D31E3700FA7DD7 /* Level_10.json */,
+				14E27AAF24D7ED8F0051FE79 /* Level_11.json */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				1434654424D344F400B12DA8 /* SecondNoInternetViewController.xib in Resources */,
 				1434654324D344F400B12DA8 /* GIFViewController.xib in Resources */,
 				14F1779A24CB192A006463F2 /* Level_2.json in Resources */,
+				14E27AB024D7ED8F0051FE79 /* Level_11.json in Resources */,
 				147DD8BF24D31E3700FA7DD7 /* Level_10.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

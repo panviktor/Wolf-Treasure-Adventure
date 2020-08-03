@@ -98,7 +98,6 @@ class GameScene: SKScene {
         }
     }
     
-    
     //MARK: - Items methods
     private func setUpWoods() {
         // load items data
@@ -117,7 +116,6 @@ class GameScene: SKScene {
             }
         }
     }
-    
     
     //MARK: - Croc methods
     private func setUpCrocodile() {
@@ -299,7 +297,8 @@ class GameScene: SKScene {
         exitButton.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         exitButton.size = CGSize(width: 50, height: 50)
         exitButton.zPosition = Layers.exitButton
-        exitButton.position = CGPoint(x: screenSize.width - exitButton.size.width - 15, y: screenSize.size.height - exitButton.size.height - infobar.size.height - extraPoin * 0.85 )
+        exitButton.position = CGPoint(x: screenSize.width - exitButton.size.width - 15,
+                                      y: screenSize.size.height - exitButton.size.height - infobar.size.height - extraPoin * 0.85 )
         exitButton.alpha = 0.25
         addChild(exitButton)
         
