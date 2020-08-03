@@ -6,8 +6,6 @@
 //  Copyright © 2020 Viktor. All rights reserved.
 //
 
-
-
 import UIKit
 import OneSignal
 import FBSDKCoreKit
@@ -85,7 +83,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
       return rootViewController
     }
-    
 }
 
 extension Notification.Name {
