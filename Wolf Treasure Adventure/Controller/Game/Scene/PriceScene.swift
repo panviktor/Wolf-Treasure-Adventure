@@ -83,6 +83,10 @@ class PriceScene: SKScene {
         buttonNode.addChild(applyButton)
     }
     
+    private func priceGrid() {
+        
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
          var pos:CGPoint!
          for touch in touches{
