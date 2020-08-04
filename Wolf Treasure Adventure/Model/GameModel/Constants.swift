@@ -11,6 +11,7 @@ enum ImageName {
     static let mainSceneCloud = "MainSceneCloud"
     static let mainScenePlayButton = "MainScenePlayButton"
     static let mainSceneSettingsButton = "MainSceneSettingsButton"
+    static let mainSceneChoosePriseButton = "MainSceneChoosePriseButton"
     static let mainSceneScoreButton = "MainSceneScoreButton"
     
     /// Game Scene Textures
@@ -50,6 +51,20 @@ enum ImageName {
     
     //FIXME: - Add Infobar Images
     ///Infobar
+    
+    /// Game Choose your price
+    static let priceSceneBackground = "PriceSceneBackground"
+    static let priceSceneTextLabel = "PriceSceneTextLabel"
+    static let priceSceneMainBoard = "PriceSceneMainBoard"
+    static let priceSceneSkinPrice_1 = "Price_1"
+    static let priceSceneSkinPrice_2 = "Price_2"
+    static let priceSceneSkinPrice_3 = "Price_3"
+    static let priceSceneSkinPrice_4 = "Price_4"
+    static let priceSceneSkinPrice_5 = "Price_5"
+    static let priceSceneSkinPrice_6 = "Price_6"
+    static let priceSceneSkinPrice_7 = "Price_7"
+    static let priceSceneSkinPrice_8 = "Price_8"
+    static let priceSceneSkinPrice_9 = "Price_9"
 }
 
 enum SoundFile {
@@ -57,6 +72,8 @@ enum SoundFile {
     static let slice = "Slice.caf"
     static let splash = "Splash.caf"
     static let nomNom = "NomNom.caf"
+    
+    static let priceSceneBackground = "PriceSceneBackground.mp3"
 }
 
 enum SoundType {
@@ -68,6 +85,7 @@ enum SoundType {
 enum BackgroundSoundType {
     case mainSceneBackground
     case topScoreSceneBackground
+    case priceSceneBackground
 }
 
 enum Layers {
@@ -75,7 +93,6 @@ enum Layers {
     static let emitter: CGFloat = 1
     static let crocodile: CGFloat = 1
     static let vine: CGFloat = 1
-   
     static let prize: CGFloat = 3
     static let foreground: CGFloat = 4
     static let wood: CGFloat = 5
