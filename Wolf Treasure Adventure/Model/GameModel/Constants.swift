@@ -65,6 +65,8 @@ enum ImageName {
     static let priceSceneSkinPrice_7 = "Price_7"
     static let priceSceneSkinPrice_8 = "Price_8"
     static let priceSceneSkinPrice_9 = "Price_9"
+    static let priceSceneBackButton = "PriceSceneBackButton"
+    static let priceSceneApplyButton = "PriceSceneApplyButton"
 }
 
 enum SoundFile {
