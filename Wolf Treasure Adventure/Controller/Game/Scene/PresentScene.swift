@@ -88,15 +88,19 @@ class PresentScene: SKScene {
     private func presentGrid() {
         if let grid = Grid(blockSize: mainBoard.size.width / 3.5, rows: 3, columns: 3) {
             grid.position = CGPoint (x: mainBoard.frame.midX, y: mainBoard.frame.midY)
+            grid.zPosition = -8
             addChild(grid)
             
-            var currentSkin =  ImageName.PresentScene.PresentSceneSkinPrice.Present_1
+            var currentSkin =  ImageName.PresentScene.SkinPrice.Present_1
+            
             for row in 0...2 {
                 for column in 0...2 {
                     let price = SKSpriteNode(imageNamed: currentSkin.description)
                     currentSkin = currentSkin.next
                     price.size =  CGSize(width: mainBoard.size.width / 3.8, height: mainBoard.size.width / 3.8)
+                    price.name = currentSkin.description
                     price.position = grid.gridPosition(row: row, column: column)
+                    price.zPosition = 1
                     grid.addChild(price)
                 }
             }
@@ -114,6 +118,26 @@ class PresentScene: SKScene {
             for c in nodes(at: pos){
                 if c.name == PresentSceneButton.BackButton.rawValue {
                     backButtonPressed()
+                } else if c.name == ImageName.PresentScene.SkinPrice.Present_1.description {
+                    print(ImageName.PresentScene.SkinPrice.Present_1)
+                } else if c.name == ImageName.PresentScene.SkinPrice.Present_2.description {
+                    print(ImageName.PresentScene.SkinPrice.Present_2)
+                    fadeAll()
+                } else if c.name == ImageName.PresentScene.SkinPrice.Present_3.description {
+                    print(ImageName.PresentScene.SkinPrice.Present_3)
+                } else if c.name == ImageName.PresentScene.SkinPrice.Present_4.description {
+                    print(ImageName.PresentScene.SkinPrice.Present_4)
+                } else if c.name == ImageName.PresentScene.SkinPrice.Present_5.description {
+                    print(ImageName.PresentScene.SkinPrice.Present_5)
+                } else if c.name == ImageName.PresentScene.SkinPrice.Present_6.description {
+                    print(ImageName.PresentScene.SkinPrice.Present_6)
+                } else if c.name == ImageName.PresentScene.SkinPrice.Present_7.description {
+                    print(ImageName.PresentScene.SkinPrice.Present_7)
+                } else if c.name == ImageName.PresentScene.SkinPrice.Present_8.description {
+                    print(ImageName.PresentScene.SkinPrice.Present_8)
+                } else if c.name == ImageName.PresentScene.SkinPrice.Present_9.description {
+                    print(ImageName.PresentScene.SkinPrice.Present_9)
+                    fadeAll()
                 }
             }
         }
@@ -126,5 +150,49 @@ class PresentScene: SKScene {
         sceneManager.mainScene = nil
         let newScene = MainScene(size: self.size)
         self.view?.presentScene(newScene)
+    }
+    
+    private func fadeAll() {
+        let fadeScreen = SKSpriteNode()
+        fadeScreen.zPosition = 50
+        fadeScreen.position =  CGPoint(x: 0, y: 0)
+        fadeScreen.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+        fadeScreen.size = CGSize(width: 1, height: 1)
+        fadeScreen.color = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)
+
+        let rect = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.PresentScene.presentSceneRays))
+        rect.zPosition = 55
+        rect.position =  CGPoint(x: frame.midX, y: frame.midY)
+        rect.size = CGSize(width: 50, height: 50)
+        
+        let avatar = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.PresentScene.SkinPrice.Present_3.description))
+        avatar.zPosition = 100
+        avatar.position =  CGPoint(x: frame.midX, y: frame.midY)
+        avatar.size = CGSize(width: 50, height: 50)
+        
+        let scaleXFadeScreen = SKAction.scaleX(to: screenSize.width, duration: 0.05)
+        let scaleYFadeScreen = SKAction.scaleY(to: screenSize.height, duration: 0.05)
+        let fadeInFadeScreen = SKAction.fadeIn(withDuration: 3)
+        let fadeOutFadeScreen = SKAction.fadeOut(withDuration: 6)
+        let sequenceFadeScreen = SKAction.sequence([scaleXFadeScreen, scaleYFadeScreen, fadeInFadeScreen, fadeOutFadeScreen])
+        self.addChild(fadeScreen)
+        fadeScreen.run(sequenceFadeScreen)
+        
+        let scaleX = SKAction.scaleX(to: 6.95, duration: 0.15)
+        let scaleY = SKAction.scaleY(to: 6.95, duration: 0.25)
+        let fadeIn = SKAction.fadeIn(withDuration: 2)
+        let fadeOut = SKAction.fadeOut(withDuration: 5)
+        let sequence = SKAction.sequence([scaleX, scaleY, fadeIn, fadeOut])
+        self.addChild(rect)
+        rect.run(sequence)
+        
+        let scaleXAvatar = SKAction.resize(toWidth: screenSize.width / 2, duration: 0.1)
+        let scaleYAvatar = SKAction.resize(toHeight: screenSize.width / 2, duration: 0.2)
+        let fadeInAvatar = SKAction.fadeIn(withDuration: 1.5)
+        let fadeOutAvatar = SKAction.fadeOut(withDuration: 4)
+        let sequenceAvatar = SKAction.sequence([scaleXAvatar, scaleYAvatar, fadeInAvatar, fadeOutAvatar])
+        self.addChild(avatar)
+        avatar.run(sequenceAvatar)
+        
     }
 }
