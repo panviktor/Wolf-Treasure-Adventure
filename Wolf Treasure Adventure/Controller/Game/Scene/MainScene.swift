@@ -15,14 +15,14 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         case GameScene
         
         case GameSettingsScene
-        case PriceScene
+        case PresentScene
         case TopScoreScene
     }
     
     private enum MainSceneButton: String {
         case PlayButton
         case SettingsButton
-        case PriceButton
+        case PresentButton
         case ScoreButton
     }
     
@@ -76,7 +76,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         let settingsButton = createUIButton(name: MainSceneButton.SettingsButton, offsetPosX: screenSize.width / 2,  offsetPosY: screenSize.height * 0.60)
         root.addChild(settingsButton)
         
-        let priceButton = createUIButton(name: MainSceneButton.PriceButton, offsetPosX: screenSize.width / 2, offsetPosY: screenSize.height * 0.45)
+        let priceButton = createUIButton(name: MainSceneButton.PresentButton, offsetPosX: screenSize.width / 2, offsetPosY: screenSize.height * 0.45)
         root.addChild(priceButton)
         
         let scoreButton = createUIButton(name: MainSceneButton.ScoreButton, offsetPosX: screenSize.width / 2, offsetPosY: screenSize.height * 0.30)
@@ -98,8 +98,8 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
                 prepareToChangeScene(scene: .GameScene)
             } else if c.name == MainSceneButton.SettingsButton.rawValue {
                 prepareToChangeScene(scene: .GameSettingsScene)
-            } else if c.name == MainSceneButton.PriceButton.rawValue {
-                 prepareToChangeScene(scene: .PriceScene)
+            } else if c.name == MainSceneButton.PresentButton.rawValue {
+                 prepareToChangeScene(scene: .PresentScene)
             } else if c.name == MainSceneButton.ScoreButton.rawValue {
                 prepareToChangeScene(scene: .TopScoreScene)
             }
@@ -120,8 +120,8 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
             button.texture = SKTexture(imageNamed: ImageName.mainSceneSettingsButton)
         case .ScoreButton:
             button.texture = SKTexture(imageNamed: ImageName.mainSceneScoreButton)
-        case .PriceButton:
-            button.texture = SKTexture(imageNamed: ImageName.mainSceneChoosePriseButton)
+        case .PresentButton:
+            button.texture = SKTexture(imageNamed: ImageName.mainSceneChoosePresentButton)
         }
         
         button.position = CGPoint(x: dx, y: dy)
@@ -154,11 +154,11 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
             self.removeAllActions()
             let newScene = TopScoreScene(size: self.size)
             self.view?.presentScene(newScene)
-        case .PriceScene:
+        case .PresentScene:
             self.recursiveRemovingSKActions(sknodes: self.children)
             self.removeAllChildren()
             self.removeAllActions()
-            let newScene = PriceScene(size: self.size)
+            let newScene = PresentScene(size: self.size)
             self.view?.presentScene(newScene)
         }
     }

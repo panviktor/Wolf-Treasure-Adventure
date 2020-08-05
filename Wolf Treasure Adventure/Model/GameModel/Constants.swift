@@ -11,7 +11,7 @@ enum ImageName {
     static let mainSceneCloud = "MainSceneCloud"
     static let mainScenePlayButton = "MainScenePlayButton"
     static let mainSceneSettingsButton = "MainSceneSettingsButton"
-    static let mainSceneChoosePriseButton = "MainSceneChoosePriseButton"
+    static let mainSceneChoosePresentButton = "MainSceneChoosePriseButton"
     static let mainSceneScoreButton = "MainSceneScoreButton"
     
     /// Game Scene Textures
@@ -52,21 +52,30 @@ enum ImageName {
     //FIXME: - Add Infobar Images
     ///Infobar
     
-    /// Game Choose your price
-    static let priceSceneBackground = "PriceSceneBackground"
-    static let priceSceneTextLabel = "PriceSceneTextLabel"
-    static let priceSceneMainBoard = "PriceSceneMainBoard"
-    static let priceSceneSkinPrice_1 = "Price_1"
-    static let priceSceneSkinPrice_2 = "Price_2"
-    static let priceSceneSkinPrice_3 = "Price_3"
-    static let priceSceneSkinPrice_4 = "Price_4"
-    static let priceSceneSkinPrice_5 = "Price_5"
-    static let priceSceneSkinPrice_6 = "Price_6"
-    static let priceSceneSkinPrice_7 = "Price_7"
-    static let priceSceneSkinPrice_8 = "Price_8"
-    static let priceSceneSkinPrice_9 = "Price_9"
-    static let priceSceneBackButton = "PriceSceneBackButton"
-    static let priceSceneApplyButton = "PriceSceneApplyButton"
+    /// Game Choose your Present
+    enum PresentScene {
+        static let presentSceneBackground = "PresentSceneBackground"
+        static let presentSceneTextLabel = "PresentSceneTextLabel"
+        static let presentSceneMainBoard = "PresentSceneMainBoard"
+        static let presentSceneBackButton = "PresentSceneBackButton"
+        static let presentSceneApplyButton = "PresentSceneApplyButton"
+        
+        enum PresentSceneSkinPrice: Int, CaseIterable, CustomStringConvertible {
+            var description: String {
+                return "Present_\(self.rawValue)"
+            }
+            
+            case Present_1 = 1
+            case Present_2
+            case Present_3
+            case Present_4
+            case Present_5
+            case Present_6
+            case Present_7
+            case Present_8
+            case Present_9
+        }
+    }
 }
 
 enum SoundFile {
@@ -138,4 +147,13 @@ enum ObjectType: String, Codable {
 enum Emitter {
     static let rain = "Rain"
     static let dust = "Dust"
+}
+
+extension CaseIterable where Self: Equatable {
+    var allCases: AllCases { Self.allCases }
+    var next: Self {
+        let index = allCases.index(after: allCases.firstIndex(of: self)!)
+        guard index != allCases.endIndex else { return allCases.first! }
+        return allCases[index]
+    }
 }

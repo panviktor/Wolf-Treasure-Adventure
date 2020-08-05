@@ -10,7 +10,8 @@
 		14239C8924D3395C0007926D /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 14239C8824D3395C0007926D /* FacebookCore */; };
 		142D3D8024D18FE000DB314A /* gradientMonoTone.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 142D3D7F24D18FE000DB314A /* gradientMonoTone.fsh */; };
 		143175E824D9994500D85411 /* PriceSceneBackground.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 143175E724D9994400D85411 /* PriceSceneBackground.mp3 */; };
-		143175EA24D999A400D85411 /* PriceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143175E924D999A400D85411 /* PriceScene.swift */; };
+		143175EA24D999A400D85411 /* PresentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143175E924D999A400D85411 /* PresentScene.swift */; };
+		143175EC24DA973A00D85411 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143175EB24DA973A00D85411 /* Grid.swift */; };
 		1434654324D344F400B12DA8 /* GIFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1434654124D344F400B12DA8 /* GIFViewController.xib */; };
 		1434654424D344F400B12DA8 /* SecondNoInternetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1434654224D344F400B12DA8 /* SecondNoInternetViewController.xib */; };
 		1434654C24D3459500B12DA8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434654B24D3459500B12DA8 /* NotificationService.swift */; };
@@ -102,7 +103,8 @@
 		130188B53BE1B735F18CC61A /* Pods_Wolf_Treasure_Adventure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wolf_Treasure_Adventure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		142D3D7F24D18FE000DB314A /* gradientMonoTone.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gradientMonoTone.fsh; sourceTree = "<group>"; };
 		143175E724D9994400D85411 /* PriceSceneBackground.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PriceSceneBackground.mp3; sourceTree = "<group>"; };
-		143175E924D999A400D85411 /* PriceScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceScene.swift; sourceTree = "<group>"; };
+		143175E924D999A400D85411 /* PresentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentScene.swift; sourceTree = "<group>"; };
+		143175EB24DA973A00D85411 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		1434654124D344F400B12DA8 /* GIFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GIFViewController.xib; sourceTree = "<group>"; };
 		1434654224D344F400B12DA8 /* SecondNoInternetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondNoInternetViewController.xib; sourceTree = "<group>"; };
 		1434654924D3459500B12DA8 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,7 +395,8 @@
 				14FEE48824CEB22300C47B75 /* MainScene.swift */,
 				14F1777324CB0A5D006463F2 /* GameScene.swift */,
 				14FEE49224CEB73000C47B75 /* GameSettingsScene.swift */,
-				143175E924D999A400D85411 /* PriceScene.swift */,
+				143175E924D999A400D85411 /* PresentScene.swift */,
+				143175EB24DA973A00D85411 /* Grid.swift */,
 				14FEE48F24CEB73000C47B75 /* TopScoreScene.swift */,
 				14FEE49024CEB73000C47B75 /* WinLevelScene.swift */,
 				14FEE49124CEB73000C47B75 /* EndChapterScene.swift */,
@@ -647,7 +650,7 @@
 				14FEE49324CEB73000C47B75 /* TopScoreScene.swift in Sources */,
 				14FEE47124CEAD8400C47B75 /* WelcomeViewController.swift in Sources */,
 				14C9A7AC24D33CD50076B695 /* SecondNoInternetViewController.swift in Sources */,
-				143175EA24D999A400D85411 /* PriceScene.swift in Sources */,
+				143175EA24D999A400D85411 /* PresentScene.swift in Sources */,
 				14FEE49524CEB73000C47B75 /* EndChapterScene.swift in Sources */,
 				14FEE48024CEAE0C00C47B75 /* Extension+UIView.swift in Sources */,
 				14FEE47D24CEAE0C00C47B75 /* Extensions+Game.swift in Sources */,
@@ -655,6 +658,7 @@
 				14C9A7AD24D33CD50076B695 /* WebViewController.swift in Sources */,
 				14FEE48724CEB16B00C47B75 /* SceneManager.swift in Sources */,
 				776CFFCE24CCEA3A0007CF2C /* WoodNode.swift in Sources */,
+				143175EC24DA973A00D85411 /* Grid.swift in Sources */,
 				14F1777924CB0A5D006463F2 /* GameScene.swift in Sources */,
 				14F1777A24CB0A5D006463F2 /* LevelData.swift in Sources */,
 				14FEE48124CEAE0C00C47B75 /* Extension+WKWebView.swift in Sources */,
