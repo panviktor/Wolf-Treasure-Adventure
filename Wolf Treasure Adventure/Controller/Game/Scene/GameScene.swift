@@ -78,12 +78,16 @@ class GameScene: SKScene {
         prize.zPosition = Layers.prize
         prize.size = CGSize(width: screenSize.width / 10, height: screenSize.width / 10)
         
-        if device.isSimulator {
-            prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
-        } else {
-            prize.physicsBody = SKPhysicsBody(texture: prize.texture!, size: prize.size)
-        }
         
+        //FIXME: - desired texture masks for acceptable performance
+        
+        //   if device.isSimulator {
+        //       prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
+        //   } else {
+        //       prize.physicsBody = SKPhysicsBody(texture: prize.texture!, size: prize.size)
+        //   }
+        
+        prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
         prize.physicsBody?.categoryBitMask = PhysicsCategoryBitMask.prize
         prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.wood
         prize.physicsBody?.density = 0.25
@@ -99,7 +103,7 @@ class GameScene: SKScene {
             let anchorPoint = CGPoint(
                 x: vine.xAnchorPoint * size.width,
                 y: vine.yAnchorPoint * size.height)
-            let vine = VineNode(length: vine.length, anchorPoint: anchorPoint, name: "\(i)")
+            let vine = VineNode(length: vine.length, anchorPoint: anchorPoint, name: "VineNode_\(i)")
             
             vine.addToScene(self)
             vine.attachToPrize(prize)
@@ -149,10 +153,10 @@ class GameScene: SKScene {
         heroes.physicsBody?.contactTestBitMask = PhysicsCategoryBitMask.prize
         heroes.physicsBody?.isDynamic = false
         addChild(heroes)
-        animateCrocodile()
+        animateTheHero()
     }
     
-    private func animateCrocodile() {
+    private func animateTheHero() {
         let duration = Double.random(in: 2...4)
         let open = SKAction.setTexture(SKTexture(imageNamed: ImageName.crocMouthOpen))
         let wait = SKAction.wait(forDuration: duration)
@@ -232,6 +236,9 @@ class GameScene: SKScene {
         
         // if it has a name it must be a vine node
         if let name = node.name {
+            if !name.contains("VineNode_") {
+                return
+            }
             // snip the vine
             node.removeFromParent()
             
@@ -243,9 +250,11 @@ class GameScene: SKScene {
                 node.run(sequence)
             })
             
-            heroes.removeAllActions()
-            heroes.texture = SKTexture(imageNamed: ImageName.crocMouthOpen)
-            animateCrocodile()
+            if heroes != nil {
+                heroes.removeAllActions()
+                heroes.texture = SKTexture(imageNamed: ImageName.crocMouthOpen)
+                animateTheHero()
+            }
             run(audioVibroManager.getAction(type: .slice))
             didCutVine = true
         }
