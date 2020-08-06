@@ -31,9 +31,6 @@ class GameScene: SKScene {
     private let audioVibroManager = AudioVibroManager.shared
     private let device = Device.current
     
-    //FIXME: - Add normal gravity
-    let startingDate = Date().addingTimeInterval(3)
-    
     override func didMove(to view: SKView) {
         setUpLevel(number: currentLevelNum)
         guard sceneManager.gameScene == nil else { return }
@@ -133,7 +130,6 @@ class GameScene: SKScene {
     private func setUpCrocodile() {
         heroes = SKSpriteNode(imageNamed: ImageName.crocMouthClosed)
         heroes.setScale(0.95)
-        //FIXME: - load from level
         heroes.position = CGPoint(x: size.width * level.heroesPosition.x,
                                   y: size.height * level.heroesPosition.y)
         
