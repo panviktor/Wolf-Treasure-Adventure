@@ -61,11 +61,10 @@ enum ImageName {
         static let presentSceneApplyButton = "PresentSceneApplyButton"
         static let presentSceneRays = "PresentSceneRays"
         
-        enum SkinPrice: Int, CaseIterable, CustomStringConvertible {
+        enum SkinPrice: Int, CaseIterable, CustomStringConvertible, Codable {
             var description: String {
                 return "Present_\(self.rawValue)"
             }
-        
             case Present_1 = 1
             case Present_2
             case Present_3
