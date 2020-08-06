@@ -31,7 +31,7 @@ final class GameManager {
     
     private(set) var currentPresent: Int {
         get {
-            return defaults.object(forKey: "currentPresent") as? Int ?? 1
+            return defaults.object(forKey: "currentPresent") as? Int ?? 5
         } set (newValue) {
             defaults.set(newValue, forKey: "currentPresent")
         }

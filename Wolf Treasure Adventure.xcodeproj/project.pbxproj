@@ -217,6 +217,7 @@
 		14C9A7A724D33CA50076B695 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				14FEE48A24CEB62400C47B75 /* Managers */,
 				14F1779824CB0EDE006463F2 /* Scene */,
 				14F1779524CB0E11006463F2 /* GameViewController */,
 			);
@@ -391,7 +392,6 @@
 		14F1779824CB0EDE006463F2 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				14FEE48A24CEB62400C47B75 /* Managers */,
 				14FEE48824CEB22300C47B75 /* MainScene.swift */,
 				14F1777324CB0A5D006463F2 /* GameScene.swift */,
 				14FEE49224CEB73000C47B75 /* GameSettingsScene.swift */,
