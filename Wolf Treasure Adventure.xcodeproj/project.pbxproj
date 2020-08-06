@@ -703,7 +703,7 @@
 			baseConfigurationReference = 46E3545895A3C0B58F180196 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -726,7 +726,7 @@
 			baseConfigurationReference = 50B3F7F90645524B6F4FAD8B /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -866,7 +866,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Wolf Treasure Adventure/Wolf Treasure Adventure.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = "Wolf Treasure Adventure/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -890,7 +890,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Wolf Treasure Adventure/Wolf Treasure Adventure.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = "Wolf Treasure Adventure/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
