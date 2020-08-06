@@ -29,6 +29,7 @@ class GameScene: SKScene {
     private var chapterIsOver = false
     private var didCutVine = false
     private let audioVibroManager = AudioVibroManager.shared
+    private let device = Device.current
     
     //FIXME: - Add normal gravity
     let startingDate = Date().addingTimeInterval(3)
@@ -71,11 +72,18 @@ class GameScene: SKScene {
     }
     
     private func setUpPrize() {
-        prize = SKSpriteNode(imageNamed: ImageName.prize)
+        prize = SKSpriteNode(imageNamed: "\(ImageName.PresentScene.SkinPrice.init(rawValue: gameManager.currentPresent)?.description ?? ImageName.prize)")
         prize.position = CGPoint(x: size.width * level.prizePosition.x,
                                  y: level.prizePosition.y)
         prize.zPosition = Layers.prize
-        prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
+        prize.size = CGSize(width: screenSize.width / 10, height: screenSize.width / 10)
+        
+        if device.isSimulator {
+            prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
+        } else {
+            prize.physicsBody = SKPhysicsBody(texture: prize.texture!, size: prize.size)
+        }
+        
         prize.physicsBody?.categoryBitMask = PhysicsCategoryBitMask.prize
         prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.wood
         prize.physicsBody?.density = 0.25
@@ -126,14 +134,16 @@ class GameScene: SKScene {
                                   y: size.height * level.heroesPosition.y)
         
         heroes.zPosition = Layers.crocodile
-        heroes.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: ImageName.heroesMask),
-                                           size: heroes.size)
         
-        let sizeX = heroes.size.width * CGFloat(0.95)
-        let sizeY = heroes.size.height * CGFloat(0.90)
-        let newPhysicsBodySize = CGSize(width: sizeX, height: sizeY)
-
-        heroes.physicsBody = SKPhysicsBody(rectangleOf: newPhysicsBodySize)
+        if device.isSimulator {
+            let sizeX = heroes.size.width * CGFloat(0.95)
+            let sizeY = heroes.size.height * CGFloat(0.90)
+            let newPhysicsBodySize = CGSize(width: sizeX, height: sizeY)
+            heroes.physicsBody = SKPhysicsBody(rectangleOf: newPhysicsBodySize)
+        } else {
+            heroes.physicsBody = SKPhysicsBody(texture: heroes.texture!, size: heroes.size)
+        }
+        
         heroes.physicsBody!.categoryBitMask = PhysicsCategoryBitMask.crocodile
         heroes.physicsBody?.collisionBitMask = 0
         heroes.physicsBody?.contactTestBitMask = PhysicsCategoryBitMask.prize
