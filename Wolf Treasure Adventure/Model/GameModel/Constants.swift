@@ -30,6 +30,7 @@ enum ImageName {
     static let physicalObjectOneTexture = "PhysicalObjectOneTexture"
     static let physicalObjectTwoTexture = "PhysicalObjectTwoTexture"
     static let physicalObjectThreeTexture = "PhysicalObjectThreeTexture"
+    static let physicalObjectFourTexture = "PhysicalObjectFourTexture"
     
     static let exitButton = "ExitButton"
     
@@ -116,6 +117,7 @@ enum Layers {
     static let physicalObjectOne: CGFloat = 5
     static let physicalObjectTwo: CGFloat = 5
     static let physicalObjectTree: CGFloat = 5
+    static let physicalObjectFour: CGFloat = 5
     
     static let infobar: CGFloat = 10
     static let exitButton: CGFloat = 10
@@ -128,9 +130,10 @@ enum PhysicsCategoryBitMask {
     static let prize: UInt32 = 8
     static let wood: UInt32 = 16
     
-    static let physicalObjectOne: UInt32 = 17
-    static let physicalObjectTwo: UInt32 = 18
-    static let physicalObjectThree: UInt32 = 19
+    static let physicalObjectOne: UInt32 = 16
+    static let physicalObjectTwo: UInt32 = 16
+    static let physicalObjectThree: UInt32 = 16
+    static let physicalObjectFour: UInt32 = 16
 }
 
 enum GameConfiguration {
@@ -154,6 +157,7 @@ enum ObjectType: String, Codable {
     case physicalObjectOne = "PhysicalObjectOne"
     case physicalObjectTwo = "PhysicalObjectTwo"
     case physicalObjectThree = "PhysicalObjectThree"
+    case physicalObjectFour = "PhysicalObjectFour"
     
     case somethingNew = "SomethingNew"
     

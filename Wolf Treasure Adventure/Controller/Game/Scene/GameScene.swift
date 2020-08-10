@@ -29,7 +29,7 @@ class GameScene: SKScene {
     private var chapterIsOver = false
     private var didCutVine = false
     private let audioVibroManager = AudioVibroManager.shared
-    private let device = Device.current
+    internal let device = Device.current
     
     override func didMove(to view: SKView) {
         setUpLevel(number: currentLevelNum)
@@ -90,6 +90,7 @@ class GameScene: SKScene {
         prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.physicalObjectOne
         prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.physicalObjectTwo
         prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.physicalObjectThree
+        prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.physicalObjectFour
         prize.physicsBody?.density = 0.25
         
         addChild(prize)
@@ -141,6 +142,12 @@ class GameScene: SKScene {
                     y: item.yPoint * size.height)
                 let rotation = item.zRotation ?? 360
                 addObjectThreeToScene(position, rotation)
+            case .physicalObjectFour:
+                let position = CGPoint(
+                    x: item.xPoint * size.width,
+                    y: item.yPoint * size.height)
+                let rotation = item.zRotation ?? 360
+                addObjectFourToScene(position, rotation)
             default:
                 print("ADD NEW ITEMS HANDLER")
             }
