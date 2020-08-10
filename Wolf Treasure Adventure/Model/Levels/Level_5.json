@@ -29,6 +29,44 @@
                 "height": 0.4
             }
         },
+        
+        
+        { "type": "PhysicalObjectOne",
+            "layer": 2,
+            "xPoint": 0.5592,
+            "yPoint": 0.5583,
+            "zRotation": 25,
+            "itemsSize": {
+                "width": 0.34,
+                "height": 0.4
+            }
+        },
+        
+        
+        { "type": "PhysicalObjectTwo",
+            "layer": 2,
+            "xPoint": 0.5592,
+            "yPoint": 0.5583,
+            "zRotation": 25,
+            "itemsSize": {
+                "width": 0.34,
+                "height": 0.4
+            }
+        },
+        
+        
+        { "type": "PhysicalObjectThree",
+            "layer": 2,
+            "xPoint": 0.5592,
+            "yPoint": 0.5583,
+            "zRotation": 25,
+            "itemsSize": {
+                "width": 0.34,
+                "height": 0.4
+            }
+        },
+        
+        
         { "type": "Wood",
             "layer": 2,
             "xPoint": 0.8592,

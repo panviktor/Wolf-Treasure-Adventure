@@ -87,6 +87,9 @@ class GameScene: SKScene {
         prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
         prize.physicsBody?.categoryBitMask = PhysicsCategoryBitMask.prize
         prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.wood
+        prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.physicalObjectOne
+        prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.physicalObjectTwo
+        prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.physicalObjectThree
         prize.physicsBody?.density = 0.25
         
         addChild(prize)
@@ -120,6 +123,24 @@ class GameScene: SKScene {
                     y: item.yPoint * size.height)
                 let rotation = item.zRotation ?? 360
                 addWoodToScene(position, rotation)
+            case .physicalObjectOne:
+                let position = CGPoint(
+                    x: item.xPoint * size.width,
+                    y: item.yPoint * size.height)
+                let rotation = item.zRotation ?? 360
+                addObjectOneToScene(position, rotation)
+            case .physicalObjectTwo:
+                let position = CGPoint(
+                    x: item.xPoint * size.width,
+                    y: item.yPoint * size.height)
+                let rotation = item.zRotation ?? 360
+                addObjectTwoToScene(position, rotation)
+            case .physicalObjectThree:
+                let position = CGPoint(
+                    x: item.xPoint * size.width,
+                    y: item.yPoint * size.height)
+                let rotation = item.zRotation ?? 360
+                addObjectThreeToScene(position, rotation)
             default:
                 print("ADD NEW ITEMS HANDLER")
             }

@@ -70,7 +70,7 @@
 		14FEE49624CEB73000C47B75 /* GameSettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE49224CEB73000C47B75 /* GameSettingsScene.swift */; };
 		14FEE49924CEBCB000C47B75 /* Infobar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE49724CEBCAF00C47B75 /* Infobar.swift */; };
 		4FACC5027DFD27EC1E33E6A6 /* Pods_Wolf_Treasure_Adventure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130188B53BE1B735F18CC61A /* Pods_Wolf_Treasure_Adventure.framework */; };
-		776CFFCE24CCEA3A0007CF2C /* WoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CFFCD24CCEA3A0007CF2C /* WoodNode.swift */; };
+		776CFFCE24CCEA3A0007CF2C /* Extension+GameScene+AddElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CFFCD24CCEA3A0007CF2C /* Extension+GameScene+AddElements.swift */; };
 		77E0563824D6FB3000F860BB /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 77E0563724D6FB3000F860BB /* Rain.sks */; };
 		991216C6D137343A0557DE99 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02E3AEF48797FF40ADDBDA5 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 /* End PBXBuildFile section */
@@ -165,7 +165,7 @@
 		14FEE49724CEBCAF00C47B75 /* Infobar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Infobar.swift; sourceTree = "<group>"; };
 		46E3545895A3C0B58F180196 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		50B3F7F90645524B6F4FAD8B /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
-		776CFFCD24CCEA3A0007CF2C /* WoodNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodNode.swift; sourceTree = "<group>"; };
+		776CFFCD24CCEA3A0007CF2C /* Extension+GameScene+AddElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+GameScene+AddElements.swift"; sourceTree = "<group>"; };
 		77E0563724D6FB3000F860BB /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
 		7A3137E08D9197848BCEB45A /* Pods-Wolf Treasure Adventure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolf Treasure Adventure.release.xcconfig"; path = "Target Support Files/Pods-Wolf Treasure Adventure/Pods-Wolf Treasure Adventure.release.xcconfig"; sourceTree = "<group>"; };
 		AEEE514FC5EFBC9BDDDA8EB8 /* Pods-Wolf Treasure Adventure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolf Treasure Adventure.debug.xcconfig"; path = "Target Support Files/Pods-Wolf Treasure Adventure/Pods-Wolf Treasure Adventure.debug.xcconfig"; sourceTree = "<group>"; };
@@ -345,7 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				14F1777024CB0A5D006463F2 /* VineNode.swift */,
-				776CFFCD24CCEA3A0007CF2C /* WoodNode.swift */,
+				776CFFCD24CCEA3A0007CF2C /* Extension+GameScene+AddElements.swift */,
 				14F1776F24CB0A5C006463F2 /* Constants.swift */,
 				14F1777124CB0A5D006463F2 /* Level.swift */,
 				14F1777424CB0A5D006463F2 /* LevelData.swift */,
@@ -657,7 +657,7 @@
 				14C9A7A624D33C8A0076B695 /* DifferentServices.swift in Sources */,
 				14C9A7AD24D33CD50076B695 /* WebViewController.swift in Sources */,
 				14FEE48724CEB16B00C47B75 /* SceneManager.swift in Sources */,
-				776CFFCE24CCEA3A0007CF2C /* WoodNode.swift in Sources */,
+				776CFFCE24CCEA3A0007CF2C /* Extension+GameScene+AddElements.swift in Sources */,
 				143175EC24DA973A00D85411 /* Grid.swift in Sources */,
 				14F1777924CB0A5D006463F2 /* GameScene.swift in Sources */,
 				14F1777A24CB0A5D006463F2 /* LevelData.swift in Sources */,
@@ -703,7 +703,7 @@
 			baseConfigurationReference = 46E3545895A3C0B58F180196 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -717,7 +717,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -726,7 +726,7 @@
 			baseConfigurationReference = 50B3F7F90645524B6F4FAD8B /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -740,7 +740,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -866,7 +866,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Wolf Treasure Adventure/Wolf Treasure Adventure.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = "Wolf Treasure Adventure/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -890,7 +890,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Wolf Treasure Adventure/Wolf Treasure Adventure.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = "Wolf Treasure Adventure/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;

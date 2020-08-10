@@ -26,6 +26,11 @@ enum ImageName {
     static let prize = "Pineapple"
     static let prizeMask = "PineappleMask"
     static let woodTexture = "Wood"
+    
+    static let physicalObjectOneTexture = "PhysicalObjectOneTexture"
+    static let physicalObjectTwoTexture = "PhysicalObjectTwoTexture"
+    static let physicalObjectThreeTexture = "PhysicalObjectThreeTexture"
+    
     static let exitButton = "ExitButton"
     
     /// End Chapter Scene Textures
@@ -106,7 +111,12 @@ enum Layers {
     static let vine: CGFloat = 1
     static let prize: CGFloat = 3
     static let foreground: CGFloat = 4
+    
     static let wood: CGFloat = 5
+    static let physicalObjectOne: CGFloat = 5
+    static let physicalObjectTwo: CGFloat = 5
+    static let physicalObjectTree: CGFloat = 5
+    
     static let infobar: CGFloat = 10
     static let exitButton: CGFloat = 10
 }
@@ -117,6 +127,10 @@ enum PhysicsCategoryBitMask {
     static let vine: UInt32 = 4
     static let prize: UInt32 = 8
     static let wood: UInt32 = 16
+    
+    static let physicalObjectOne: UInt32 = 17
+    static let physicalObjectTwo: UInt32 = 18
+    static let physicalObjectThree: UInt32 = 19
 }
 
 enum GameConfiguration {
@@ -136,6 +150,11 @@ enum PrizeType: String {
 
 enum ObjectType: String, Codable {
     case wood = "Wood"
+    
+    case physicalObjectOne = "PhysicalObjectOne"
+    case physicalObjectTwo = "PhysicalObjectTwo"
+    case physicalObjectThree = "PhysicalObjectThree"
+    
     case somethingNew = "SomethingNew"
     
     init(from decoder: Decoder) throws {
