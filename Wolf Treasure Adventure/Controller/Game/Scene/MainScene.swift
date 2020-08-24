@@ -38,6 +38,8 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         self.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         loadBackground()
         try? audioVibroManager.playMusic(type: .mainSceneBackground)
+        
+        
     }
     
     private func loadBackground(){
@@ -47,6 +49,12 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         mainSceneBackground.size = CGSize(width: screenSize.width, height: screenSize.height)
         mainSceneBackground.zPosition = -10
         mainSceneBackground.name = ImageName.mainSceneBackground
+        
+        shaders.append(("Water", createWater()))
+        
+        mainSceneBackground.shader = shaders[0].shader
+        
+        
         self.addChild(mainSceneBackground)
         
         let cloud = SKSpriteNode()
@@ -77,6 +85,21 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         
         cloud.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: 25, duration: 3),
                                                             SKAction.moveBy(x: 0, y: -25, duration: 3)])))
+    }
+    
+     typealias ShaderExample = (title: String, shader: SKShader)
+    
+    var shaders = [ShaderExample]()
+    
+    
+    func createWater() -> SKShader {
+        let uniforms: [SKUniform] = [
+            SKUniform(name: "u_speed", float: 3),
+            SKUniform(name: "u_strength", float: 2.5),
+            SKUniform(name: "u_frequency", float: 10)
+        ]
+
+        return SKShader(fromFile: "SHKWater", uniforms: uniforms)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -143,6 +166,29 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
             self.removeAllActions()
             let newScene = TopScoreScene(size: self.size)
             self.view?.presentScene(newScene)
+        }
+    }
+}
+
+
+extension SKShader {
+    convenience init(fromFile filename: String, uniforms: [SKUniform]? = nil, attributes: [SKAttribute]? = nil) {
+        guard let path = Bundle.main.path(forResource: filename, ofType: "fsh") else {
+            fatalError("Unable to find shader \(filename).fsh in bundle")
+        }
+
+        guard let source = try? String(contentsOfFile: path) else {
+            fatalError("Unable to load shader \(filename).fsh")
+        }
+
+        if let uniforms = uniforms {
+            self.init(source: source as String, uniforms: uniforms)
+        } else {
+            self.init(source: source as String)
+        }
+
+        if let attributes = attributes {
+            self.attributes = attributes
         }
     }
 }

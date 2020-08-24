@@ -66,6 +66,7 @@
 		14FEE49624CEB73000C47B75 /* GameSettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE49224CEB73000C47B75 /* GameSettingsScene.swift */; };
 		14FEE49924CEBCB000C47B75 /* Infobar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEE49724CEBCAF00C47B75 /* Infobar.swift */; };
 		4FACC5027DFD27EC1E33E6A6 /* Pods_Wolf_Treasure_Adventure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130188B53BE1B735F18CC61A /* Pods_Wolf_Treasure_Adventure.framework */; };
+		7712BD4224F436280088B851 /* SHKWater.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7712BD4124F436280088B851 /* SHKWater.fsh */; };
 		776CFFCE24CCEA3A0007CF2C /* WoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CFFCD24CCEA3A0007CF2C /* WoodNode.swift */; };
 		77E0563824D6FB3000F860BB /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 77E0563724D6FB3000F860BB /* Rain.sks */; };
 		991216C6D137343A0557DE99 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02E3AEF48797FF40ADDBDA5 /* Pods_OneSignalNotificationServiceExtension.framework */; };
@@ -157,6 +158,7 @@
 		14FEE49724CEBCAF00C47B75 /* Infobar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Infobar.swift; sourceTree = "<group>"; };
 		46E3545895A3C0B58F180196 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		50B3F7F90645524B6F4FAD8B /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		7712BD4124F436280088B851 /* SHKWater.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKWater.fsh; sourceTree = "<group>"; };
 		776CFFCD24CCEA3A0007CF2C /* WoodNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodNode.swift; sourceTree = "<group>"; };
 		77E0563724D6FB3000F860BB /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
 		7A3137E08D9197848BCEB45A /* Pods-Wolf Treasure Adventure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolf Treasure Adventure.release.xcconfig"; path = "Target Support Files/Pods-Wolf Treasure Adventure/Pods-Wolf Treasure Adventure.release.xcconfig"; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				14FEE48A24CEB62400C47B75 /* Managers */,
+				7712BD4124F436280088B851 /* SHKWater.fsh */,
 				14FEE48824CEB22300C47B75 /* MainScene.swift */,
 				14F1777324CB0A5D006463F2 /* GameScene.swift */,
 				14FEE49224CEB73000C47B75 /* GameSettingsScene.swift */,
@@ -490,7 +493,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Viktor;
 				TargetAttributes = {
 					1434654824D3459500B12DA8 = {
@@ -540,6 +543,7 @@
 			files = (
 				14F1778924CB0A7E006463F2 /* Particle@2x.png in Resources */,
 				147DD8C124D31E3700FA7DD7 /* Level_9.json in Resources */,
+				7712BD4224F436280088B851 /* SHKWater.fsh in Resources */,
 				147DD8BD24D31E3700FA7DD7 /* Level_6.json in Resources */,
 				14F1778D24CB0A7E006463F2 /* Slice.caf in Resources */,
 				147DD8BE24D31E3700FA7DD7 /* Level_8.json in Resources */,
@@ -690,7 +694,7 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -713,7 +717,7 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -754,6 +758,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -778,7 +783,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -814,6 +819,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -832,7 +838,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -853,7 +859,7 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = "Wolf Treasure Adventure/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -877,7 +883,7 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 85254P39JJ;
 				INFOPLIST_FILE = "Wolf Treasure Adventure/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
